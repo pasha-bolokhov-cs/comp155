@@ -1,1 +1,19 @@
-sqlplus64 bolokhov/password@babbage.cs.camosun.bc.ca:1521/CALEB
+#!/bin/bash
+# 
+
+# Find either 'sqlplus' or 'sqlplus64'
+SQLPLUS=sqlplus64
+if ! hash ${SQLPLUS} 2>/dev/null; then
+	SQLPLUS=sqlplus
+fi
+if ! hash ${SQLPLUS} 2>/dev/null; then
+	echo "Need to have 'sqlplus' or 'sqlplus64' installed" 1>&2
+	exit 1
+fi
+
+# Ask for the password
+USER=bolokhov
+read -s -p "Password: " PASS
+
+${SQLPLUS} ${USER}/${PASS}@babbage.cs.camosun.bc.ca:1521/CALEB
+
