@@ -11,7 +11,7 @@ SET PAGESIZE 100
  Due:
  Lab section 1B: due Thursday Jan 22 @ 11:30 
  
- Time spent working on this lab: 1:30 hours [ your approximation ]
+ Time spent working on this lab: 1:30 hours
  **********************************/
  
 /*** 1 ***/
