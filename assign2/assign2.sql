@@ -1,7 +1,7 @@
 -- Run command: @lab2.sql
 set echo off
-SPOOL lab2.out
-SET PAGESIZE 100
+spool assign2.out
+set PAGESIZE 100
 
 /*********************************
  Assignment - Lab 2 Solution
