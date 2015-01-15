@@ -1,0 +1,79 @@
+
+Poor Employee             Monthly Salary                                        
+------------------------- --------------                                        
+Himuro                              2600                                        
+Colmenares                          2500                                        
+Marlow                              2500                                        
+Patel                               2500                                        
+Matos                               2600                                        
+Vargas                              2500                                        
+Sullivan                            2500                                        
+Perkins                             2500                                        
+OConnell                            2600                                        
+Grant                               2600                                        
+
+10 rows selected.
+
+
+Last Name                 Department No                                         
+------------------------- -------------                                         
+Pataballa                            60                                         
+Lorentz                              60                                         
+Kochhar                              90                                         
+King                                 90                                         
+Hunold                               60                                         
+Ernst                                60                                         
+De Haan                              90                                         
+Baer                                 70                                         
+Austin                               60                                         
+
+9 rows selected.
+
+
+Last Name                                                                       
+-------------------------                                                       
+Grant                                                                           
+Grant                                                                           
+Whalen                                                                          
+
+
+First Name           Last Name                     Salary Commission            
+-------------------- ------------------------- ---------- ----------            
+Sundita              Kumar                           6100         .1            
+Amit                 Banda                           6200         .1            
+Charles              Johnson                         6200         .1            
+Sundar               Ande                            6400         .1            
+David                Lee                             6800         .1            
+Kimberely            Grant                           7000        .15            
+Oliver               Tuvault                         7000        .15            
+Sarath               Sewall                          7000        .25            
+Mattea               Marvins                         7200         .1            
+Elizabeth            Bates                           7300        .15            
+William              Smith                           7400        .15            
+Nanette              Cambrault                       7500         .2            
+Louise               Doran                           7500         .3            
+Christopher          Olsen                           8000         .2            
+Lindsey              Smith                           8000         .3            
+Jack                 Livingston                      8400         .2            
+Jonathon             Taylor                          8600         .2            
+Alyssa               Hutton                          8800        .25            
+Peter                Hall                            9000        .25            
+Allan                McEwen                          9000        .35            
+Danielle             Greene                          9500        .15            
+David                Bernstein                       9500        .25            
+Patrick              Sully                           9500        .35            
+Tayler               Fox                             9600         .2            
+Harrison             Bloom                          10000         .2            
+Peter                Tucker                         10000         .3            
+Janette              King                           10000        .35            
+Eleni                Zlotkey                        10500         .2            
+Clara                Vishney                        10500        .25            
+Ellen                Abel                           11000         .3            
+Gerald               Cambrault                      11000         .3            
+Lisa                 Ozer                           11500        .25            
+Alberto              Errazuriz                      12000         .3            
+Karen                Partners                       13500         .3            
+John                 Russell                        14000         .4            
+
+35 rows selected.
+
