@@ -1,3 +1,24 @@
+SQL> set PAGESIZE 100
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 2 Solution
+SQL> 
+SQL>  By: Pasha Bolokhov
+SQL>  Lab section: 1B
+SQL>  Due:
+SQL>  Lab section 1B: due Thursday Jan 22 @ 11:30
+SQL> 
+SQL>  Time spent working on this lab: 1:30 hours
+SQL>  **********************************/
+SQL> 
+SQL> /*** 1 ***/
+SQL> /* Write a query to display the last name and salary for
+SQL> 	all employees whose salary falls in the range of $2,500
+SQL> 	to $2,600 inclusive. Label the columns Poor Employee and
+SQL> 	Monthly Salary respectively.*/
+SQL> SELECT last_name AS "Poor Employee", salary AS "Monthly Salary"
+  2  	    FROM employees
+  3  	    WHERE salary BETWEEN 2500 AND 2600;
 
 Poor Employee             Monthly Salary                                        
 ------------------------- --------------                                        
@@ -14,6 +35,16 @@ Grant                               2600
 
 10 rows selected.
 
+SQL> 
+SQL> 
+SQL> /*** 2 ***/
+SQL> /* Write a query to display the last name and department
+SQL> 	number of all employees in departments 60, 70 and 90
+SQL> 	in alphabetical order by last name descending. */
+SQL> SELECT last_name AS "Last Name", department_id AS "Department No"
+  2  	    FROM employees
+  3  	    WHERE department_id IN (60, 70, 90)
+  4  	    ORDER BY last_name DESC;
 
 Last Name                 Department No                                         
 ------------------------- -------------                                         
@@ -29,6 +60,14 @@ Austin                               60
 
 9 rows selected.
 
+SQL> 
+SQL> 
+SQL> /*** 3 ***/
+SQL> /* Write a query to display the last names of all employees
+SQL> 	where the third letter of their name is an a. */
+SQL> SELECT last_name AS "Last Name"
+  2  	    FROM employees
+  3  	    WHERE last_name LIKE '__a%';
 
 Last Name                                                                       
 -------------------------                                                       
@@ -36,6 +75,18 @@ Grant
 Grant                                                                           
 Whalen                                                                          
 
+SQL> 
+SQL> 
+SQL> /*** 4 ***/
+SQL> /* Write a query to display the first name, last name, salary, and
+SQL> 	commission for all employees who earn commissions and have a
+SQL> 	last name beginning with the letter S. Sort data in
+SQL> 	descending order of salary and commissions. */
+SQL> SELECT first_name AS "First Name", last_name AS "Last Name",
+  2  	    salary AS "Salary", commission_pct AS "Commission"
+  3  	    FROM employees
+  4  	    WHERE NOT commission_pct IS NULL
+  5  	    ORDER BY salary, commission_pct;
 
 First Name           Last Name                     Salary Commission            
 -------------------- ------------------------- ---------- ----------            
@@ -77,3 +128,6 @@ John                 Russell                        14000         .4
 
 35 rows selected.
 
+SQL> 
+SQL> 
+SQL> SPOOL OFF

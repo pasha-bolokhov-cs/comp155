@@ -1,6 +1,6 @@
 -- Run command: @lab2.sql
-set echo off
-spool assign2.out
+set echo on
+SPOOL assign2.out
 set PAGESIZE 100
 
 /*********************************
@@ -19,27 +19,27 @@ set PAGESIZE 100
    all employees whose salary falls in the range of $2,500 
    to $2,600 inclusive. Label the columns Poor Employee and 
    Monthly Salary respectively.*/
-select last_name as "Poor Employee", salary as "Monthly Salary"
-       from employees 
-       where salary between 2500 and 2600;
+SELECT last_name AS "Poor Employee", salary AS "Monthly Salary"
+       FROM employees 
+       WHERE salary BETWEEN 2500 AND 2600;
 
 
 /*** 2 ***/
 /* Write a query to display the last name and department 
    number of all employees in departments 60, 70 and 90 
    in alphabetical order by last name descending. */
-select last_name as "Last Name", department_id as "Department No"
-       from employees 
-       where department_id in (60, 70, 90) 
-       order by last_name desc;
+SELECT last_name AS "Last Name", department_id AS "Department No"
+       FROM employees 
+       WHERE department_id IN (60, 70, 90) 
+       ORDER BY last_name DESC;
 
 
 /*** 3 ***/
 /* Write a query to display the last names of all employees 
    where the third letter of their name is an a. */
-select last_name as "Last Name"
-       from employees
-       where last_name like '__a%';
+SELECT last_name AS "Last Name"
+       FROM employees
+       WHERE last_name LIKE '__a%';
 
 
 /*** 4 ***/
@@ -47,11 +47,11 @@ select last_name as "Last Name"
    commission for all employees who earn commissions and have a 
    last name beginning with the letter S. Sort data in 
    descending order of salary and commissions. */
-select first_name as "First Name", last_name as "Last Name", 
-       salary as "Salary", commission_pct as "Commission"
-       from employees 
-       where not commission_pct is NULL
-       order by salary, commission_pct;
+SELECT first_name AS "First Name", last_name AS "Last Name", 
+       salary AS "Salary", commission_pct AS "Commission"
+       FROM employees 
+       WHERE NOT commission_pct IS NULL
+       ORDER BY salary, commission_pct;
 
 
 SPOOL OFF
