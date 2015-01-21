@@ -1,9 +1,18 @@
 
-LAST_NAME                 JOB_TITLE                           DEPARTMENT_ID DEPARTMENT_NAME                CITY                             
-------------------------- ----------------------------------- ------------- ------------------------------ ------------------------------   
-Hunold                    Programmer                                     60 IT                             Southlake                        
-Ernst                     Programmer                                     60 IT                             Southlake                        
-Austin                    Programmer                                     60 IT                             Southlake                        
-Pataballa                 Programmer                                     60 IT                             Southlake                        
-Lorentz                   Programmer                                     60 IT                             Southlake                        
+LAST_NAME                 JOB_TITLE                           DEPARTMENT_ID DEPARTMENT_NAME                                                 
+------------------------- ----------------------------------- ------------- ------------------------------                                  
+Hunold                    Programmer                                     60 IT                                                              
+Ernst                     Programmer                                     60 IT                                                              
+Austin                    Programmer                                     60 IT                                                              
+Pataballa                 Programmer                                     60 IT                                                              
+Lorentz                   Programmer                                     60 IT                                                              
+
+
+LAST_NAME                 JOB_TITLE                           DEPARTMENT_ID DEPARTMENT_NAME                                                 
+------------------------- ----------------------------------- ------------- ------------------------------                                  
+Hunold                    Programmer                                     60 IT                                                              
+Ernst                     Programmer                                     60 IT                                                              
+Austin                    Programmer                                     60 IT                                                              
+Pataballa                 Programmer                                     60 IT                                                              
+Lorentz                   Programmer                                     60 IT                                                              
 

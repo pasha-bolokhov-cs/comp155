@@ -17,6 +17,7 @@ handle case (i.e. upper and lower case) when checking that the city
 is Southlake - use a function to force a proper case comparison. Give 
 the query in SQL:1999 and Oracle SQL. */
 
+-- SQL:1999
 SELECT e.last_name, 
        job_title,
        department_id, d.department_name
@@ -29,6 +30,15 @@ SELECT e.last_name,
        WHERE UPPER(l.city) LIKE 'SOUTHLAKE';
 
 -- Oracle SQL
+SELECT e.last_name,
+       j.job_title,
+       e.department_id, d.department_name
+       FROM employees e, departments d, jobs j, locations l
+       WHERE e.department_id = d.department_id
+       AND e.job_id = j.job_id
+       AND d.location_id = l.location_id
+       AND UPPER(l.city) LIKE 'SOUTHLAKE';
+
 
 /* SQL commands here */
 
