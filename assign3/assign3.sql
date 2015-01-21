@@ -1,5 +1,5 @@
 -- Run command: @assign3.sql
-set echo on
+set echo off
 SPOOL assign3.out
 
 /*********************************
@@ -17,9 +17,16 @@ handle case (i.e. upper and lower case) when checking that the city
 is Southlake - use a function to force a proper case comparison. Give 
 the query in SQL:1999 and Oracle SQL. */
 
--- SQL:1999
-
-/* SQL commands here */
+SELECT e.last_name, 
+       job_title,
+       department_id, d.department_name
+       FROM employees e INNER JOIN departments d
+       USING (department_id)
+       INNER JOIN jobs j
+       USING (job_id)
+       INNER JOIN locations l
+       ON (d.location_id = l.location_id)
+       WHERE UPPER(l.city) LIKE 'SOUTHLAKE';
 
 -- Oracle SQL
 
