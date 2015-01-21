@@ -6,8 +6,7 @@ SPOOL assign3.out
 Assignment - Lab 3 Solution
 By Pasha Bolokhov
 Lab Section: 1B
-Due: 
-Lab section 1B: due Tuesday Jan 27 @ 11:30 
+Due: Tuesday Jan 27 @ 11:30 
 Time spent on this lab: xx.x hours
 **********************************/
 
