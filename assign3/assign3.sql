@@ -18,9 +18,10 @@ is Southlake - use a function to force a proper case comparison. Give
 the query in SQL:1999 and Oracle SQL. */
 
 -- SQL:1999
-SELECT e.last_name, 
-       job_title,
-       department_id, d.department_name
+SELECT e.last_name AS "Last Name", 
+       job_title AS "Job",
+       department_id AS "Dept No", 
+       d.department_name AS "Department"
        FROM employees e INNER JOIN departments d
        USING (department_id)
        INNER JOIN jobs j
@@ -30,17 +31,15 @@ SELECT e.last_name,
        WHERE UPPER(l.city) LIKE 'SOUTHLAKE';
 
 -- Oracle SQL
-SELECT e.last_name,
-       j.job_title,
-       e.department_id, d.department_name
+SELECT e.last_name AS "Last Name",
+       j.job_title AS "Job",
+       e.department_id AS "Dept No", 
+       d.department_name AS "Department"
        FROM employees e, departments d, jobs j, locations l
        WHERE e.department_id = d.department_id
        AND e.job_id = j.job_id
        AND d.location_id = l.location_id
        AND UPPER(l.city) LIKE 'SOUTHLAKE';
-
-
-/* SQL commands here */
 
 
 /*** 2 ***/
@@ -52,12 +51,18 @@ Give the query in SQL:1999 and Oracle SQL. (Note: do not use IS NULL
 or IS NOT NULL in your query.) */
 
 -- SQL:1999
-
-/* SQL commands here */
+SELECT e.last_name AS "Last Name",
+       d.department_name AS "Department"
+       FROM employees e LEFT OUTER JOIN departments d
+       USING (department_id)
+       WHERE UPPER(e.last_name) LIKE 'G%';
 
 -- Oracle SQL
-
-/* SQL commands here */
+SELECT e.last_name AS "Last Name",
+       d.department_name AS "Department"
+       FROM employees e, departments d
+       WHERE (e.department_id = d.department_id(+))
+       AND UPPER(e.last_name) LIKE 'G%';
 
 
 /*** 3 ***/

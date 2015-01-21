@@ -1,18 +1,46 @@
 
-LAST_NAME                 JOB_TITLE                           DEPARTMENT_ID DEPARTMENT_NAME                                                 
-------------------------- ----------------------------------- ------------- ------------------------------                                  
-Hunold                    Programmer                                     60 IT                                                              
-Ernst                     Programmer                                     60 IT                                                              
-Austin                    Programmer                                     60 IT                                                              
-Pataballa                 Programmer                                     60 IT                                                              
-Lorentz                   Programmer                                     60 IT                                                              
+Last Name                 Job                                    Dept No Department                                                         
+------------------------- ----------------------------------- ---------- ------------------------------                                     
+Hunold                    Programmer                                  60 IT                                                                 
+Ernst                     Programmer                                  60 IT                                                                 
+Austin                    Programmer                                  60 IT                                                                 
+Pataballa                 Programmer                                  60 IT                                                                 
+Lorentz                   Programmer                                  60 IT                                                                 
 
 
-LAST_NAME                 JOB_TITLE                           DEPARTMENT_ID DEPARTMENT_NAME                                                 
-------------------------- ----------------------------------- ------------- ------------------------------                                  
-Hunold                    Programmer                                     60 IT                                                              
-Ernst                     Programmer                                     60 IT                                                              
-Austin                    Programmer                                     60 IT                                                              
-Pataballa                 Programmer                                     60 IT                                                              
-Lorentz                   Programmer                                     60 IT                                                              
+Last Name                 Job                                    Dept No Department                                                         
+------------------------- ----------------------------------- ---------- ------------------------------                                     
+Hunold                    Programmer                                  60 IT                                                                 
+Ernst                     Programmer                                  60 IT                                                                 
+Austin                    Programmer                                  60 IT                                                                 
+Pataballa                 Programmer                                  60 IT                                                                 
+Lorentz                   Programmer                                  60 IT                                                                 
+
+
+Last Name                 Department                                                                                                        
+------------------------- ------------------------------                                                                                    
+Grant                     Shipping                                                                                                          
+Gates                     Shipping                                                                                                          
+Geoni                     Shipping                                                                                                          
+Gee                       Shipping                                                                                                          
+Greene                    Sales                                                                                                             
+Greenberg                 Finance                                                                                                           
+Gietz                     Accounting                                                                                                        
+Grant                                                                                                                                       
+
+8 rows selected.
+
+
+Last Name                 Department                                                                                                        
+------------------------- ------------------------------                                                                                    
+Grant                     Shipping                                                                                                          
+Gates                     Shipping                                                                                                          
+Geoni                     Shipping                                                                                                          
+Gee                       Shipping                                                                                                          
+Greene                    Sales                                                                                                             
+Greenberg                 Finance                                                                                                           
+Gietz                     Accounting                                                                                                        
+Grant                                                                                                                                       
+
+8 rows selected.
 
