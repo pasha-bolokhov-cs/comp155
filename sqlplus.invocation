@@ -1,8 +1,11 @@
 #!/bin/bash
 # 
 
-# Find either 'sqlplus' or 'sqlplus64'
-SQLPLUS=sqlplus64
+# Find one of 'gqlplus', 'sqlplus' or 'sqlplus64'
+SQLPLUS=gqlplus
+if ! hash ${SQLPLUS} 2>/dev/null; then
+	SQLPLUS=sqlplus64
+fi
 if ! hash ${SQLPLUS} 2>/dev/null; then
 	SQLPLUS=sqlplus
 fi
