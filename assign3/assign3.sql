@@ -1,5 +1,5 @@
 -- Run command: @assign3.sql
-set echo off
+set echo on
 SPOOL assign3.out
 
 /*********************************
@@ -7,7 +7,7 @@ Assignment - Lab 3 Solution
 By Pasha Bolokhov
 Lab Section: 1B
 Due: Tuesday Jan 27 @ 11:30 
-Time spent on this lab: xx.x hours
+Time spent on this lab: 3:00 hours
 **********************************/
 
 /*** 1 ***/
@@ -74,11 +74,22 @@ Emp#, Manager, and Mgr#, respectively (note the use of upper and lower
 case). Give the query in SQL:1999 and Oracle SQL. */
 
 -- SQL:1999
-
-/* SQL commands here */
+SELECT e.last_name AS "Employee",
+       e.employee_id AS "Emp#",
+       m.last_name AS "Manager",
+       m.employee_id AS "Mgr#"
+       FROM employees e INNER JOIN employees m
+       ON (e.manager_id = m.employee_id)
+       WHERE UPPER(e.last_name) LIKE 'T%';
 
 -- Oracle SQL
+SELECT e.last_name AS "Employee",
+       e.employee_id AS "Emp#",
+       m.last_name AS "Manager",
+       m.employee_id AS "Mgr#"
+       FROM employees e, employees m
+       WHERE (e.manager_id = m.employee_id)
+       AND UPPER(e.last_name) LIKE 'T%';
 
-/* SQL commands here */
 
 SPOOL OFF

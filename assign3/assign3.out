@@ -1,3 +1,31 @@
+SQL> 
+SQL> /*********************************
+SQL> Assignment - Lab 3 Solution
+SQL> By Pasha Bolokhov
+SQL> Lab Section: 1B
+SQL> Due: Tuesday Jan 27 @ 11:30
+SQL> Time spent on this lab: 3:00 hours
+SQL> **********************************/
+SQL> 
+SQL> /*** 1 ***/
+SQL> /* Write a query to display the last name, job, department number, and
+SQL> department name for all employees who work in Southlake. Be sure to
+SQL> handle case (i.e. upper and lower case) when checking that the city
+SQL> is Southlake - use a function to force a proper case comparison. Give
+SQL> the query in SQL:1999 and Oracle SQL. */
+SQL> 
+SQL> -- SQL:1999
+SQL> SELECT e.last_name AS "Last Name",
+  2  	    job_title AS "Job",
+  3  	    department_id AS "Dept No",
+  4  	    d.department_name AS "Department"
+  5  	    FROM employees e INNER JOIN departments d
+  6  	    USING (department_id)
+  7  	    INNER JOIN jobs j
+  8  	    USING (job_id)
+  9  	    INNER JOIN locations l
+ 10  	    ON (d.location_id = l.location_id)
+ 11  	    WHERE UPPER(l.city) LIKE 'SOUTHLAKE';
 
 Last Name                 Job                                    Dept No Department                                                         
 ------------------------- ----------------------------------- ---------- ------------------------------                                     
@@ -7,6 +35,17 @@ Austin                    Programmer                                  60 IT
 Pataballa                 Programmer                                  60 IT                                                                 
 Lorentz                   Programmer                                  60 IT                                                                 
 
+SQL> 
+SQL> -- Oracle SQL
+SQL> SELECT e.last_name AS "Last Name",
+  2  	    j.job_title AS "Job",
+  3  	    e.department_id AS "Dept No",
+  4  	    d.department_name AS "Department"
+  5  	    FROM employees e, departments d, jobs j, locations l
+  6  	    WHERE e.department_id = d.department_id
+  7  	    AND e.job_id = j.job_id
+  8  	    AND d.location_id = l.location_id
+  9  	    AND UPPER(l.city) LIKE 'SOUTHLAKE';
 
 Last Name                 Job                                    Dept No Department                                                         
 ------------------------- ----------------------------------- ---------- ------------------------------                                     
@@ -16,6 +55,22 @@ Austin                    Programmer                                  60 IT
 Pataballa                 Programmer                                  60 IT                                                                 
 Lorentz                   Programmer                                  60 IT                                                                 
 
+SQL> 
+SQL> 
+SQL> /*** 2 ***/
+SQL> /* Write a query that will list all of the employees (last names),
+SQL> whose last name starts with 'G' (be sure to handle case - use a
+SQL> function), and the departments (give the name) to which they belong.
+SQL> Include all employees who have not yet been assigned to any department.
+SQL> Give the query in SQL:1999 and Oracle SQL. (Note: do not use IS NULL
+SQL> or IS NOT NULL in your query.) */
+SQL> 
+SQL> -- SQL:1999
+SQL> SELECT e.last_name AS "Last Name",
+  2  	    d.department_name AS "Department"
+  3  	    FROM employees e LEFT OUTER JOIN departments d
+  4  	    USING (department_id)
+  5  	    WHERE UPPER(e.last_name) LIKE 'G%';
 
 Last Name                 Department                                                                                                        
 ------------------------- ------------------------------                                                                                    
@@ -30,6 +85,13 @@ Grant
 
 8 rows selected.
 
+SQL> 
+SQL> -- Oracle SQL
+SQL> SELECT e.last_name AS "Last Name",
+  2  	    d.department_name AS "Department"
+  3  	    FROM employees e, departments d
+  4  	    WHERE (e.department_id = d.department_id(+))
+  5  	    AND UPPER(e.last_name) LIKE 'G%';
 
 Last Name                 Department                                                                                                        
 ------------------------- ------------------------------                                                                                    
@@ -44,3 +106,51 @@ Grant
 
 8 rows selected.
 
+SQL> 
+SQL> 
+SQL> /*** 3 ***/
+SQL> /* Display the employee last name and employee number along with their
+SQL> manager's last name and manager number (in other words the manager's
+SQL> employee id) for all employees whose last name begins with 'T' (be
+SQL> sure to handle case - use a function). Label the columns Employee,
+SQL> Emp#, Manager, and Mgr#, respectively (note the use of upper and lower
+SQL> case). Give the query in SQL:1999 and Oracle SQL. */
+SQL> 
+SQL> -- SQL:1999
+SQL> SELECT e.last_name AS "Employee",
+  2  	    e.employee_id AS "Emp#",
+  3  	    m.last_name AS "Manager",
+  4  	    m.employee_id AS "Mgr#"
+  5  	    FROM employees e INNER JOIN employees m
+  6  	    ON (e.manager_id = m.employee_id)
+  7  	    WHERE UPPER(e.last_name) LIKE 'T%';
+
+Employee                        Emp# Manager                         Mgr#                                                                   
+------------------------- ---------- ------------------------- ----------                                                                   
+Tobias                           117 Raphaely                         114                                                                   
+Tuvault                          155 Russell                          145                                                                   
+Tucker                           150 Russell                          145                                                                   
+Taylor                           180 Weiss                            120                                                                   
+Taylor                           176 Zlotkey                          149                                                                   
+
+SQL> 
+SQL> -- Oracle SQL
+SQL> SELECT e.last_name AS "Employee",
+  2  	    e.employee_id AS "Emp#",
+  3  	    m.last_name AS "Manager",
+  4  	    m.employee_id AS "Mgr#"
+  5  	    FROM employees e, employees m
+  6  	    WHERE (e.manager_id = m.employee_id)
+  7  	    AND UPPER(e.last_name) LIKE 'T%';
+
+Employee                        Emp# Manager                         Mgr#                                                                   
+------------------------- ---------- ------------------------- ----------                                                                   
+Tobias                           117 Raphaely                         114                                                                   
+Tuvault                          155 Russell                          145                                                                   
+Tucker                           150 Russell                          145                                                                   
+Taylor                           180 Weiss                            120                                                                   
+Taylor                           176 Zlotkey                          149                                                                   
+
+SQL> 
+SQL> 
+SQL> SPOOL OFF
