@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab03.html?ou=83589 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":513,"ttGuid":"AE25A74D4E913F7E","agent":"js-agent.newrelic.com/nr-476.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 2</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+       color:#036;
+}
+h1 {text-align:center;
+}
+strong { font-family:"Courier New", Courier, monospace;
+         color:#03F;
+}
+li { margin-bottom: 7px; }
+</style>
+<script type="text/javascript" src="./assign3_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign3_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 3</h1>
+<h1>MULTIPLE TABLE QUERIES - Joins</h1>
+<h2>Due</h2>
+<p>At the <b>start</b> of your next scheduled lab on this same day (and time) of the week. In other words:</p>
+<blockquote>Lab section 1A: due Tuesday Jan 27 @ 1:00 <br> Lab section 1B: due Tuesday Jan 27 @ 11:30 <br> Lab section 2A: due Monday Jan 26 @ 8:30 <br> Lab section 2B: due Monday Jan 26 @ 12:30</blockquote>
+<h2>Prerequisites</h2>
+<p>Read Chapter 2, pages 45-61.</p>
+<h2>Objectives</h2>
+<ul>
+<li>Write <strong>SELECT</strong> statements to access <b>data from more than one table</b> using equality and nonequality joins.</li>
+<li>View data that generally does not meet a join condition by using <b>outer joins</b></li>
+<li>Join a table to itself using a <b>self-join</b></li>
+</ul>
+<h2>Do</h2>
+<ul>
+<li>Work your way through the various examples on pages 46-61 in the Jason Price textbook.</li>
+<li>
+<blockquote>
+<ul>
+<li>You do not have the Store schema tables installed on your schema. The Store schema tables are available in the <strong>STOREDB</strong> schema.</li>
+<li>To use the Store Schema tables in your textbook examples, you need to put <strong>STOREDB.</strong> (dot) in front of the table names. For example, to run the command in the middle of page 34 you would write: <br><br> <strong> SELECT price * 2 DOUBLE_PRICE <br> FROM <span style="color: blue;">storedb.</span>products; </strong> <br><br> Note the "storedb" can be either upper or lower case.</li>
+<li>You will be introduced to the SQL:1992 syntax in this chapter. It is important to learn the new syntax, but also to be aware that not many local Oracle installations are yet using the new syntax. A lot of the production work is still being done using previous versions of Oracle which will not accept the SQL:1992 syntax. As a result, you should be sure to pay close attention to the old syntax as well as the new.</li>
+<li>In the Oracle SQL courseware, the "new" syntax is referred to as SQL:1999. Since many people working with Oracle have taken one of their courses, we use the SQL:1999 label in the labs and lectures. However, your book is correct in referring to this syntax as SQL:92 since the commands covered by the book were introduced in 1992.</li>
+</ul>
+</blockquote>
+</li>
+<li>Remember to exit the SQL*Plus session at the end by issuing the SQL*Plus command: <strong>exit</strong>.</li>
+</ul>
+<h2>Assignment</h2>
+<ul>
+<li>For the following, you will need to use the Human Resource tables. These were created using the "HR_Start.sql" script from lab 1. You will be required to SPOOL the queries and results to a file so that you can print them to hand in. See pages 69-70 in your text or the Notes: section at the end of this lab. These questions do not use the <strong>STOREDB</strong> tables used in the textbook examples, only the tables you installed from lab 1 (e.g. the <strong>Employees</strong> is one of the tables). Don't forget to use the <strong>DESC Employees</strong> statement in SQL*Plus to view the structure of the <strong>Employees</strong>table. The SQL command
+<div style="padding: 20px; margin: 20px; border: 2px solid coral; border-radius: 15px; -moz-border-radius: 15px;"><strong>SELECT table_name <br> FROM user_tables;</strong></div>
+displays a list of all the tables currently in your schema.</li>
+<li>Here is the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/HR_ERD.png?_&d2lSessionVal=9qPOz7jHlU22oEVnT3zJ3O0vS&ou=83589" target="_blank">ERD</a> (entity relationship diagram) for the Human Resource tables. You can also find it as a link off the main Lecture/Lab page. You will be required to SPOOL the queries and results to a file so that you can print them to hand in. To give you practice with the SQL:1999 and the older Oracle SQL (which will be referred to as "Oracle SQL" for purposes of this course), you are required to write each query below twice, once in SQL:1999 and once in Oracle SQL.</li>
+<li>In this assignment, and all others to follows, think of the Human Resource data you loaded as just a test data set. Imagine the real, production data set is comprised of several million rows, and so your command must work on the test and production data sets. In other words, you won't be able to see all the data and thus adapt your command accordingly. This is particularly true for dealing with case. If a name happens to be in upper and lower case in the test data set, don't assume it will always be that way in the production data set. Assume the worst. Write your command to manage the worst. Also, do not look up data items to avoid writing a join. Remember those millions and millions of rows in the production data set. It would take you far longer to look up the desired data item than to just write the join.</li>
+</ul>
+<ol>
+<li>Write a query to display the last name, job, department number, and department name for all employees who work in Southlake. Be sure to handle case (i.e. upper and lower case) when checking that the city is Southlake - use a function to force a proper case comparison. Give the query in SQL:1999 and Oracle SQL.</li>
+<li>Write a query that will list all of the employees (last names), whose last name starts with 'G' (be sure to handle case - use a function), and the departments (give the name) to which they belong. Include all employees who have not yet been assigned to any department. Give the query in SQL:1999 and Oracle SQL. (Note: do <span style="text-decoration: underline;"><b>not</b> </span>use IS NULL or IS NOT NULL in your query.)</li>
+<li>Display the employee last name and employee number along with their manager's last name and manager number (in other words the manager's employee id) for all employees whose last name begins with 'T' (be sure to handle case - use a function).&nbsp; Label the columns Employee, Emp#, Manager, and Mgr#, respectively (note the use of upper and lower case). Give the query in SQL:1999 and Oracle SQL.</li>
+</ol>
+<p>Be sure to use proper formatting in your SQL statements. Your <strong>SELECT</strong> should be on one line, your <strong>FROM</strong> on another and so on. Each clause should start a new line. You will lose marks if you do not use proper formatting to your SQL statements!</p>
+<p>Also, be sure to clearly indicate on the hard copy you hand in which query and result goes with which assignment number.</p>
+<div style="padding: 20px; margin: 20px; border: 2px solid coral; border-radius: 15px; -moz-border-radius: 15px;">
+<p>For example, this sample equijoin <strong>SELECT</strong> query is properly formatted:</p>
+<blockquote><strong>SELECT e.last_name AS "Last Name",<br>&nbsp; &nbsp;e.salary AS "Monthly Salary",<br> &nbsp; &nbsp;d.department_name AS "Department Name"<br> FROM employees e,<br>&nbsp; &nbsp;departments d<br>WHERE d.department_id=e.department_id<br>&nbsp; &nbsp;AND e.last_name = 'SMITH'<br>&nbsp; &nbsp;AND d.salary &gt; 1000<br>ORDER BY d.salary;</strong></blockquote>
+<p>This sample <strong>SELECT</strong> query is not properly formatted:</p>
+<blockquote><strong> SELECT last_name,salary from employees e, departments d where e.department_id=d.department_id and d.last_name='SMITH' AND d.salary &gt; 1000 ORDER BY salary; </strong></blockquote>
+</div>
+<h2>Hand-In</h2>
+<ul>
+<li>Hand in a printed copy of your <strong>SELECT</strong> statements and the results.</li>
+<li>Ensure your name is on all pages that you hand in.</li>
+<li>Remember to turn <strong>SET ECHO ON</strong> to get your SQL statements to appear on the spooled file.</li>
+</ul>
+<h2>Notes:</h2>
+<p>As with Lab 2, I am <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab3_SolCmd.sql?_&d2lSessionVal=9qPOz7jHlU22oEVnT3zJ3O0vS&ou=83589" target="_blank">including a solution template script</a> that you can use with this lab. Save the script file as <strong>Lab3_SolCmd.sql</strong> to your comp 155 lab solutions folder. Then update the first and third lines in that file to indicate the correct folder location (the template script assumes a default folder location of H:\comp155\labsol\). Edit the script with your name and lab section. Edit the script with your <strong>SELECT</strong> statements as indicated. Copy the first line of the script file starting at the @ sign to the end of the line, then paste directly into your SQL*Plus window, press enter to run the script. The <strong>SPOOL</strong> commands are already set up in the script file so the output from running the script will appear in a text file indicated on the script's third line. Do not edit the output text file...just edit the script file and run that.</p>
+<script src="./assign3_files/nr-476.min.js"></script><script type="text/javascript" src="./assign3_files/9efc9e456b"></script></body></html>

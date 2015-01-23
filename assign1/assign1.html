@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab01.html?ou=83589 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":274,"ttGuid":"3B7A4755C83EE8B","agent":"js-agent.newrelic.com/nr-476.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 1</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+       color:#036;
+}
+h1 {text-align:center;
+}
+strong { font-family:"Courier New", Courier, monospace;
+         color:#03F;
+}
+li { margin-bottom: 7px; }
+</style>
+<script type="text/javascript" src="./assign1_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign1_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>BASIC SQL SELECT Statements</h1>
+<h1>Getting Started</h1>
+<h2>Due</h2>
+<p>Nothing is due for this lab.</p>
+<h2>Prerequisites</h2>
+<p>Read Chapter 1, pages 2-20 (very top only).</p>
+<p>Read about data dictionaries in the online Oracle documentation&nbsp; <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28318/datadict.htm#CNCPT1211" target="_blank">link.</a></p>
+<h2>Objectives</h2>
+<ul>
+<li>Introduction to SQL</li>
+<li>Use SQL*Plus</li>
+<li>Create databases needed for this course</li>
+<li>Understand the Data Dictionary views</li>
+</ul>
+<h2>Introduction</h2>
+<p>When first faced with Oracle, most students wonder which physical file contains the database. Unlike Microsoft Access and other such products, Oracle does not store the database files in a physical file. You cannot point to a single file on the hard drive and say that that is the database. Instead, Oracle stores information about the database in a series of tables or data dictionary views. If you want to find out what tables you own, you need to look in a <strong>user_table</strong> table. If you want information about indexes, you must look in the <strong>user_indexes</strong> table and so on. In this lab you will look at some of the user tables.</p>
+<h2>Do</h2>
+<h4>Part 1: An Introduction to Oracle Databases</h4>
+<blockquote>
+<h4>Chapter 1:</h4>
+<ul>
+<li>Review the material in your lab text on pages 2 - 20.</li>
+<li>You will be running the script in your own schema so you will not be required to set up the user as described on page 11. In fact, you cannot run these commands because you need special privileges to create a user and your account has not been assigned that permission.</li>
+<li>The Store schema has been set up for you to use under the schema name <strong>STOREDB</strong>. Your account has been assigned read privilege to this schema so you can issue SELECT SQL statements against those tables there. This will enable you to try most of the commands provided in your Jason Price book.</li>
+</ul>
+</blockquote>
+<blockquote>
+<h4>Starting Oracle:</h4>
+<ul>
+<li>You will be using the "instant client" to connect to the Oracle database server. Follow the instructions below to connect to it.</li>
+<li><b>How to connect to an Oracle database using SQL*Plus</b>
+<ul>
+<li>A SQL*Plus icon should appear on your desktop. Double-click the icon to launch an Oracle application that can connect to a database. (Note: Do NOT use SQL Data Modeler or Developer.) If you don't have the SQL*Plus icon, or if it doesn't work correctly, you can create your own icon/shortcut to SQL*Plus. See the Note at the end of this lab.</li>
+<li>To logon, you will be using the last 12 letters of your last name (with any spaces removed) for the User Name: and your student id (minus the C and preceding zeros) for the Password. The logon will be as follows:<br><br> Enter user-name: <i>UserName@caleb</i> (Note: "caleb" is the name of the database. You can have spaces around the "@" symbol if you wish.)<br> Enter password: <i>Password</i> <br><br> Your logon will look like: <br><br><img src="./assign1_files/LoginWindow75.png" alt="SQL*Plus login window" title="SQL*Plus login window"><br> You will now be logged into your own user account.<br><br> Note: If you have problems, check with your instructor. Your account may not have been created yet, or may be slightly different due to a conflict with a pre-existing user.</li>
+<li>If you see the prompt <strong>SQL&gt;</strong> appear in the SQL*Plus window, you have successfully connected.</li>
+</ul>
+</li>
+<li>Once you have successfully connected to the database, you can continue with Part 2 of the lab.</li>
+</ul>
+</blockquote>
+<h4>Part 2: Loading the database</h4>
+<p>Now that you have connected, it is time to build your database. You will be using the "human resources" database from Oracle in this course. To load this database into your schema follow these instructions:</p>
+<ul>
+<li>First copy the database create and load files from the Comp 155 website to your H: drive. The create and load files are found at the bottom of the Lecture/Labs page. You will want the Human Resources files (If you are using the Microsoft Internet Explorer browser, be sure to right-click and "Save Target As", otherwise you will get some odd HTML codes added.) [Note: We are loading the Human Resource tables instead of Store Schema tables of the book because (a) the tables have more rows, and (b) these are the tables used by the Oracle certification exams.]</li>
+<li>The nine (9) Human Resources schema files have been zipped together. You will need to unzip them before proceeding with the next step.</li>
+<li>Once these files have been unzipped on your H: drive (for example in a directory called "comp155") you are ready to use them to create and populate the databases in your account.</li>
+<li>Before you can run the scripts, you will need to modify the script that creates the Human Resource schema. Open the file called HR_Start.sql in a text editor such as Notepad or Textpad (do NOT use Word or any word processor that will add formatting). Change the text that says "&lt;path here&gt;<path here="">" to the path where you have placed all the files. For example, if you have all the files on your H: drive in a directory called "comp155" you should change <path here=""> to H:\comp155\. The first line in HR_Start.sql would look like <br><br> <strong>@H:\comp155\hr_cre.sql</strong><br><br> and so on... </path></path></li>
+<li>Switch back to your SQL*Plus window</li>
+<li>Now load the databases using the following commands (assuming your files are in a directory called "comp155" on your H: drive): <br><br> <strong>SQL&gt; @H:\comp155\HR_Start.sql</strong> <br><br> You should tables being created and data loaded. Lots of commands should be scrolling past on your SQL*Plus window.<br><br> NOTE: If you see and obvious error messages scroll by, be sure to contact your instructor for help.</li>
+<li>You are now ready to proceed with Part 3 of the lab.</li>
+</ul>
+<h4>Part 3: Data Dictionary</h4>
+<ul>
+<li>To find what tables you have just loaded, enter the following SQL command:
+<blockquote>
+<p><strong>SELECT table_name<br>FROM user_tables;</strong></p>
+</blockquote>
+</li>
+<li>If you would like to know the structure of one of the tables, e.g. departments, enter the following SQL*Plus command:
+<blockquote>
+<p><strong>DESC departments</strong></p>
+</blockquote>
+</li>
+<li>To view the contents (data) of the <strong>departments</strong>table, issue the following SQL command:
+<blockquote>
+<p><strong>SELECT * <br> FROM departments; </strong></p>
+</blockquote>
+</li>
+<li>There are lots of other tables with interesting information for the user. Among these are:
+<blockquote><strong>user_catalog <br> user_constraints <br> user_cons_columns <br> user_indexes <br> user_ind_columns <br> user_synonyms <br> user_tab_columns <br> user_col_comments <br> user_views</strong></blockquote>
+Use the <strong>DESC</strong> command and the <strong>SELECT</strong> &lt;attributes&gt; <strong>FROM </strong>&lt;table_name&gt; command to view the structure and contents of each of these tables in your schema.
+<blockquote>
+<p>For example: <br><br> <strong>DESC user_constraints </strong><br><br> and then <br><br> <strong>SELECT owner, constraint_name, constraint_type, table_name <br> FROM user_constraints; </strong></p>
+</blockquote>
+Don't worry if they are a bit confusing at this stage. You will learn more about the value of these tables during the course. For your information, your tables don't have entries for all these user tables.</li>
+<li>If you know how to access the information in these data dictionary tables, you will be able to better manage your labs throughout this course. Spend some time practicing with these different data dictionary tables.</li>
+<li>Oracle also has a special dummy table called <strong>DUAL</strong> which is mainly used to execute SQL statements when there is no base table needed for the query to execute successfully. It can be handy for getting system information or doing some basic arithmetic.</li>
+<li>To see how the <strong>DUAL&nbsp;</strong>table operates within a SQL command, try the following commands:
+<blockquote>
+<p><strong> SELECT sysdate, user <br> FROM dual;<br><br> SELECT 21-5 <br> FROM dual;<br><br> SELECT 21-5 + 6 <br> FROM dual; </strong></p>
+</blockquote>
+</li>
+</ul>
+<h2>Demonstrate</h2>
+<ul>
+<li>You should confirm with your instructor that you have completed all parts of the lab.</li>
+</ul>
+<h2>Hand-In</h2>
+<ul>
+<li>Nothing to hand-in for this lab.</li>
+</ul>
+<h2>Note</h2>
+<ul>
+<li>If you want to install SQL*Plus on your Windows laptop, go to <a href="http://hal.cs.camosun.bc.ca/~langs/comp155-utils" target="_blank">http://hal.cs.camosun.bc.ca/~langs/comp155-utils</a>&nbsp;and download the two instant client zip files, extract them to the same folder location, then copy the tnsnames.ora file (from that web location) into that folder location.<br><br></li>
+<li>If you wish to create a shortcut to SQL*Plus on your desktop, you can do the following steps:
+<ul>
+<li>Using Windows Explorer, select "Computer", then "Local Disk (C:)".</li>
+<li>Find the "Oracle" directory, and then the "instantclient_11_2" directory. (Ignore the two .zip files).</li>
+<li>Scroll down until you see the "sqlplus.exe" file.</li>
+<li>Right-click on the file name, and then select "Create shortcut".</li>
+<li>Drag your new shortcut to the desktop. The SQL*Plus shortcut will now be available on your desktop for all your future work.</li>
+<li>You can now access SQL*Plus by double-clicking on the shortcut on your desktop.</li>
+</ul>
+</li>
+</ul>
+
+<script src="./assign1_files/nr-476.min.js"></script><script type="text/javascript" src="./assign1_files/9efc9e456b"></script></body></html>

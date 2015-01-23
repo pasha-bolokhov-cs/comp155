@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab04.html?ou=83589 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":671,"ttGuid":"DA4807CAA7768CF9","agent":"js-agent.newrelic.com/nr-476.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 4</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+       color:#036;
+}
+h1 {text-align:center;
+}
+strong { font-family:"Courier New", Courier, monospace;
+         color:#03F;
+}
+li { margin-bottom: 7px; }
+pre { font-family:"Courier New", Courier, monospace;
+       color:gray;
+    }
+</style>
+<script type="text/javascript" src="./assign4_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign4_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 4</h1>
+<h1>SQL*Plus Overview + Joins</h1>
+<h2>Due</h2>
+<p>At the <b>start</b> of your next scheduled lab at the same day and time. In other words:</p>
+<blockquote>
+<p>Lab section 1A: due Thursday, Jan 29 1:00 pm<br> Lab section 1B: due Thursday, Jan 29 11:30 am<br> Lab section 2A: due Thursday, Jan 29 8:30 am<br> Lab section 2B: due Wednesday, Jan 28 12:30 pm</p>
+</blockquote>
+<h2>Prerequisites</h2>
+<p>Read Chapter 3, pages 64-87.</p>
+<h2>Objectives</h2>
+<ul>
+<li>Distinguish between SQL commands and SQL*Plus commands</li>
+<li>Create and execute script files</li>
+<li>Produce readable output with SQL*Plus</li>
+<li>More practice with joins</li>
+</ul>
+<h2>Do</h2>
+<p>There are a lot of pages in this chapter, but don't worry. You have already done a fair number of the tasks. Some comments on this chapter follows:</p>
+<blockquote>
+<ul>
+<li>Pages 65-66. Editing SQL Statements. While this editor is available with all installations of SQL*Plus, almost no one uses it. Lots of other options. Probably the best option for this course is an ASCII editor such as Textpad or Notepad++. Type up all your commands in the editor and then cut and paste them into SQL*Plus. This way, you can also save them for later.</li>
+<li>Pages 66-70. Saving, Retrieving and Running Files. This is a very useful section, particularly the running of files part. You will probably find it easier to set up your lab assignments with all the commands in a file. You can then run that file to get your solution. This is how I prepare the solutions to all the labs. See the solution for the previous lab to get an idea of how I set up my script.</li>
+<li>Pages 70-73. Formatting. Using the COLUMN formatting command makes it easier to produce nice output to hand-in. Of course, in the great world this is only used for very quick and dirty reports. For a proper report, something like Oracle Reports is used.</li>
+</ul>
+</blockquote>
+<h2>Assignment</h2>
+<p>In this assignment you will be writing your own script, rather than using one provided for you. You can use one of the provided scripts to help you, but you will have to add some SQL*Plus commands as a practice.</p>
+<p>For the following, you will need to use the Human Resource tables (you can see an <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/HR_ERD.png?_&d2lSessionVal=9qPOz7jHlU22oEVnT3zJ3O0vS&ou=83589" target="_blank">ERD for the Human Resource tables here</a> or as a link off the main Lecture/Lab page). You will be required to demonstrate your script to your instructor as well as hand in a hard copy.</p>
+<ol>
+<li>The HR department wants to determine the names and hire dates for all employees who were hired BEFORE their managers, along with their managers' names and hire dates. Write a query that will list all of the names (first and last) plus the hire date of the employees and their managers who meet the requirement. Order the results in descending order by the last name of the employee. To show the HR department a sample of the results, limit the result set to employees whose last name starts with an 'S' or greater (e.g. also a 'T', 'U', 'V' etc) Be sure to handle case - use a function. Use <b>either</b> SQL:1999 or Oracle SQL - your choice. (Hint: This is a variation on #3 in Lab 3.) This command will be included in the script you write in number 2 below.</li>
+<li>Write a script that will do the following:</li>
+</ol>
+<blockquote>
+<ul>
+<li>Include the query you produced in #1 above.</li>
+<li>Use column aliases in your SELECT statement to produce nice column labels like those in the example below. (Note the use of upper and lower case and spaces.) Do<b> NOT </b>use the SQL*Plus COLUMN command to create the labels.</li>
+<li>Restrict the "Employee Name" and "Manager Name" column to 20 characters (use a SQL*Plus command)</li>
+<li>Set an appropriate pagesize and linesize. (use SQL*Plus commands)</li>
+<li>Include the SPOOL command so that the spooled output will automatically go to a file. (use a SQL*Plus command)</li>
+<li>The output should look similar to the table below (only the names starting with an S are given as an example):</li>
+</ul>
+</blockquote>
+<pre>Employee Name        Hire Date Manager Name         Hire Date 
+-------------------- --------- -------------------- --------- 
+Nandita Sarchand     27-JAN-96 Adam Fripp           10-APR-97 
+William Smith        23-FEB-99 Gerald Cambrault     15-OCT-99 
+Patrick Sully        04-MAR-96 Karen Partners       05-JAN-97 
+	</pre>
+<blockquote>
+<ul>
+<li>Make sure all your commands are echoed to the output file - that includes the SQL*Plus commands such as COLUMN.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>Run the script you produced above in SQL*Plus. Print out the resulting file to hand in.</li>
+</ol>
+<p>Be sure to use proper formatting in your SQL statements.</p>
+<h2>Hand-In</h2>
+<ul>
+<li>Demonstrate your SQL*Plus script to your instructor. Hand in a hard copy of your spooled results file from your SQL*Plus script.</li>
+<li>Be sure that your name is on all pages that you hand in.</li>
+<li><b>NOTE:</b> You will only get half marks for this lab if you fail to demonstrate your script.</li>
+</ul>
+<script src="./assign4_files/nr-476.min.js"></script><script type="text/javascript" src="./assign4_files/9efc9e456b"></script></body></html>

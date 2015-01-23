@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab07.html?ou=83589 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":578,"ttGuid":"80BAF9E0E82F49BA","agent":"js-agent.newrelic.com/nr-476.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 6</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+       color:#036;
+}
+h1 {text-align:center;
+}
+strong { font-family:"Courier New", Courier, monospace;
+         color:#03F;
+}
+li { margin-bottom: 7px; }
+pre { font-family:"Courier New", Courier, monospace;
+       color:gray;
+    }
+</style>
+<script type="text/javascript" src="./assign7_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign7_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 7</h1>
+<h1>Processing Dates and Times</h1>
+<h2>Due</h2>
+<p>At the <b>start</b> of your next scheduled lab at the same day and time. In other words:</p>
+<blockquote>
+<p>Lab section 1A: due Thursday, Feb 13th @ 1:30pm<br> Lab section 1B: due Thursday, Feb 13th @ 3:00pm<br> Lab section 2A: due Wednesday, Feb 12th @ 3:30pm<br> Lab section 2B: due Wednesday, Feb 12th @ 1:30pm</p>
+</blockquote>
+<h2>Prerequisites</h2>
+<p>Read Chapter 5, pages 130-146.</p>
+<p>The section on Time Zones, Timestamps and Intervals (pg 146 - 165) is useful if you are working in an Oracle shop with at least Oracle 9i. It is a good section to read but you will not be tested on it.</p>
+<h2>Objectives</h2>
+<ul>
+<li>Use date functions.</li>
+<li>Examine methods for storing and processing dates and times.</li>
+</ul>
+<h2>Do</h2>
+<p>Work your way through the various examples on pages 102-120. Remember that all the Store Schema files are in the STOREDB schema.</p>
+<p>Read the section on time zones and intervals on pages 120-138.</p>
+<h2>Assignment</h2>
+<p>For the first two questions, you will need to use the Human Resource tables. For the third question you will use a table called <strong>PEOPLE</strong> in the <strong>COMP155</strong> schema. You will be required to SPOOL the queries and results to a file so that you can print them to hand in.</p>
+<ol>
+<li>For each employee whose last name begins with an P, display the employee's last name and calculate the number of months between today and the date the employee was hired. Label the column MONTHS_WORKED (upper case). Order your results by the number of months employed. Round the number of months to the closest whole number.</li>
+<li>Your company is considering providing a special lunch every month for all employees who have worked for the company at least 10 years. They will be invited to the lunch in the month in which they were hired. To get an idea of how many employees might come to a special lunch each month over the calendar year, your boss has asked you to write a query to return the number of employees who will have worked for the company at least 10 years divided into groupings by month. A sample report is given below. Because your boss will want to run this query each year, you are instructed to avoid hard coding in any specific dates. Rather you should run your query using SYSDATE and handle the fact that the query could be run at any point in the year. In other words, if you run the query on July 1st but some of the employees won't reach their 10 year anniversary month until October, they should still be included in your results. In other words, their anniversary is within the calendar year. (Note: Be sure the months are listed in calendar order <b>NOT</b> in alphabetical order.) Example (numbers may not be accurate):<br>
+<pre><strong>      
+                     Number
+  Month            of Hires
+  -----------  ------------
+  January                 4
+  February                2
+  March                   1
+  May                     4
+  etc...
+</strong></pre>
+</li>
+<li>Your company maintains a separate database on employee personal details. This includes some information on their families. This database is kept in a schema called COMP155. Your boss has told you that the company plans on having a really big Christmas party this year on December 3rd complete with a bar. Your boss wants to know how many people might come who are of legal drinking age in British Columbia (in other words, are at least 19 as of December 3rd). You need to write a query to count the number of people in the people database who are at least 19 by that date. You will use the PEOPLE table in the COMP155 schema for your query. Your report should produce a line similar to the following (note upper and lower case): <br><br> <strong> The number of people who will be 19 or older as of December 3rd, 2015 is: &lt;give the number&gt; </strong></li>
+<li>
+<p>Be sure to use proper formatting in your SQL statements. Also, be sure to clearly indicate on the hard copy you hand in which query and result goes with which assignment number.</p>
+</li>
+</ol>
+<p>The Oracle documentation on the Datetime functions is available at:<br> <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions001.htm#sthref928" target="_blank"> https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions001.htm#sthref928</a></p>
+<h2>Hand-In</h2>
+<ul>
+<li>Hand in a hard copy of your spooled results file from your SQL*Plus script.</li>
+<li>Be sure that your name is on all pages that you hand in.</li>
+</ul>
+<h2>Notes</h2>
+<p>As with previous labs here is a script solution <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab7_SolCmd.sql?_&d2lSessionVal=9qPOz7jHlU22oEVnT3zJ3O0vS&ou=83589" target="_blank">template</a> for you to use.</p>
+<blockquote>
+<p>For your information, the structure of the COMP155.PEOPLE table is as follows:</p>
+</blockquote>
+<pre>SQL&gt; DESC comp155.people
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PERSON_ID                                 NOT NULL NUMBER
+ CURRENT_LAST_NAME                                  VARCHAR2(40)
+ CURRENT_FIRST_NAME                                 VARCHAR2(40)
+ CURRENT_MIDDLE_NAME                                VARCHAR2(40)
+ CURRENT_PERSONAL_TITLE                             VARCHAR2(40)
+ BIRTH_DATE                                         DATE
+ GENDER                                             VARCHAR2(1)
+ MARITAL_STATUS                                     VARCHAR2(1)
+ SOCIAL_INSURANCE_NUMBER                            NUMBER
+ INCOME                                             NUMBER(9,2)
+ COMMENTS                                           VARCHAR2(255)
+ CREATE_TIMESTAMP                          NOT NULL DATE
+ CREATE_USERID                             NOT NULL VARCHAR2(30)
+ UPDATE_TIMESTAMP                          NOT NULL DATE
+ UPDATE_USERID                             NOT NULL VARCHAR2(30)
+</pre>
+<p></p>
+<script src="./assign7_files/nr-476.min.js"></script><script type="text/javascript" src="./assign7_files/9efc9e456b"></script></body></html>
