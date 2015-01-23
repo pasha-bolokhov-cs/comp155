@@ -1,0 +1,38 @@
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 4 Solution
+SQL>  By Pasha Bolokhov
+SQL>  Lab Section: 1B
+SQL>  Due: Tuesday Jan 29 @ 11:30
+SQL>  Time spent on this lab: 1:30 hours
+SQL> **********************************/
+SQL> 
+SQL> SET LINESIZE 140
+SQL> SET PAGESIZE 80
+SQL> COLUMN "Employee Name" FORMAT A20
+SQL> COLUMN "Manager Name" FORMAT A20
+SQL> SELECT e.first_name || ' ' || e.last_name AS "Employee Name",
+  2  	    e.hire_date AS "Hire Date",
+  3  	    m.first_name || ' ' || m.last_name AS "Manager Name",
+  4  	    m.hire_date AS "Hire Date"
+  5  FROM employees e
+  6  INNER JOIN employees m
+  7  ON (e.manager_id = m.employee_id)
+  8  WHERE (e.hire_date < m.hire_date)
+  9  AND (UPPER(SUBSTR(e.last_name, 1, 1)) >= 'S')
+ 10  ORDER BY e.last_name DESC;
+
+Employee Name        Hire Date Manager Name         Hire Date                                                                               
+-------------------- --------- -------------------- ---------                                                                               
+Jennifer Whalen      17-SEP-87 Neena Kochhar        21-SEP-89                                                                               
+Alana Walsh          24-APR-98 Kevin Mourgos        16-NOV-99                                                                               
+Peter Vargas         09-JUL-98 Kevin Mourgos        16-NOV-99                                                                               
+Jonathon Taylor      24-MAR-98 Eleni Zlotkey        29-JAN-00                                                                               
+Patrick Sully        04-MAR-96 Karen Partners       05-JAN-97                                                                               
+William Smith        23-FEB-99 Gerald Cambrault     15-OCT-99                                                                               
+Nandita Sarchand     27-JAN-96 Adam Fripp           10-APR-97                                                                               
+
+7 rows selected.
+
+SQL> 
+SQL> SPOOL OFF
