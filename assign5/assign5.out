@@ -63,13 +63,31 @@ SQL> for which they work. He is sure once he sees the name and department he
 SQL> will remember the person. Make sure you use a function to check for the sound
 SQL> of the name. */
 SQL> 
-SQL> -- Traditional
-SQL> 
-SQL> /* SQL command here */
+SQL> -- Traditional SQL
+SQL> SELECT e.first_name AS "First Name", e.last_name AS "Last Name",
+  2  	    d.department_name AS "Department"
+  3  	    FROM employees e, departments d
+  4  	    WHERE e.department_id = d.department_id
+  5  	    AND SOUNDEX(last_name) = SOUNDEX('Olson');
+
+First Name           Last Name                 Department                       
+-------------------- ------------------------- ------------------------------   
+Christopher          Olsen                     Sales                            
+TJ                   Olson                     Shipping                         
+
 SQL> 
 SQL> -- SQL/92
-SQL> 
-SQL> /* SQL command here */
+SQL> SELECT e.first_name AS "First Name", e.last_name AS "Last Name",
+  2  	    d.department_name AS "Department"
+  3  	    FROM employees e INNER JOIN departments d
+  4  	    USING (department_id)
+  5  	    WHERE SOUNDEX(last_name) = SOUNDEX('olsOn');
+
+First Name           Last Name                 Department                       
+-------------------- ------------------------- ------------------------------   
+Christopher          Olsen                     Sales                            
+TJ                   Olson                     Shipping                         
+
 SQL> 
 SQL> /*** 4 ***/
 SQL> /* Write a query that produces the following for each employee whose last

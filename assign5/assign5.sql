@@ -38,13 +38,19 @@ for which they work. He is sure once he sees the name and department he
 will remember the person. Make sure you use a function to check for the sound 
 of the name. */
 
--- Traditional
-
-/* SQL command here */
+-- Traditional SQL
+SELECT e.first_name AS "First Name", e.last_name AS "Last Name",
+       d.department_name AS "Department"
+       FROM employees e, departments d
+       WHERE e.department_id = d.department_id
+       AND SOUNDEX(last_name) = SOUNDEX('Olson');
 
 -- SQL/92 
-
-/* SQL command here */
+SELECT e.first_name AS "First Name", e.last_name AS "Last Name",
+       d.department_name AS "Department"
+       FROM employees e INNER JOIN departments d
+       USING (department_id)
+       WHERE SOUNDEX(last_name) = SOUNDEX('Olson');
 
 /*** 4 ***/
 /* Write a query that produces the following for each employee whose last 
