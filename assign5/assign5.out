@@ -1,0 +1,87 @@
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 5 Solution
+SQL>  By: Pasha Bolokhov
+SQL>  Section: 1B
+SQL> 
+SQL>  Due: Tuesday, Feb 3 1:00 pm
+SQL> 
+SQL>  Time spent completing this lab: xx.x hours
+SQL>  **********************************/
+SQL> 
+SQL> /*** 1 ***/
+SQL> /* Run the script to add a couple of records to your HR employees table.*/
+SQL> @insert.sql
+SQL> INSERT INTO employees
+  2  (employee_id, first_name, last_name, email, hire_date, job_id, salary)
+  3  VALUES
+  4  (9989, 'bill', 'rIm', 'rim@home.com', sysdate, 'PU_CLERK', 1500.25);
+
+1 row created.
+
+SQL> 
+SQL> INSERT INTO employees
+  2  (employee_id, first_name, last_name, email, hire_date, job_id, salary)
+  3  VALUES
+  4  (9988, 'LARRY', 'rIMMER', 'rimmer@myhome.com', sysdate, 'PU_CLERK', 1600.25);
+
+1 row created.
+
+SQL> 
+SQL> /*** 2 ***/
+SQL> /* For all employees whose last name starts with the letter R, display the
+SQL> 	employee's last names with the first letter capitalized and all other
+SQL> 	letters lowercase (be sure to use a function), and give the length of their
+SQL> 	last name. Give each column an appropriate label using SQL (i.e. do not use
+SQL> 	the column name default). Sort the results in descending order by the
+SQL> 	employee's last name. */
+SQL> SELECT INITCAP(last_name) AS "Last Name", LENGTH(last_name) AS "Name Length"
+  2  	    FROM employees
+  3  	    WHERE UPPER(last_name) LIKE 'R%'
+  4  	    ORDER BY UPPER(last_name) DESC;
+
+Last Name                 Name Length                                           
+------------------------- -----------                                           
+Russell                             7                                           
+Rogers                              6                                           
+Rimmer                              6                                           
+Rim                                 3                                           
+Raphaely                            8                                           
+Rajs                                4                                           
+
+6 rows selected.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> /*** 3 ***/
+SQL> /* Your boss was at a company party and met a fellow employee name Olson, or
+SQL> was it Olsen, or may something else like that. He wasn't quite sure (his
+SQL> hearing is bad when he drinks). He wants you to run a query that will get
+SQL> all employees whose name sounds like Olson and the name of the department
+SQL> for which they work. He is sure once he sees the name and department he
+SQL> will remember the person. Make sure you use a function to check for the sound
+SQL> of the name. */
+SQL> 
+SQL> -- Traditional
+SQL> 
+SQL> /* SQL command here */
+SQL> 
+SQL> -- SQL/92
+SQL> 
+SQL> /* SQL command here */
+SQL> 
+SQL> /*** 4 ***/
+SQL> /* Write a query that produces the following for each employee whose last
+SQL> name begins with an R: <employee last name> earns <salary> monthly but
+SQL> wants <3 times salary>. Label the column Dream Salaries. */
+SQL> 
+SQL> /* SQL command here */
+SQL> 
+SQL> /*** 5 ***/
+SQL> ROLLBACK;
+
+Rollback complete.
+
+SQL> 
+SQL> SPOOL OFF

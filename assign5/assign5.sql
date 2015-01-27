@@ -1,23 +1,19 @@
--- Run command: @H:\comp155\labsol\Lab5_SolCmd
 set echo on
-SPOOL H:\comp155\labsol\Lab5_Sol.txt
+SPOOL assign5.out
 
 /*********************************
  Assignment - Lab 5 Solution
- By: [replace with your name]
- Section: 1A  or  1B  or  2A  [show only one]
+ By: Pasha Bolokhov
+ Section: 1B
 
- Due:
- Lab section 1A: due Tuesday, Feb 3 10:30 am
- Lab section 1B: due Tuesday, Feb 3 1:00 pm
- Lab section 2A: due Monday, Feb 2 1:30 pm
- Lab section 2B: due Monday, Feb 2 3:00 pm
+ Due: Tuesday, Feb 3 1:00 pm
 
- Time spent completing this lab: xx.x hours [ your approximation ]	  
+ Time spent completing this lab: xx.x hours
  **********************************/
  
 /*** 1 ***/
 /* Run the script to add a couple of records to your HR employees table.*/
+@insert.sql
 
 /*** 2 ***/
 /* For all employees whose last name starts with the letter R, display the 
@@ -26,8 +22,12 @@ SPOOL H:\comp155\labsol\Lab5_Sol.txt
    last name. Give each column an appropriate label using SQL (i.e. do not use 
    the column name default). Sort the results in descending order by the 
    employee's last name. */
+SELECT INITCAP(last_name) AS "Last Name", LENGTH(last_name) AS "Name Length"
+       FROM employees
+       WHERE UPPER(last_name) LIKE 'R%'
+       ORDER BY UPPER(last_name) DESC;
 
-/* SQL command here */
+
 
 /*** 3 ***/
 /* Your boss was at a company party and met a fellow employee name Olson, or 
