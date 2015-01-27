@@ -6,27 +6,27 @@ SQL>  Section: 1B
 SQL> 
 SQL>  Due: Tuesday, Feb 3 1:00 pm
 SQL> 
-SQL>  Time spent completing this lab: xx.x hours
+SQL>  Time spent completing this lab: 4:30 hours
 SQL>  **********************************/
 SQL> 
 SQL> /*** 1 ***/
 SQL> /* Run the script to add a couple of records to your HR employees table.*/
 SQL> @insert.sql
 SQL> INSERT INTO employees
-  2  (employee_id, first_name, last_name, email, hire_date, job_id, salary)
-  3  VALUES
-  4  (9989, 'bill', 'rIm', 'rim@home.com', sysdate, 'PU_CLERK', 1500.25);
+  2  	    (employee_id, first_name, last_name, email, hire_date, job_id, salary)
+  3  	    VALUES (9989, 'bill', 'rIm', 'rim@home.com', sysdate, 'PU_CLERK', 1500.25);
 
 1 row created.
 
 SQL> 
 SQL> INSERT INTO employees
-  2  (employee_id, first_name, last_name, email, hire_date, job_id, salary)
-  3  VALUES
-  4  (9988, 'LARRY', 'rIMMER', 'rimmer@myhome.com', sysdate, 'PU_CLERK', 1600.25);
+  2  	    (employee_id, first_name, last_name, email, hire_date, job_id, salary)
+  3  	    VALUES (9988, 'LARRY', 'rIMMER', 'rimmer@myhome.com', sysdate, 'PU_CLERK', 1600.25);
 
 1 row created.
 
+SQL> 
+SQL> 
 SQL> 
 SQL> /*** 2 ***/
 SQL> /* For all employees whose last name starts with the letter R, display the
@@ -63,7 +63,7 @@ SQL> for which they work. He is sure once he sees the name and department he
 SQL> will remember the person. Make sure you use a function to check for the sound
 SQL> of the name. */
 SQL> 
-SQL> -- Traditional SQL
+SQL> -- Traditional
 SQL> SELECT e.first_name AS "First Name", e.last_name AS "Last Name",
   2  	    d.department_name AS "Department"
   3  	    FROM employees e, departments d
@@ -81,7 +81,7 @@ SQL> SELECT e.first_name AS "First Name", e.last_name AS "Last Name",
   2  	    d.department_name AS "Department"
   3  	    FROM employees e INNER JOIN departments d
   4  	    USING (department_id)
-  5  	    WHERE SOUNDEX(last_name) = SOUNDEX('olsOn');
+  5  	    WHERE SOUNDEX(last_name) = SOUNDEX('Olson');
 
 First Name           Last Name                 Department                       
 -------------------- ------------------------- ------------------------------   
@@ -89,12 +89,159 @@ Christopher          Olsen                     Sales
 TJ                   Olson                     Shipping                         
 
 SQL> 
+SQL> 
+SQL> 
 SQL> /*** 4 ***/
 SQL> /* Write a query that produces the following for each employee whose last
 SQL> name begins with an R: <employee last name> earns <salary> monthly but
 SQL> wants <3 times salary>. Label the column Dream Salaries. */
+SQL> SELECT INITCAP(last_name) || ' earns ' || TO_CHAR(salary, 'fm$99,999.00') ||
+  2  	    ' but wants ' || TO_CHAR(3 * salary, 'fm$99,999.00') || '.' AS "Dream Salaries"
+  3  	    FROM employees;
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+King earns $24,000.00 but wants $72,000.00.                                     
+Kochhar earns $17,000.00 but wants $51,000.00.                                  
+De Haan earns $17,000.00 but wants $51,000.00.                                  
+Hunold earns $9,000.00 but wants $27,000.00.                                    
+Ernst earns $6,000.00 but wants $18,000.00.                                     
+Austin earns $4,800.00 but wants $14,400.00.                                    
+Pataballa earns $4,800.00 but wants $14,400.00.                                 
+Lorentz earns $4,200.00 but wants $12,600.00.                                   
+Greenberg earns $12,000.00 but wants $36,000.00.                                
+Faviet earns $9,000.00 but wants $27,000.00.                                    
+Chen earns $8,200.00 but wants $24,600.00.                                      
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Sciarra earns $7,700.00 but wants $23,100.00.                                   
+Urman earns $7,800.00 but wants $23,400.00.                                     
+Popp earns $6,900.00 but wants $20,700.00.                                      
+Raphaely earns $11,000.00 but wants $33,000.00.                                 
+Khoo earns $3,100.00 but wants $9,300.00.                                       
+Baida earns $2,900.00 but wants $8,700.00.                                      
+Tobias earns $2,800.00 but wants $8,400.00.                                     
+Himuro earns $2,600.00 but wants $7,800.00.                                     
+Colmenares earns $2,500.00 but wants $7,500.00.                                 
+Weiss earns $8,000.00 but wants $24,000.00.                                     
+Fripp earns $8,200.00 but wants $24,600.00.                                     
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Kaufling earns $7,900.00 but wants $23,700.00.                                  
+Vollman earns $6,500.00 but wants $19,500.00.                                   
+Mourgos earns $5,800.00 but wants $17,400.00.                                   
+Nayer earns $3,200.00 but wants $9,600.00.                                      
+Mikkilineni earns $2,700.00 but wants $8,100.00.                                
+Landry earns $2,400.00 but wants $7,200.00.                                     
+Markle earns $2,200.00 but wants $6,600.00.                                     
+Bissot earns $3,300.00 but wants $9,900.00.                                     
+Atkinson earns $2,800.00 but wants $8,400.00.                                   
+Marlow earns $2,500.00 but wants $7,500.00.                                     
+Olson earns $2,100.00 but wants $6,300.00.                                      
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Mallin earns $3,300.00 but wants $9,900.00.                                     
+Rogers earns $2,900.00 but wants $8,700.00.                                     
+Gee earns $2,400.00 but wants $7,200.00.                                        
+Philtanker earns $2,200.00 but wants $6,600.00.                                 
+Ladwig earns $3,600.00 but wants $10,800.00.                                    
+Stiles earns $3,200.00 but wants $9,600.00.                                     
+Seo earns $2,700.00 but wants $8,100.00.                                        
+Patel earns $2,500.00 but wants $7,500.00.                                      
+Rajs earns $3,500.00 but wants $10,500.00.                                      
+Davies earns $3,100.00 but wants $9,300.00.                                     
+Matos earns $2,600.00 but wants $7,800.00.                                      
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Vargas earns $2,500.00 but wants $7,500.00.                                     
+Russell earns $14,000.00 but wants $42,000.00.                                  
+Partners earns $13,500.00 but wants $40,500.00.                                 
+Errazuriz earns $12,000.00 but wants $36,000.00.                                
+Cambrault earns $11,000.00 but wants $33,000.00.                                
+Zlotkey earns $10,500.00 but wants $31,500.00.                                  
+Tucker earns $10,000.00 but wants $30,000.00.                                   
+Bernstein earns $9,500.00 but wants $28,500.00.                                 
+Hall earns $9,000.00 but wants $27,000.00.                                      
+Olsen earns $8,000.00 but wants $24,000.00.                                     
+Cambrault earns $7,500.00 but wants $22,500.00.                                 
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Tuvault earns $7,000.00 but wants $21,000.00.                                   
+King earns $10,000.00 but wants $30,000.00.                                     
+Sully earns $9,500.00 but wants $28,500.00.                                     
+Mcewen earns $9,000.00 but wants $27,000.00.                                    
+Smith earns $8,000.00 but wants $24,000.00.                                     
+Doran earns $7,500.00 but wants $22,500.00.                                     
+Sewall earns $7,000.00 but wants $21,000.00.                                    
+Vishney earns $10,500.00 but wants $31,500.00.                                  
+Greene earns $9,500.00 but wants $28,500.00.                                    
+Marvins earns $7,200.00 but wants $21,600.00.                                   
+Lee earns $6,800.00 but wants $20,400.00.                                       
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Ande earns $6,400.00 but wants $19,200.00.                                      
+Banda earns $6,200.00 but wants $18,600.00.                                     
+Ozer earns $11,500.00 but wants $34,500.00.                                     
+Bloom earns $10,000.00 but wants $30,000.00.                                    
+Fox earns $9,600.00 but wants $28,800.00.                                       
+Smith earns $7,400.00 but wants $22,200.00.                                     
+Bates earns $7,300.00 but wants $21,900.00.                                     
+Kumar earns $6,100.00 but wants $18,300.00.                                     
+Abel earns $11,000.00 but wants $33,000.00.                                     
+Hutton earns $8,800.00 but wants $26,400.00.                                    
+Taylor earns $8,600.00 but wants $25,800.00.                                    
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Livingston earns $8,400.00 but wants $25,200.00.                                
+Grant earns $7,000.00 but wants $21,000.00.                                     
+Johnson earns $6,200.00 but wants $18,600.00.                                   
+Taylor earns $3,200.00 but wants $9,600.00.                                     
+Fleaur earns $3,100.00 but wants $9,300.00.                                     
+Sullivan earns $2,500.00 but wants $7,500.00.                                   
+Geoni earns $2,800.00 but wants $8,400.00.                                      
+Sarchand earns $4,200.00 but wants $12,600.00.                                  
+Bull earns $4,100.00 but wants $12,300.00.                                      
+Dellinger earns $3,400.00 but wants $10,200.00.                                 
+Cabrio earns $3,000.00 but wants $9,000.00.                                     
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Chung earns $3,800.00 but wants $11,400.00.                                     
+Dilly earns $3,600.00 but wants $10,800.00.                                     
+Gates earns $2,900.00 but wants $8,700.00.                                      
+Perkins earns $2,500.00 but wants $7,500.00.                                    
+Bell earns $4,000.00 but wants $12,000.00.                                      
+Everett earns $3,900.00 but wants $11,700.00.                                   
+Mccain earns $3,200.00 but wants $9,600.00.                                     
+Jones earns $2,800.00 but wants $8,400.00.                                      
+Walsh earns $3,100.00 but wants $9,300.00.                                      
+Feeney earns $3,000.00 but wants $9,000.00.                                     
+Oconnell earns $2,600.00 but wants $7,800.00.                                   
+
+Dream Salaries                                                                  
+------------------------------------------------------------------              
+Grant earns $2,600.00 but wants $7,800.00.                                      
+Whalen earns $4,400.00 but wants $13,200.00.                                    
+Hartstein earns $13,000.00 but wants $39,000.00.                                
+Fay earns $6,000.00 but wants $18,000.00.                                       
+Mavris earns $6,500.00 but wants $19,500.00.                                    
+Baer earns $10,000.00 but wants $30,000.00.                                     
+Higgins earns $12,000.00 but wants $36,000.00.                                  
+Gietz earns $8,300.00 but wants $24,900.00.                                     
+Rim earns $1,500.25 but wants $4,500.75.                                        
+Rimmer earns $1,600.25 but wants $4,800.75.                                     
+
+109 rows selected.
+
 SQL> 
-SQL> /* SQL command here */
+SQL> 
 SQL> 
 SQL> /*** 5 ***/
 SQL> ROLLBACK;
