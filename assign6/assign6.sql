@@ -1,6 +1,6 @@
--- Run command: @H:\comp155\labsol\Lab6_SolCmd
+-- Run command: @assign6.sql
 set echo on
-SPOOL H:\comp155\labsol\Lab6_Sol.txt
+SPOOL assign6.out
 
 /*********************************
  Assignment - Lab 6 Solution
@@ -20,16 +20,20 @@ SPOOL H:\comp155\labsol\Lab6_Sol.txt
 /* Write a query to display the number of people with the same job. Use JOB_ID 
 in your query and list the jobs by JOB_ID along with the number of people having
 that job.*/
+SELECT COUNT(*) AS "No. Employees", job_id AS "Job No."
+       FROM employees
+       GROUP BY job_id;
 
-/* Your SQL SELECT query solution to 1 above goes here. */
 
 /*** 2 ***/
 /* Display the highest, lowest, sum, and average salary of all employees. Label 
 the columns Maximum, Minimum, Sum, and Average, respectively (note the use of 
 upper and lower case). Round your results to the nearest whole number. Do not use
 the min_salary or max_salary attributes in the jobs table. */
+SELECT ROUND(MAX(salary)) AS "Maximum", ROUND(MIN(salary)) AS "Minimum",
+       ROUND(SUM(salary)) AS "Sum", ROUND(AVG(salary)) AS "Average"
+       FROM employees;
 
-/* Your SQL SELECT query solution to 2 above goes here. */
  
 /*** 3 ***/ 
 /* Modify the above (#2) to display the maximum, minimum, sum, and average 

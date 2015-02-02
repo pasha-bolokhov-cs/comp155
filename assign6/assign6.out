@@ -1,0 +1,89 @@
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 6 Solution
+SQL>  By: [replace with your name]
+SQL>  Section: 1A  or  1B  or  2A or 2B [show only one]
+SQL> 
+SQL>  Due:
+SQL>  Lab section 1A: due Thursday, Feb 5 1:00 am
+SQL>  Lab section 1B: due Thursday, Feb 5 11:30 am
+SQL>  Lab section 2A: due Thursday, Feb 5 8:30 am
+SQL>  Lab section 2B: due Wednesday, Feb 4 12:30 pm
+SQL> 
+SQL>  Time spent completing this lab: xx.x hours [ your approximation ]
+SQL>  **********************************/
+SQL> 
+SQL> /*** 1 ***/
+SQL> /* Write a query to display the number of people with the same job. Use JOB_ID
+SQL> in your query and list the jobs by JOB_ID along with the number of people having
+SQL> that job.*/
+SQL> SELECT COUNT(*) AS "No. Employees", job_id AS "Job No."
+  2  	    FROM employees
+  3  	    GROUP BY job_id;
+
+No. Employees Job No.                                                           
+------------- ----------                                                        
+            1 AC_ACCOUNT                                                        
+            1 AC_MGR                                                            
+            1 AD_ASST                                                           
+            1 AD_PRES                                                           
+            2 AD_VP                                                             
+            5 FI_ACCOUNT                                                        
+            1 FI_MGR                                                            
+            1 HR_REP                                                            
+            5 IT_PROG                                                           
+            1 MK_MAN                                                            
+            1 MK_REP                                                            
+
+No. Employees Job No.                                                           
+------------- ----------                                                        
+            1 PR_REP                                                            
+            5 PU_CLERK                                                          
+            1 PU_MAN                                                            
+            5 SA_MAN                                                            
+           30 SA_REP                                                            
+           20 SH_CLERK                                                          
+           20 ST_CLERK                                                          
+            5 ST_MAN                                                            
+
+19 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 2 ***/
+SQL> /* Display the highest, lowest, sum, and average salary of all employees. Label
+SQL> the columns Maximum, Minimum, Sum, and Average, respectively (note the use of
+SQL> upper and lower case). Round your results to the nearest whole number. Do not use
+SQL> the min_salary or max_salary attributes in the jobs table. */
+SQL> SELECT ROUND(MAX(salary)) AS "Maximum", ROUND(MIN(salary)) AS "Minimum",
+  2  	    ROUND(SUM(salary)) AS "Sum", ROUND(AVG(salary)) AS "Average"
+  3  	    FROM employees;
+
+   Maximum    Minimum        Sum    Average                                     
+---------- ---------- ---------- ----------                                     
+     24000       2100     691400       6462                                     
+
+SQL> 
+SQL> 
+SQL> /*** 3 ***/
+SQL> /* Modify the above (#2) to display the maximum, minimum, sum, and average
+SQL> salary for each job type  (assume each job_id represents a job type). Be
+SQL> sure to give the job type in your output.*/
+SQL> 
+SQL> /* Your SQL SELECT query solution to 3 above goes here. */
+SQL> 
+SQL> /*** 4 ***/
+SQL> /* Display the manager number and the salary of the lowest paid employee for
+SQL> that manager. Exclude anyone whose manager is not known - in other words,
+SQL> exclude anyone who has a NULL manager_id. */
+SQL> 
+SQL> /* Your SQL SELECT query solution to 4 above goes here. */
+SQL> 
+SQL> /*** 5 ***/
+SQL> /* Modify your query from above (#4) to exclude any groups where the minimum
+SQL> salary is less than or equal to $6,000. Sort the output in descending order of
+SQL> salary. */
+SQL> 
+SQL> /* Your SQL SELECT query solution to 5 above goes here. */
+SQL> 
+SQL> SPOOL OFF
