@@ -1,5 +1,6 @@
 -- Run command: @assign6.sql
 set echo on
+set PAGESIZE 40
 SPOOL assign6.out
 
 /*********************************
@@ -39,21 +40,33 @@ SELECT ROUND(MAX(salary)) AS "Maximum", ROUND(MIN(salary)) AS "Minimum",
 /* Modify the above (#2) to display the maximum, minimum, sum, and average 
 salary for each job type  (assume each job_id represents a job type). Be 
 sure to give the job type in your output.*/
+SELECT job_id AS "Job Type",
+       ROUND(MAX(salary)) AS "Maximum", ROUND(MIN(salary)) AS "Minimum",
+       ROUND(SUM(salary)) AS "Sum", ROUND(AVG(salary)) AS "Average"
+       FROM employees
+       GROUP BY job_id;
 
-/* Your SQL SELECT query solution to 3 above goes here. */
 
 /*** 4 ***/ 
 /* Display the manager number and the salary of the lowest paid employee for 
 that manager. Exclude anyone whose manager is not known - in other words, 
 exclude anyone who has a NULL manager_id. */
+SELECT manager_id AS "Manager No.", ROUND(MIN(salary)) AS "Lowest Salary"
+       FROM employees
+       GROUP BY manager_id
+       HAVING (manager_id IS NOT NULL);
 
-/* Your SQL SELECT query solution to 4 above goes here. */
 
 /*** 5 ***/ 
 /* Modify your query from above (#4) to exclude any groups where the minimum 
 salary is less than or equal to $6,000. Sort the output in descending order of 
 salary. */
+SELECT manager_id AS "Manager No.", ROUND(MIN(salary)) AS "Lowest Salary"
+       FROM employees
+       GROUP BY manager_id
+       HAVING (manager_id IS NOT NULL)
+       AND (ROUND(MIN(salary)) >= 6000)
+       ORDER BY "Lowest Salary" DESC;
 
-/* Your SQL SELECT query solution to 5 above goes here. */
 
 SPOOL OFF

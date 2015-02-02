@@ -34,9 +34,6 @@ No. Employees Job No.
             5 IT_PROG                                                           
             1 MK_MAN                                                            
             1 MK_REP                                                            
-
-No. Employees Job No.                                                           
-------------- ----------                                                        
             1 PR_REP                                                            
             5 PU_CLERK                                                          
             1 PU_MAN                                                            
@@ -69,21 +66,97 @@ SQL> /*** 3 ***/
 SQL> /* Modify the above (#2) to display the maximum, minimum, sum, and average
 SQL> salary for each job type  (assume each job_id represents a job type). Be
 SQL> sure to give the job type in your output.*/
+SQL> SELECT job_id AS "Job Type",
+  2  	    ROUND(MAX(salary)) AS "Maximum", ROUND(MIN(salary)) AS "Minimum",
+  3  	    ROUND(SUM(salary)) AS "Sum", ROUND(AVG(salary)) AS "Average"
+  4  	    FROM employees
+  5  	    GROUP BY job_id;
+
+Job Type      Maximum    Minimum        Sum    Average                          
+---------- ---------- ---------- ---------- ----------                          
+IT_PROG          9000       4200      28800       5760                          
+AC_MGR          12000      12000      12000      12000                          
+AC_ACCOUNT       8300       8300       8300       8300                          
+ST_MAN           8200       5800      36400       7280                          
+PU_MAN          11000      11000      11000      11000                          
+AD_ASST          4400       4400       4400       4400                          
+AD_VP           17000      17000      34000      17000                          
+SH_CLERK         4200       2500      64300       3215                          
+FI_ACCOUNT       9000       6900      39600       7920                          
+FI_MGR          12000      12000      12000      12000                          
+PU_CLERK         3100       2500      13900       2780                          
+SA_MAN          14000      10500      61000      12200                          
+MK_MAN          13000      13000      13000      13000                          
+PR_REP          10000      10000      10000      10000                          
+AD_PRES         24000      24000      24000      24000                          
+SA_REP          11500       6100     250500       8350                          
+MK_REP           6000       6000       6000       6000                          
+ST_CLERK         3600       2100      55700       2785                          
+HR_REP           6500       6500       6500       6500                          
+
+19 rows selected.
+
 SQL> 
-SQL> /* Your SQL SELECT query solution to 3 above goes here. */
 SQL> 
 SQL> /*** 4 ***/
 SQL> /* Display the manager number and the salary of the lowest paid employee for
 SQL> that manager. Exclude anyone whose manager is not known - in other words,
 SQL> exclude anyone who has a NULL manager_id. */
+SQL> SELECT manager_id AS "Manager No.", ROUND(MIN(salary)) AS "Lowest Salary"
+  2  	    FROM employees
+  3  	    GROUP BY manager_id
+  4  	    HAVING (manager_id IS NOT NULL);
+
+Manager No. Lowest Salary                                                       
+----------- -------------                                                       
+        100          5800                                                       
+        123          2500                                                       
+        120          2200                                                       
+        121          2100                                                       
+        147          6200                                                       
+        108          6900                                                       
+        148          6100                                                       
+        149          6200                                                       
+        205          8300                                                       
+        102          9000                                                       
+        201          6000                                                       
+        101          4400                                                       
+        114          2500                                                       
+        124          2500                                                       
+        145          7000                                                       
+        146          7000                                                       
+        103          4200                                                       
+        122          2200                                                       
+
+18 rows selected.
+
 SQL> 
-SQL> /* Your SQL SELECT query solution to 4 above goes here. */
 SQL> 
 SQL> /*** 5 ***/
 SQL> /* Modify your query from above (#4) to exclude any groups where the minimum
 SQL> salary is less than or equal to $6,000. Sort the output in descending order of
 SQL> salary. */
+SQL> SELECT manager_id AS "Manager No.", ROUND(MIN(salary)) AS "Lowest Salary"
+  2  	    FROM employees
+  3  	    GROUP BY manager_id
+  4  	    HAVING (manager_id IS NOT NULL)
+  5  	    AND (ROUND(MIN(salary)) >= 6000)
+  6  	    ORDER BY "Lowest Salary" DESC;
+
+Manager No. Lowest Salary                                                       
+----------- -------------                                                       
+        102          9000                                                       
+        205          8300                                                       
+        146          7000                                                       
+        145          7000                                                       
+        108          6900                                                       
+        149          6200                                                       
+        147          6200                                                       
+        148          6100                                                       
+        201          6000                                                       
+
+9 rows selected.
+
 SQL> 
-SQL> /* Your SQL SELECT query solution to 5 above goes here. */
 SQL> 
 SQL> SPOOL OFF
