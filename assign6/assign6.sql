@@ -5,16 +5,13 @@ SPOOL assign6.out
 
 /*********************************
  Assignment - Lab 6 Solution
- By: [replace with your name]
- Section: 1A  or  1B  or  2A or 2B [show only one]
+ By: Pasha Bolokhov
+ Section: 1B
 
  Due:
- Lab section 1A: due Thursday, Feb 5 1:00 am
  Lab section 1B: due Thursday, Feb 5 11:30 am
- Lab section 2A: due Thursday, Feb 5 8:30 am
- Lab section 2B: due Wednesday, Feb 4 12:30 pm
 
- Time spent completing this lab: xx.x hours [ your approximation ]	  
+ Time spent completing this lab: 2:00 hours
  **********************************/
  
 /*** 1 ***/
