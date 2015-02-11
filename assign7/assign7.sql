@@ -42,7 +42,6 @@ calendar year, your boss has asked you to write a query to return the number
 of employees who will have worked for the company at least 15 years divided 
 into groupings by month. (See lab write-up for further details.) */
 
-/* Place SQL statement here */
 
 
 /*** 3 ***/
