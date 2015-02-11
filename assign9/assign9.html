@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab09.html?ou=83589 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":72,"ttGuid":"1268B00FD0F2D74E","agent":"js-agent.newrelic.com/nr-515.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,t,e){function r(e){if(!t[e]){var o=t[e]={exports:{}};n[e][0].call(o.exports,function(t){var o=n[e][1][t];return r(o?o:t)},o,o.exports)}return t[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({QJf3ax:[function(n,t){function e(n){function t(t,e,a){n&&n(t,e,a),a||(a={});for(var u=c(t),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,e);return s}function a(n,t){f[n]=c(n).concat(t)}function c(n){return f[n]||[]}function u(){return e(t)}var f={};return{on:a,emit:t,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");t.exports=e()},{gos:"7eSDFh"}],ee:[function(n,t){t.exports=n("QJf3ax")},{}],gos:[function(n,t){t.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,t){function e(n,t,e){if(r.call(n,t))return n[t];var o=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,t,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[t]=o,o}var r=Object.prototype.hasOwnProperty;t.exports=e},{}],D5DuLP:[function(n,t){function e(n,t,e){return r.listeners(n).length?r.emit(n,t,e):(o[n]||(o[n]=[]),void o[n].push(t))}var r=n("ee").create(),o={};t.exports=e,e.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,t){t.exports=n("D5DuLP")},{}],XL7HBI:[function(n,t){function e(n){var t=typeof n;return!n||"object"!==t&&"function"!==t?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");t.exports=e},{gos:"7eSDFh"}],id:[function(n,t){t.exports=n("XL7HBI")},{}],loader:[function(n,t){t.exports=n("G9z0Bl")},{}],G9z0Bl:[function(n,t){function e(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(t,e){t in n||(n[t]=e)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var t=f.createElement("script");t.src=v.proto+n.agent,f.body.appendChild(t)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=window,f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},v=t.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(f[p]("onreadystatechange",r),u[p]("onload",e)),a("mark",["firstbyte",i()])},{1:11,handle:"D5DuLP"}],11:[function(n,t){function e(n,t){var e=[],o="",i=0;for(o in n)r.call(n,o)&&(e[i]=t(o,n[o]),i+=1);return e}var r=Object.prototype.hasOwnProperty;t.exports=e},{}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 8</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+       color:#036;
+       line-height: 125%;
+}
+h1 {text-align:center;
+}
+strong { font-family:"Courier New", Courier, monospace;
+         color:#03F;
+}
+li { margin-bottom: 7px; }
+pre { font-family:"Courier New", Courier, monospace;
+       color:gray;
+    }
+</style>
+<script type="text/javascript" src="./assign9_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign9_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 9</h1>
+<h1>Change Table Contents Using DML</h1>
+<h2>Due</h2>
+<p>At the <b>start</b> of your next scheduled lab at the same day and time. In other words:</p>
+<blockquote>Lab section 1A: due Thursday, Feb 19th @ 1:00pm<br> Lab section 1B: due Thursday, Feb 19th @ 11:30pm<br> Lab section 2A: due Thursday, Feb 19th @ 8:30pm<br> Lab section 2B: due Wednesday, Feb 18th @ 12:30pm</blockquote>
+<h2>Prerequisites</h2>
+<p>Read Chapter 8, pages 252-269</p>
+<h2>Objectives</h2>
+<ul>
+<li>Describe DML statements</li>
+<li>Insert rows into a table</li>
+<li>Update rows in a table</li>
+<li>Delete rows from a table</li>
+</ul>
+<h2>Do</h2>
+<ul>
+<li>Before working your way through the various examples on pages 248-269, you will need to run the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab9CreateTables.sql?_&d2lSessionVal=kRq9VOVjUOB4dB5f4Ynsdd06C&ou=83589" target="_blank">provided script </a>to create the necessary tables and the required data.</li>
+<li>Once you have run the provided script, work your way through the examples. Note the following:</li>
+<li>Page 255. The <strong>RETURNING</strong> clause is new to Oracle 10g. You only need to note that it exists. You will not be tested on it.</li>
+<li>Page 258. The "order_status" table is created and populated for you in the provided script.</li>
+<li>Page 259. The "product_changes" table is created and populated for you in the provide script.</li>
+<li>Pages 270-273. Flashbacks are new to Oracle and are incredibly useful. However, you should be aware that this option will not always be available to you and may not be available in other DBMS packages. Just read the section on flashback and try the examples is you wish. You will not be tested on flashback.</li>
+<li>Once you have completed the required pages for this lab <b><span style="text-decoration: underline;">and the assignment below</span></b>, clean up your schema by running the drop table script <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab9DropTables.sql?_&d2lSessionVal=kRq9VOVjUOB4dB5f4Ynsdd06C&ou=83589" target="_blank">provide here</a>.</li>
+</ul>
+<h2>Assignment</h2>
+<p>To complete the following assignment, you will need the tables you <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab9CreateTables.sql?_&d2lSessionVal=kRq9VOVjUOB4dB5f4Ynsdd06C&ou=83589" target="_blank">created above</a>. You <b><span style="text-decoration: underline;"> must</span> SPOOL</b> your commands and results to a file so that you can print them to hand in. Only spooled results will be accepted. (If you wish, you may clean up any errors in your spooled file before handing it in. If you choose to leave errors, be sure to indicate which statements belong to which part of the assignment. <b>Only</b> those statements indicated as belonging to a specific step (number) of the assignment will be marked.) Be sure you have SET ECHO ON so that your commands will show in the spooled listing.</p>
+<p>Be sure to use proper formatting for all SQL statement (e.g. put clauses on separate lines).</p>
+<p>It is a good idea to save your individual SQL commands in a separate document (e.g. in Textpad or Notepad) so that you can run them again as needed.</p>
+<p>A second reminder: If you do not use the provided template, be sure you indicate which command belongs to which step of the assignment. <span style="text-decoration: underline;"><b>Only</b></span> those commands which are clearly assigned to steps of the assignment will be marked.</p>
+<ol>
+<li>Add the following data to the customers table (be sure the dates are entered as dates and in the same format as shown, e.g.. as December 9, 1906, not as "9-DEC-06"&nbsp; etc). Be sure to format the dates using SQL, <b>NOT</b> using SQL*Plus.</li>
+</ol>
+<div align="center"><center>
+<table border="1" style="width: 100%;">
+<tbody>
+<tr>
+<td width="11%" style="background-color: #99cc99;">customer_id</td>
+<td width="11%" style="background-color: #99cc99;">first_name</td>
+<td width="14%" style="background-color: #99cc99;">last_name</td>
+<td width="31%" style="background-color: #99cc99;">dob</td>
+<td width="32%" style="background-color: #99cc99;">phone</td>
+</tr>
+<tr>
+<td width="11%">50</td>
+<td width="11%">Grace</td>
+<td width="14%">Hopper</td>
+<td width="31%">December 9, 1906</td>
+<td width="32%">800-555-1250</td>
+</tr>
+<tr>
+<td width="11%" height="30">51</td>
+<td width="11%" height="30">Steve</td>
+<td width="14%" height="30">Jobs</td>
+<td width="31%" height="30">February 24, 1955</td>
+<td width="32%" height="30">800-555-1251</td>
+</tr>
+<tr>
+<td width="11%">52</td>
+<td width="11%">Larry</td>
+<td width="14%">Ellison</td>
+<td width="31%">August 17, 1944</td>
+<td width="32%">800-555-1252</td>
+</tr>
+<tr>
+<td width="11%">53</td>
+<td width="11%">Tom</td>
+<td width="14%">Thomson</td>
+<td width="31%">August 4, 1877</td>
+<td width="32%">NULL</td>
+</tr>
+</tbody>
+</table>
+</center></div>
+<ol start="2">
+<li>Confirm your addition to the table. Order by customer_id. (Hint: Use a <strong>SELECT</strong> statement.)</li>
+<li>The last_name for customer_id 53 is "Thomson" but should be "Thomas". Correct the error.</li>
+<li>Jobs has closed his account. Remove his record from the table. (Remove him by name <b>NOT</b> by id number.)</li>
+<li>There is a legacy data problem. You need to change all the customer_ids. Update all the customer_ids by adding 100 to all the customer_id values. (The update should apply to ALL records not just the ones you entered.)</li>
+<li>Confirm your changes to the table. Order by customer_id. (Hint: Use a <strong>SELECT</strong> statement.)</li>
+<li>Create a <strong>SAVEPOINT</strong> named <strong>CUST_SAVEP</strong>.</li>
+<li>Add yourself to the customers table. Feel free to make up your birth date and phone number.</li>
+<li>Confirm your changes to the table. Order by customer_id.</li>
+<li><strong>ROLLBACK TO CUST_SAVEP</strong>.</li>
+<li>List the table contents. Order by customer_id. (Hint: Use a <strong>SELECT</strong> statement.)</li>
+<li>Now issue a general <strong>ROLLBACK</strong> command.</li>
+<li>List the table contents. Order by customer_id.</li>
+<li>Re-insert the row from step 8 above, i.e. re-insert yourself.</li>
+<li>Now issue the command, <strong>COMMIT;</strong></li>
+<li>List the table contents. Order by customer_id.</li>
+<li><strong>ROLLBACK to CUST_SAVEP</strong>. Did anything happen? Enter a statement saying why you got the result you did from the "<strong>ROLLBACK to CUST_SAVEP</strong>" command.</li>
+<li>List the table contents. Order by customer_id.</li>
+<li>Issue a <strong>SELECT</strong> statement which will list all the data records with the dates in the format as they were originally entered. For example, the date should be given as "December 9, 1906" (note the upper and lower case) and not as "9-DEC-06" or any other default format. (Note: Don't worry if all the months, days and years line up.) Use a SQL command to format the dates, <b>NOT</b> a SQL*Plus command.</li>
+<li>Spool off.</li>
+</ol>
+<p>Once you have completed your work, use the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab9DropTables.sql?_&d2lSessionVal=kRq9VOVjUOB4dB5f4Ynsdd06C&ou=83589" target="_blank">provided script </a>to clean up your schema.</p>
+<h2>Hand-In</h2>
+<ul>
+<li>Hand in a hard copy of your spooled results file from your SQL*Plus script.</li>
+<li>Be sure that your name is on all pages that you hand in.</li>
+</ul>
+<h2>Notes</h2>
+<p>As with previous labs here is a script solution <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab9_SolCmd.sql?_&d2lSessionVal=kRq9VOVjUOB4dB5f4Ynsdd06C&ou=83589" target="_blank">template</a> for you to use.</p>
+
+<script src="./assign9_files/nr-515.min.js"></script><script type="text/javascript" src="./assign9_files/9efc9e456b"></script></body></html>
