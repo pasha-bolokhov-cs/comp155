@@ -1,0 +1,72 @@
+SQL> SET PAGESIZE 50
+SQL> SET LINESIZE 120
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 7 Solution
+SQL>  By <give your name>
+SQL>  Lab Section: 1A or 1B or 2A or 2B
+SQL>  Due:
+SQL>  Lab section 1A: due Thursday, Feb 12 1:00 pm
+SQL>  Lab section 1B: due Thursday, Feb 12 11:30 am
+SQL>  Lab section 2A: due Thursday, Feb 12 8:30 am
+SQL>  Lab section 2B: due Wednesday, Feb 11 12:30 pm
+SQL> 
+SQL>  **********************************/
+SQL> 
+SQL> -- Get the date of the run for information
+SQL> SELECT TO_CHAR(sysdate, 'Day Month DD HH24:MM') As "Script Run"
+  2  FROM DUAL;
+
+Script Run                                                                                                              
+----------------------------------------------------------------------------------                                      
+Wednesday February  11 11:02                                                                                            
+
+SQL> 
+SQL> /*** 1 ***/
+SQL> /* For each employee whose last name begins with a P, display the employee's
+SQL> last name and calculate the number of months between today and the date the
+SQL> employee was hired. Label the column "Months Worked" (note case). Order your
+SQL> results in descending order by the number of months employed. Round the
+SQL> number of months so that there is only a single digit after the decimal. */
+SQL> SELECT last_name AS "Last Name",
+  2  	    ROUND(MONTHS_BETWEEN(SYSDATE, hire_date), 1) AS "Months Worked"
+  3  	    FROM employees
+  4  	    WHERE UPPER(last_name) LIKE 'P%'
+  5  	    ORDER BY "Months Worked" DESC;
+
+Last Name                 Months Worked                                                                                 
+------------------------- -------------                                                                                 
+Partners                          217.2                                                                                 
+Pataballa                         204.2                                                                                 
+Patel                             202.2                                                                                 
+Popp                              182.1                                                                                 
+Perkins                           181.8                                                                                 
+Philtanker                        180.2                                                                                 
+
+6 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 2 ***/
+SQL> /* Your company is considering providing a special lunch every month for all
+SQL> employees who have worked for the company at least 15 years. They will be
+SQL> invited to the lunch in the month in which they were hired. To get an idea
+SQL> of how many employees might come to a special lunch each month over the
+SQL> calendar year, your boss has asked you to write a query to return the number
+SQL> of employees who will have worked for the company at least 15 years divided
+SQL> into groupings by month. (See lab write-up for further details.) */
+SQL> 
+SQL> /* Place SQL statement here */
+SQL> 
+SQL> 
+SQL> /*** 3 ***/
+SQL> /* Your boss wants to know how many people might come who are of legal
+SQL> drinking age in British Columbia (in other words, are at least 19 as of
+SQL> December 3rd). You need to write a query to count the number of people
+SQL> in the people database who are at least 19 by that date. You will use the
+SQL> COMP155.PEOPLE table for this query. (See lab write-up for further details.)*/
+SQL> 
+SQL> /* Place SQL statement here */
+SQL> 
+SQL> 
+SQL> SPOOL OFF

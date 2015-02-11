@@ -1,6 +1,6 @@
--- Run command: @H:\comp155\labsol\Lab7_SolCmd
+-- Run command: @assign7
 set echo on
-SPOOL H:\comp155\labsol\Lab7_Sol.txt
+SPOOL assign7.out
 SET PAGESIZE 50
 SET LINESIZE 120
 
@@ -26,8 +26,11 @@ last name and calculate the number of months between today and the date the
 employee was hired. Label the column "Months Worked" (note case). Order your 
 results in descending order by the number of months employed. Round the 
 number of months so that there is only a single digit after the decimal. */
-
-/* Place SQL statement here */
+SELECT last_name AS "Last Name", 
+       ROUND(MONTHS_BETWEEN(SYSDATE, hire_date), 1) AS "Months Worked"
+       FROM employees
+       WHERE UPPER(last_name) LIKE 'P%'
+       ORDER BY "Months Worked" DESC;
 
 
 /*** 2 ***/
