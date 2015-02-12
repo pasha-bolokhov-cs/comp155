@@ -1,0 +1,107 @@
+SQL> SET PAGESIZE 50
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 8 Solution
+SQL>  By Pasha Bolokhov
+SQL>  Lab Section: 1B
+SQL>  Time spent working on this lab: 1 hrs
+SQL>  **********************************/
+SQL> 
+SQL> /*** 1 ***/
+SQL> /* Create a query to display the employee numbers, last names
+SQL> and salaries of all employees who earn more than the average
+SQL> salary and whose last_name begins with a 'G' or 'P' (be sure
+SQL> to handle case). Sort the results in descending order of salary. */
+SQL> SELECT last_name AS "Last Name", salary AS "Salary"
+  2  	    FROM employees
+  3  	    WHERE salary >
+  4  		  (SELECT AVG(salary) FROM employees)
+  5  	    AND (UPPER(last_name) LIKE 'G%'
+  6  		 OR UPPER(last_name) LIKE 'P%')
+  7  	    ORDER BY salary DESC;
+
+Last Name                     Salary                                            
+------------------------- ----------                                            
+Partners                       13500                                            
+Greenberg                      12000                                            
+Greene                          9500                                            
+Gietz                           8300                                            
+Grant                           7000                                            
+Popp                            6900                                            
+
+6 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 2 ***/
+SQL> /* Write a query that will display the last name and salary of every
+SQL> employee who reports to Gerald Cambrault. (There is more than one
+SQL> Cambrault in the database so you must be careful to check the first
+SQL> name too.) Be sure to handle case. */
+SQL> SELECT last_name AS "Last Name", salary AS "Salary"
+  2  	    FROM employees
+  3  	    WHERE manager_id =
+  4  		  (SELECT employee_id
+  5  		   FROM employees
+  6  		   WHERE UPPER(first_name) = 'GERALD'
+  7  		   AND UPPER(last_name) = 'CAMBRAULT');
+
+Last Name                     Salary                                            
+------------------------- ----------                                            
+Ozer                           11500                                            
+Bloom                          10000                                            
+Fox                             9600                                            
+Smith                           7400                                            
+Bates                           7300                                            
+Kumar                           6100                                            
+
+6 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 3 ***/
+SQL> /* How many people work in the same department as Gerald Cambrault?
+SQL> Write a query to count the number employees in Gerald's department.
+SQL> Exclude Gerald from your count. (Remember, there is more than one
+SQL> Cambrault in the database so be sure to check the first name too.) */
+SQL> SELECT COUNT(last_name)
+  2  	    FROM employees
+  3  	    WHERE department_id =
+  4  		  (SELECT department_id
+  5  		   FROM employees
+  6  		   WHERE UPPER(first_name) = 'GERALD'
+  7  		   AND UPPER(last_name) = 'CAMBRAULT')
+  8  	    AND NOT (UPPER(first_name) = 'GERALD'
+  9  		   AND UPPER(last_name) = 'CAMBRAULT');
+
+COUNT(LAST_NAME)                                                                
+----------------                                                                
+              33                                                                
+
+SQL> 
+SQL> 
+SQL> 
+SQL> /*** 4 ***/
+SQL> /* Write a query to display the department IDs, employee IDs, last names,
+SQL> and salaries of all employees who earn more than twice ( 2 times) the
+SQL> average salary for the company, and who work in a department with any
+SQL> employee with a "u" anywhere in their last name. (Remember the "u" could
+SQL> be at the beginning of the name too.) Order your output by employee IDs. */
+SQL> SELECT department_id AS "Dept No", employee_id AS "Emp No",
+  2  	    last_name AS "Last Name", salary AS "Salary"
+  3  	    FROM employees
+  4  	    WHERE salary >
+  5  		  (SELECT 2 * AVG(salary) FROM employees)
+  6  	    AND department_id IN
+  7  		(SELECT department_id
+  8  		 FROM employees
+  9  		 WHERE UPPER(last_name) LIKE '%U%')
+ 10  	    ORDER BY employee_id;
+
+   Dept No     Emp No Last Name                     Salary                      
+---------- ---------- ------------------------- ----------                      
+        80        145 Russell                        14000                      
+        80        146 Partners                       13500                      
+
+SQL> 
+SQL> SPOOL OFF
