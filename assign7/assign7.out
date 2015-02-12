@@ -19,7 +19,7 @@ SQL> SELECT TO_CHAR(sysdate, 'Day Month DD HH24:MM') As "Script Run"
 
 Script Run                                                                                                              
 ----------------------------------------------------------------------------------                                      
-Wednesday February  11 11:02                                                                                            
+Wednesday February  11 19:02                                                                                            
 
 SQL> 
 SQL> /*** 1 ***/
@@ -39,7 +39,7 @@ Last Name                 Months Worked
 Partners                          217.2                                                                                 
 Pataballa                         204.2                                                                                 
 Patel                             202.2                                                                                 
-Popp                              182.1                                                                                 
+Popp                              182.2                                                                                 
 Perkins                           181.8                                                                                 
 Philtanker                        180.2                                                                                 
 
@@ -55,8 +55,19 @@ SQL> of how many employees might come to a special lunch each month over the
 SQL> calendar year, your boss has asked you to write a query to return the number
 SQL> of employees who will have worked for the company at least 15 years divided
 SQL> into groupings by month. (See lab write-up for further details.) */
+SQL> SELECT TO_CHAR(hire_date, 'Month'), COUNT(last_name)
+  2  	    FROM employees
+  3  	    WHERE TO_CHAR(SYSDATE, 'YYYY') - TO_CHAR(hire_date, 'YYYY') = 15
+  4  	    GROUP BY TO_CHAR(hire_date, 'Month');
+
+TO_CHAR(HIRE_DATE,'MONTH')           COUNT(LAST_NAME)                                                                   
+------------------------------------ ----------------                                                                   
+January                                             4                                                                   
+February                                            3                                                                   
+April                                               2                                                                   
+March                                               2                                                                   
+
 SQL> 
-SQL> /* Place SQL statement here */
 SQL> 
 SQL> 
 SQL> /*** 3 ***/
