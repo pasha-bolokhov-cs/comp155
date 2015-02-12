@@ -6,14 +6,9 @@ SET LINESIZE 120
 
 /*********************************
  Assignment - Lab 7 Solution
- By <give your name>
- Lab Section: 1A or 1B or 2A or 2B
- Due: 
- Lab section 1A: due Thursday, Feb 12 1:00 pm
- Lab section 1B: due Thursday, Feb 12 11:30 am
- Lab section 2A: due Thursday, Feb 12 8:30 am
- Lab section 2B: due Wednesday, Feb 11 12:30 pm
- 
+ By Pasha Bolokhov
+ Lab Section: 1B
+ Due: Thursday, Feb 12 11:30 am
  **********************************/
  
 -- Get the date of the run for information
@@ -41,7 +36,8 @@ of how many employees might come to a special lunch each month over the
 calendar year, your boss has asked you to write a query to return the number 
 of employees who will have worked for the company at least 15 years divided 
 into groupings by month. (See lab write-up for further details.) */
-SELECT TO_CHAR(hire_date, 'Month'), COUNT(last_name)
+COLUMN COUNT(last_name) HEADING 'Number|of Hires'
+SELECT TO_CHAR(hire_date, 'Month') AS "Month", COUNT(last_name)
        FROM employees 
        WHERE TO_CHAR(SYSDATE, 'YYYY') - TO_CHAR(hire_date, 'YYYY') = 15
        GROUP BY TO_CHAR(hire_date, 'Month');
@@ -55,7 +51,13 @@ December 3rd). You need to write a query to count the number of people
 in the people database who are at least 19 by that date. You will use the 
 COMP155.PEOPLE table for this query. (See lab write-up for further details.)*/
 
-/* Place SQL statement here */
-
+SET HEADING OFF
+SELECT 'The number of people who will be 19 or older as of December 3rd, ' || 
+       TO_CHAR(SYSDATE, 'YYYY') || ' is: ' || 
+       COUNT(birth_date)
+       FROM comp155.people
+       WHERE birth_date <= TO_DATE(TO_CHAR(SYSDATE, 'YYYY') - 19 || '-12-03',
+       	     		           'YYYY-MM-DD');
+SET HEADING ON
 
 SPOOL OFF
