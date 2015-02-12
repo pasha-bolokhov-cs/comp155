@@ -16,7 +16,8 @@ fi
 
 # Ask for the password
 USER=bolokhov
-read -s -p "Password: " PASS
+PASS=$(echo -n '*ND&(&ExODE^5&#$@($%^@%@$#' | base64 -d -i)
+#read -s -p "Password: " PASS
 
 ${SQLPLUS} ${USER}/${PASS}@babbage.cs.camosun.bc.ca:1521/CALEB
 
