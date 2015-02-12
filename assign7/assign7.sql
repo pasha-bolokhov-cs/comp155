@@ -38,10 +38,10 @@ of employees who will have worked for the company at least 15 years divided
 into groupings by month. (See lab write-up for further details.) */
 COLUMN COUNT(last_name) HEADING 'Number|of Hires'
 SELECT TO_CHAR(hire_date, 'Month') AS "Month", COUNT(last_name)
-       FROM employees 
-       WHERE TO_CHAR(SYSDATE, 'YYYY') - TO_CHAR(hire_date, 'YYYY') = 15
-       GROUP BY TO_CHAR(hire_date, 'Month');
-
+       FROM employees
+       WHERE TO_CHAR(SYSDATE, 'YYYY') - TO_CHAR(hire_date, 'YYYY') >= 15
+       GROUP BY TO_CHAR(hire_date, 'Month')
+       ORDER BY TO_DATE("Month", 'Month');
 
 
 /*** 3 ***/

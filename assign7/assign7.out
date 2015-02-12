@@ -14,7 +14,7 @@ SQL> SELECT TO_CHAR(sysdate, 'Day Month DD HH24:MM') As "Script Run"
 
 Script Run                                                                                                              
 ----------------------------------------------------------------------------------                                      
-Wednesday February  11 21:02                                                                                            
+Thursday  February  12 11:02                                                                                            
 
 SQL> 
 SQL> /*** 1 ***/
@@ -53,18 +53,28 @@ SQL> into groupings by month. (See lab write-up for further details.) */
 SQL> COLUMN COUNT(last_name) HEADING 'Number|of Hires'
 SQL> SELECT TO_CHAR(hire_date, 'Month') AS "Month", COUNT(last_name)
   2  	    FROM employees
-  3  	    WHERE TO_CHAR(SYSDATE, 'YYYY') - TO_CHAR(hire_date, 'YYYY') = 15
-  4  	    GROUP BY TO_CHAR(hire_date, 'Month');
+  3  	    WHERE TO_CHAR(SYSDATE, 'YYYY') - TO_CHAR(hire_date, 'YYYY') >= 15
+  4  	    GROUP BY TO_CHAR(hire_date, 'Month')
+  5  	    ORDER BY TO_DATE("Month", 'Month');
 
                                          Number                                                                         
 Month                                  of Hires                                                                         
 ------------------------------------ ----------                                                                         
-January                                       4                                                                         
-February                                      3                                                                         
-April                                         2                                                                         
-March                                         2                                                                         
+January                                      14                                                                         
+February                                     13                                                                         
+March                                        17                                                                         
+April                                         7                                                                         
+May                                           6                                                                         
+June                                         11                                                                         
+July                                          7                                                                         
+August                                        9                                                                         
+September                                     5                                                                         
+October                                       6                                                                         
+November                                      5                                                                         
+December                                      7                                                                         
 
-SQL> 
+12 rows selected.
+
 SQL> 
 SQL> 
 SQL> /*** 3 ***/
