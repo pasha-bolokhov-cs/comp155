@@ -1,0 +1,266 @@
+SQL> set pagesize 50
+SQL> set linesize 100
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 9 Solution
+SQL>  By Pasha Bolokhov
+SQL>  Lab Section: 1B
+SQL>  **********************************/
+SQL> 
+SQL> /*** 1 Insert ***/
+SQL> INSERT INTO customers (customer_id, first_name, last_name, dob, phone)
+  2  	    VALUES (50, 'Grace', 'Hopper', TO_DATE('December 9, 1906', 'Month DD, YYYY'), '800-555-1250');
+
+1 row created.
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, dob, phone)
+  2  	    VALUES (51, 'Steve', 'Jobs', TO_DATE('February 24, 1955', 'Month DD, YYYY'), '800-555-1251');
+
+1 row created.
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, dob, phone)
+  2  	    VALUES (52, 'Larry', 'Ellison', TO_DATE('August 17, 1944', 'Month DD, YYYY'), '800-555-1252');
+
+1 row created.
+
+SQL> INSERT INTO customers (customer_id, first_name, last_name, dob, phone)
+  2  	    VALUES (53, 'Tom', 'Thomson', TO_DATE('August 4, 1877', 'Month DD, YYYY'), NULL);
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> /*** 2 Confirm ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+          1 John       Brown      01-JAN-65 800-555-1211                                            
+          2 Cynthia    Green      05-FEB-68 800-555-1212                                            
+          3 Steve      White      16-MAR-71 800-555-1213                                            
+          4 Gail       Black                800-555-1214                                            
+          5 Doreen     Blue       20-MAY-70                                                         
+          6 Stephanie  Jobs       21-JUN-80                                                         
+         50 Grace      Hopper     09-DEC-06 800-555-1250                                            
+         51 Steve      Jobs       24-FEB-55 800-555-1251                                            
+         52 Larry      Ellison    17-AUG-44 800-555-1252                                            
+         53 Tom        Thomson    04-AUG-77                                                         
+
+10 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 3 Correct last name ***/
+SQL> UPDATE customers
+  2  	    SET last_name = 'Thomas'
+  3  	    WHERE customer_id = 53;
+
+1 row updated.
+
+SQL> 
+SQL> 
+SQL> /*** 4 Remove Jobs ***/
+SQL> DELETE FROM customers
+  2  	    WHERE customer_id = 51;
+
+1 row deleted.
+
+SQL> 
+SQL> 
+SQL> /*** 5 Update customer_ids ***/
+SQL> UPDATE customers
+  2  	    SET customer_id = customer_id + 100;
+
+9 rows updated.
+
+SQL> 
+SQL> 
+SQL> /*** 6 Confirm changes ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+        101 John       Brown      01-JAN-65 800-555-1211                                            
+        102 Cynthia    Green      05-FEB-68 800-555-1212                                            
+        103 Steve      White      16-MAR-71 800-555-1213                                            
+        104 Gail       Black                800-555-1214                                            
+        105 Doreen     Blue       20-MAY-70                                                         
+        106 Stephanie  Jobs       21-JUN-80                                                         
+        150 Grace      Hopper     09-DEC-06 800-555-1250                                            
+        152 Larry      Ellison    17-AUG-44 800-555-1252                                            
+        153 Tom        Thomas     04-AUG-77                                                         
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 7 Create Savepoint ***/
+SQL> SAVEPOINT CUST_SAVEP;
+
+Savepoint created.
+
+SQL> 
+SQL> 
+SQL> /*** 8 Add yourself ***/
+SQL> INSERT INTO customers
+  2  	    VALUES (200, 'Pasha', 'Bolokhov', TO_DATE('January 31, 1940', 'Month DD, YYYY'), '778-356-5612');
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> /*** 9 Confirm changes ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+        101 John       Brown      01-JAN-65 800-555-1211                                            
+        102 Cynthia    Green      05-FEB-68 800-555-1212                                            
+        103 Steve      White      16-MAR-71 800-555-1213                                            
+        104 Gail       Black                800-555-1214                                            
+        105 Doreen     Blue       20-MAY-70                                                         
+        106 Stephanie  Jobs       21-JUN-80                                                         
+        150 Grace      Hopper     09-DEC-06 800-555-1250                                            
+        152 Larry      Ellison    17-AUG-44 800-555-1252                                            
+        153 Tom        Thomas     04-AUG-77                                                         
+        200 Pasha      Bolokhov   31-JAN-40 778-356-5612                                            
+
+10 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 10 Rollback to savepoint ***/
+SQL> ROLLBACK TO CUST_SAVEP;
+
+Rollback complete.
+
+SQL> 
+SQL> 
+SQL> /*** 11 List contents ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+        101 John       Brown      01-JAN-65 800-555-1211                                            
+        102 Cynthia    Green      05-FEB-68 800-555-1212                                            
+        103 Steve      White      16-MAR-71 800-555-1213                                            
+        104 Gail       Black                800-555-1214                                            
+        105 Doreen     Blue       20-MAY-70                                                         
+        106 Stephanie  Jobs       21-JUN-80                                                         
+        150 Grace      Hopper     09-DEC-06 800-555-1250                                            
+        152 Larry      Ellison    17-AUG-44 800-555-1252                                            
+        153 Tom        Thomas     04-AUG-77                                                         
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 12 Rollback ***/
+SQL> ROLLBACK;
+
+Rollback complete.
+
+SQL> 
+SQL> 
+SQL> /*** 13 List contents ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+          1 John       Brown      01-JAN-65 800-555-1211                                            
+          2 Cynthia    Green      05-FEB-68 800-555-1212                                            
+          3 Steve      White      16-MAR-71 800-555-1213                                            
+          4 Gail       Black                800-555-1214                                            
+          5 Doreen     Blue       20-MAY-70                                                         
+          6 Stephanie  Jobs       21-JUN-80                                                         
+
+6 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 14 Re-insert yourself ***/
+SQL> INSERT INTO customers
+  2  	    VALUES (200, 'Pasha', 'Bolokhov', TO_DATE('January 31, 1940', 'Month DD, YYYY'), '778-356-5612');
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> /*** 15 Commit ***/
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> /*** 16 List contents ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+          1 John       Brown      01-JAN-65 800-555-1211                                            
+          2 Cynthia    Green      05-FEB-68 800-555-1212                                            
+          3 Steve      White      16-MAR-71 800-555-1213                                            
+          4 Gail       Black                800-555-1214                                            
+          5 Doreen     Blue       20-MAY-70                                                         
+          6 Stephanie  Jobs       21-JUN-80                                                         
+        200 Pasha      Bolokhov   31-JAN-40 778-356-5612                                            
+
+7 rows selected.
+
+SQL> 
+SQL> /*** 17 Rollback to savepoint & explanation ***/
+SQL> ROLLBACK TO CUST_SAVEP;
+ROLLBACK TO CUST_SAVEP
+*
+ERROR at line 1:
+ORA-01086: savepoint 'CUST_SAVEP' never established in this session or is invalid 
+
+
+SQL> -- CUST_SAVEP was erased already at step 12,
+SQL> -- not to mention the COMMIT if step 12 wasn't there
+SQL> 
+SQL> 
+SQL> /*** 18 List contents ***/
+SQL> SELECT * FROM customers
+  2  	    ORDER BY customer_id;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  DOB       PHONE                                                   
+----------- ---------- ---------- --------- ------------                                            
+          1 John       Brown      01-JAN-65 800-555-1211                                            
+          2 Cynthia    Green      05-FEB-68 800-555-1212                                            
+          3 Steve      White      16-MAR-71 800-555-1213                                            
+          4 Gail       Black                800-555-1214                                            
+          5 Doreen     Blue       20-MAY-70                                                         
+          6 Stephanie  Jobs       21-JUN-80                                                         
+        200 Pasha      Bolokhov   31-JAN-40 778-356-5612                                            
+
+7 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 19 Select all records ***/
+SQL> SELECT customer_id, first_name, last_name, TO_CHAR(dob, 'fmMonth DD, YYYY'), phone
+  2  	    FROM customers;
+
+CUSTOMER_ID FIRST_NAME LAST_NAME  TO_CHAR(DOB,'FMMONTHDD,YYYY')                 PHONE               
+----------- ---------- ---------- --------------------------------------------- ------------        
+          1 John       Brown      January 1, 1965                               800-555-1211        
+          2 Cynthia    Green      February 5, 1968                              800-555-1212        
+          3 Steve      White      March 16, 1971                                800-555-1213        
+          4 Gail       Black                                                    800-555-1214        
+          5 Doreen     Blue       May 20, 1970                                                      
+          6 Stephanie  Jobs       June 21, 1980                                                     
+        200 Pasha      Bolokhov   January 31, 1940                              778-356-5612        
+
+7 rows selected.
+
+SQL> 
+SQL> 
+SQL> /*** 20 Spool off ***/
+SQL> SPOOL OFF
