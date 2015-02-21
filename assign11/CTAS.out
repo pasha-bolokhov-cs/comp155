@@ -1,0 +1,49 @@
+
+SQL> drop table d purge;
+
+Table dropped.
+
+SQL> create table d as
+  2  select * from emp;
+
+Table created.
+
+SQL> desc d
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(4)
+ ENAME                                              VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+
+SQL> select *
+  2  from d
+  3  where upper(ename) like '%SMITH%';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+
+SQL>
+  1  create table d2 as
+  2  select empno as "Employee Number", ename as "Employee Name"
+  3  from d
+  4* where upper(ename) like '%SMITH%'
+SQL> /
+
+Table created.
+
+SQL> select *
+  2  from d2;
+
+Employee Number Employee Name
+--------------- -------------
+      7369              SMITH
+
+SQL> spool off
+

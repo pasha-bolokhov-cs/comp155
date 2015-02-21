@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab10.html?ou=83589 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./assign10_files/9efc9e456b"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":55,"ttGuid":"78CD37034BD6E987","agent":"js-agent.newrelic.com/nr-536.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],G9z0Bl:[function(n,e){function t(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(e,t){e in n||(n[e]=t)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=v.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},v=e.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 10</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+color:#036;
+line-height: 125%;
+}
+h1 {text-align:center;
+}
+strong { font-family:"Courier New", Courier, monospace;
+color:#03F;
+}
+li { margin-bottom: 15px; }
+pre { font-family:"Courier New", Courier, monospace;
+color:gray;
+}
+td { padding: 6px;
+}
+.style1 { font-family: Consolas, "Courier New", monospace;
+          font-weight:bold;
+  }
+.checkpoint {  color:red;
+               font-weight:bold;
+   }
+.alpha {  color: darkcyan; 
+          font-weight: bold;
+       }
+.bravo {  color: cornflowerblue;
+          font-weight: bold;
+       }
+.charlie { color: cadetblue;
+           font-weight: bold;
+         }
+.broccoli { color: darkgreen;
+           font-family: 'Comic Sans MS', 'Comic Sans', cursive;"
+          }
+</style>
+<script type="text/javascript" src="./assign10_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign10_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 10</h1>
+<h1>Database Security</h1>
+<h2>Due</h2>
+<p>This lab <b>must</b> be done during the lab time and requires at least <b>two</b> partners. There is nothing to hand in but your results must be checked at various points. The latest this lab can be done is at the <strong>beginning</strong> of the following scheduled lab, but you <span style="text-decoration: underline;"><b>must</b></span> have lab at least two partners to do the lab with you if you elect to do the lab in the next scheduled lab.</p>
+<blockquote>Lab section 1A: due Tuesday, Feb 24th @ 10:30pm<br> Lab section 1B: due Tuesday, Feb 24th @ 1:00pm<br> Lab section 2A: due Monday, Feb 23th @ 1:30pm<br> Lab section 2B: due Monday, Feb 23th @ 3:00pm</blockquote>
+<h2>Prerequisites</h2>
+<p>Read Chapter 9, pages 276-292</p>
+<p>Skip the section on Synonyms (pg 287-288). We will come back to that section later.</p>
+<h2>Objectives</h2>
+<ul>
+<li>Understand how to create and modify user accounts on an Oracle database</li>
+<li>Understand creating roles to ease administration of security</li>
+<li>Describe the difference between system and object privileges</li>
+<li>Use the <strong>GRANT</strong> and <strong>REVOKE</strong> statements to grant and revoke object privileges</li>
+</ul>
+<h2>Do</h2>
+<ul>
+<li>The lab machines are all clients using the single Oracle server called babbage. To be able to do the examples in the book, you need to have DBA (database administrator) access, and it is not sensible or secure to give everyone DBA access to babbage. As a result, it will be difficult to work through the examples. Although you will not be able to try all the examples, do read through the sections in the book on Creating&nbsp; a User and on Roles. <b>You will be expected to have a basic understanding of all the commands.&nbsp;</b>
+<p>For those of you who have set up Oracle at home, try the book examples. You will find them very useful for working with your own Oracle installation.&nbsp;</p>
+</li>
+<li>Examine the various examples on pages 276-297. Note the following:
+<ul>
+<li>Pages 276-277. You do not have the privileges to create any users.</li>
+<li>Pages 277-278. You can change your own password but not anyone else's. You can issue the <strong>CONNECT</strong> command but only connect again as yourself.</li>
+<li>Pages 278-281. You do not have the privileges to delete a user or grant/revoke system privileges.</li>
+<li>Pages 281-287. Read the examples in the section on Object privileges. You will be working with object privileges in the lab.</li>
+<li>Pages 287-288. Skip the section on Synonyms. We will come back to these in a later lab.</li>
+<li>Pages 289-297. You do not have the privileges to deal with roles.</li>
+</ul>
+</li>
+</ul>
+<h2><span style="color: #000080; font-family: Arial;">Assignment</span></h2>
+<p>Although you won't be able to create users and roles, you can assign object privileges. In this lab you will need to work with a minimum of two partners so that you can see the affect of granting different types of privileges.</p>
+<p>You will be required to complete this assignment during lab time so that you can show the results at various checkpoints to your instructor.</p>
+<p>Be sure to use proper formatting for all SQL statement (e.g. put clauses on separate lines).</p>
+<ol>
+<li>Each partner should create a table which has his or her last name and first initial. (For example, I would create a table called <strong>LANGS</strong>.) The basic table creation command is provided for you below. Just change the "tablename" to your last name plus initial. This will create a new table in each partners' schema -- the schema name is your SQL login ID.
+<blockquote>
+<blockquote>
+<p class="style1">CREATE TABLE <i>tablename</i><br> (MEALDATE DATE,<br> &nbsp;BREAKFAST VARCHAR2(50));</p>
+</blockquote>
+</blockquote>
+</li>
+<li>Insert into the table what you had for breakfast the past couple of days.
+<blockquote>
+<blockquote>
+<p class="style1">INSERT INTO <i>tablename</i><br> VALUES ('15-Feb-2015', 'Scrambled eggs');<br> -- for example</p>
+</blockquote>
+</blockquote>
+You are welcome to make something up if you don't want everyone to know that you eat chocolate every morning. Be sure to add the appropriate dates.</li>
+<li>Try to find out what each partner has had for breakfast.
+<blockquote>
+<blockquote>
+<p class="style1">SELECT * FROM <i>userid.tablename</i>;</p>
+</blockquote>
+</blockquote>
+here <strong>userid</strong> is their comp155 logon ID (the first seven letters of their last name --also happens to be their schema name-- and here tablename is the name of <i>their</i> table). Confirm that you do not have access to view their table information.</li>
+<li>Grant select privilege on your table to one of your partners. That partner should grant select privilege on his or her table to the third partner, and the third partner should grant select privilege on his or her table to you. You should have a ring of select privileges. For example, for a group of three: if you are "<span class="alpha">Alpha</span>", you grant select to "<span class="bravo">Bravo</span>". <span class="bravo">Bravo</span> grants select to "<span class="charlie">Charlie</span>". <span class="charlie">Charlie</span> grants select to <span class="alpha">Alpha</span>.</li>
+<li>Try to find out what each partner has had for breakfast.</li>
+<li><span class="checkpoint">CHECKPOINT 1.</span> Show your results from step 5 to your instructor.</li>
+<li>Do the same grant as in step 4 above, but this time add <strong>"WITH GRANT OPTION"</strong>.</li>
+<li>Have the partner with the grant option, grant select on your table to the third partner. Again around the ring. For example, for a group of three: if you are <span class="alpha">Alpha</span>, you should be able to grant select on <span class="bravo">Bravo</span>'s table to <span class="charlie">Charlie</span>; <span class="bravo">Bravo</span> will grant select on <span class="charlie">Charlie</span>'s table to <span class="alpha">Alpha</span>; and <span class="charlie">Charlie</span> will grant select on <span class="alpha">Alpha</span>'s table to <span class="bravo">Bravo</span>.</li>
+<li>Try to find out what each partner had for breakfast.</li>
+<li>You decided that everyone should eat <span class="broccoli">broccoli</span> for breakfast, so try to add a row to either partner's table with "broccoli" for breakfast and today's date. This should fail because you do not have the insert privilege granted yet.</li>
+<li>Now grant insert privilege to every partner.</li>
+<li>Try step 10 again. Note that the one who did the inserting can see those new records and yet the owner of that table will not see them (yet - see next step).</li>
+<li>Type <strong>COMMIT;</strong> to commit all your transactions to the database. (All partners need to do this step before continuing to the next step.)</li>
+<li>Show if broccoli rows have been added to your table by listing all the data in your table.</li>
+<li><span class="checkpoint">CHECKPOINT 2.</span> Show your current results to your instructor.</li>
+<li>Revoke the select privilege from your first partner (the one in step 4).</li>
+<li>Try to find out what everyone had for breakfast.</li>
+<li>Check to see what privileges still exist. It may help to set the SQL*Plus window display linesize to 200 here. (You will need to use a data dictionary to do this - see pages 280-282 or check this <a href="http://www.java2s.com/Tutorial/Oracle/0600__System-Tables-Data-Dictionary/CheckingSystemPrivilegesGrantedtoaUserusersysprivs.htm" target="_blank">link</a>).</li>
+<li>Revoke any remaining privileges. (All partners need to do this step before continuing to the next step.)</li>
+<li>Prove that all privileges have been revoked. (Use the data dictionary again.) <strong>SELECT * FROM USER_TAB_PRIVS_MADE;</strong> will show what privileges you created on your tables (not columns) to other users.</li>
+<li><span class="checkpoint">CHECKPOINT 3.</span> Show your current results to your instructor.</li>
+<li>Grant update privileges on the <strong>MEALDATE&nbsp;</strong>column only to each partner. Use the following command to grant this privilege:
+<blockquote>
+<blockquote>
+<p class="style1">GRANT UPDATE (MEALDATE) ON <i>tablename</i> TO <i>partner_1, partner_2</i></p>
+</blockquote>
+</blockquote>
+(Replace <i>tablename</i> with your tablename and list your partners separated by a comma.)</li>
+<li>First, try to update all the breakfast rows in your partners' tables to say 'Chocolate'.</li>
+<li>Try to update all the <strong>MEALDATE</strong> rows in your partners' tables to today's date.</li>
+<li>Type <strong>COMMIT;</strong> to commit all your transactions to the database. (All partners need to do this step before continuing to the next step.)</li>
+<li>Show if the <strong>MEALDATE</strong> has been changed in your table.</li>
+<li><span class="checkpoint">CHECKPOINT 4.</span> Show your current results to your lab instructor.</li>
+<li>Drop your table.</li>
+</ol>
+<h2>Hand-In</h2>
+<ul>
+<li>There is nothing to hand-in for this lab. Your lab instructor must check off that you have completed the relevant steps in this lab.</li>
+</ul>
+<h2>Notes</h2>
+<p>No template is needed for this lab.</p>
+
+<script src="./assign10_files/nr-536.min.js"></script></body></html>
