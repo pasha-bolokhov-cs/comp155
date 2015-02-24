@@ -1,0 +1,43 @@
+create table pashab (mealdate date, breakfast varchar2(50));
+insert into pashab values ('22-feb-2015', 'muesli');
+insert into pashab values ('23-feb-2015', 'strawberry pie');
+insert into pashab values ('24-feb-2015', 'mango smoothie');
+insert into pashab values ('21-feb-2015', 'raspberry yoghurt');
+select * from pashab;
+select * from shao.shaos;
+select * from shao.shaos;
+grant select on pashab to shao;
+select * from wang.wangx;
+select * from lwang.wangx;
+select * from pashab;
+grant select on pashab to shao with grant option;
+grant select on lwang.wangx to shao;
+select * from shao.shaos;
+insert into lwang.wangx values ('22-feb-2015', 'strawberry-caramel donut');
+grant insert on pashab to shao;
+grant insert on pashab to lwang;
+insert into lwang.wangx values ('22-feb-2015', 'strawberry-caramel donut');
+insert into shao.shaos values ('22-feb-2015', 'strawberry-caramel donut');
+insert into lwang.wangx values ('22-feb-2015', 'strawberry-caramel donut');
+select * from lwang.wangx;
+insert into shao.shaos values ('20-feb-2015', 'chololate-chip muffin');
+insert into shao.shaos values ('20-feb-2015', 'chocolate-chip muffin');
+select * from shao.shaos;
+commit
+revoke select from shao;
+revoke select on pashab from shao;
+set linesize 150
+select * from user_tab_privs_made;
+revoke insert on pashab from shao;
+revoke insert on pashab from lwang;
+select * from user_tab_privs_made;
+grant update (mealdate) on pashab to shao, lwang;
+select * from pashab;
+update shao.shaos set breakfast = 'chocolate';
+update lwang.wangx set breakfast = 'chocolate';
+update shao.shaos set mealdate = '24-feb-2015';
+update shao.shaos set mealdate = '23-feb-2015' where breakfast = 'broccoli';
+commit;
+select * from pashab;
+drop table pashab;
+
