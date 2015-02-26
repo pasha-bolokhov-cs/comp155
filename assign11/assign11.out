@@ -1,15 +1,15 @@
-SQL> set pagesize 15
+SQL> set pagesize 20
 SQL> set linesize 80
 SQL> 
 SQL> /*********************************
 SQL>  Assignment - Lab 11 Solution
 SQL>  By Pasha Bolokhov
 SQL>  Lab Section: 1B
-SQL>  Time Used Completing Lab: xx.x hours
+SQL>  Time Used Completing Lab: 2:00 hours
 SQL>  **********************************/
 SQL> 
 SQL> /*** 1 Create MY_STUDENT ***/
-SQL> CREATE TABLE my_student (
+SQL> CREATE TABLE MY_STUDENT (
   2  	    mystudent_id     NUMBER(5) PRIMARY KEY,
   3  	    mylname	     VARCHAR2(25),
   4  	    mystartdate      DATE DEFAULT SYSDATE
@@ -20,7 +20,7 @@ Table created.
 SQL> 
 SQL> 
 SQL> /*** 2 Describe ***/
-SQL> DESCRIBE my_student
+SQL> DESCRIBE MY_STUDENT
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
  MYSTUDENT_ID                              NOT NULL NUMBER(5)
@@ -30,7 +30,7 @@ SQL> DESCRIBE my_student
 SQL> 
 SQL> 
 SQL> /*** 3 Modify MY_STUDENT ***/
-SQL> ALTER TABLE my_student
+SQL> ALTER TABLE MY_STUDENT
   2  	   MODIFY mylname VARCHAR2(50);
 
 Table altered.
@@ -38,7 +38,7 @@ Table altered.
 SQL> 
 SQL> 
 SQL> /*** 4 Describe ***/
-SQL> DESC my_student
+SQL> DESC MY_STUDENT
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
  MYSTUDENT_ID                              NOT NULL NUMBER(5)
@@ -48,7 +48,7 @@ SQL> DESC my_student
 SQL> 
 SQL> 
 SQL> /*** 5 Insert your name ***/
-SQL> INSERT INTO my_student (mystudent_id, mylname)
+SQL> INSERT INTO MY_STUDENT (mystudent_id, mylname)
   2  	    VALUES (5515, 'Bjoerndalen');
 
 1 row created.
@@ -56,7 +56,7 @@ SQL> INSERT INTO my_student (mystudent_id, mylname)
 SQL> 
 SQL> 
 SQL> /*** 6 List contents ***/
-SQL> SELECT * FROM my_student;
+SQL> SELECT * FROM MY_STUDENT;
 
 MYSTUDENT_ID MYLNAME                                            MYSTARTDA       
 ------------ -------------------------------------------------- ---------       
@@ -64,7 +64,7 @@ MYSTUDENT_ID MYLNAME                                            MYSTARTDA
 
 SQL> 
 SQL> /*** 7 Add comment ***/
-SQL> COMMENT ON TABLE my_student
+SQL> COMMENT ON TABLE MY_STUDENT
   2  	     IS 'Assignment 11 Table';
 
 Comment created.
@@ -84,40 +84,120 @@ Assignment 11 Table
                                                                                 
 
 SQL> 
-SQL> /*** 9 Create table My_Student ***/
 SQL> 
-SQL> REM SQL command here
+SQL> /*** 9 Create table My_Student ***/
+SQL> CREATE TABLE "My_Student" AS
+  2  	    SELECT mystudent_id AS "StudentNo",
+  3  		   mylname AS "Last Name",
+  4  		   mystartdate AS "BeginDate"
+  5  		   FROM MY_STUDENT;
+
+Table created.
+
+SQL> 
 SQL> 
 SQL> /*** 10 Describe ***/
+SQL> DESCRIBE "My_Student"
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ StudentNo                                          NUMBER(5)
+ Last Name                                          VARCHAR2(50)
+ BeginDate                                          DATE
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** 11 Select from data dictionary ***/
+SQL> SELECT table_name FROM user_tables
+  2  	    ORDER BY table_name;
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+COUNTRIES                                                                       
+CUSTOMERS                                                                       
+DEPARTMENTS                                                                     
+EMPLOYEES                                                                       
+JOBS                                                                            
+JOB_HISTORY                                                                     
+LOCATIONS                                                                       
+MY_STUDENT                                                                      
+My_Student                                                                      
+ORDER_STATUS                                                                    
+PRODUCTS                                                                        
+PRODUCT_CHANGES                                                                 
+PRODUCT_TYPES                                                                   
+REGIONS                                                                         
+
+14 rows selected.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** 12 Drop MY_STUDENT ***/
+SQL> DROP TABLE MY_STUDENT PURGE;
+
+Table dropped.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** 13 Rename ***/
+SQL> RENAME "My_Student" TO MY_STUDENT;
+
+Table renamed.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** 14 Select from data dictionary ***/
+SQL> SELECT table_name FROM user_tables
+  2  	    ORDER BY table_name;
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+COUNTRIES                                                                       
+CUSTOMERS                                                                       
+DEPARTMENTS                                                                     
+EMPLOYEES                                                                       
+JOBS                                                                            
+JOB_HISTORY                                                                     
+LOCATIONS                                                                       
+MY_STUDENT                                                                      
+ORDER_STATUS                                                                    
+PRODUCTS                                                                        
+PRODUCT_CHANGES                                                                 
+PRODUCT_TYPES                                                                   
+REGIONS                                                                         
+
+13 rows selected.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** 15 Drop MY_STUDENT ***/
-SQL> DROP TABLE my_student PURGE;
+SQL> DROP TABLE MY_STUDENT PURGE;
 
 Table dropped.
 
 SQL> 
 SQL> 
 SQL> /*** 16 Select from data dictionary ***/
+SQL> SELECT table_name FROM user_tables
+  2  	    ORDER BY table_name;
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+COUNTRIES                                                                       
+CUSTOMERS                                                                       
+DEPARTMENTS                                                                     
+EMPLOYEES                                                                       
+JOBS                                                                            
+JOB_HISTORY                                                                     
+LOCATIONS                                                                       
+ORDER_STATUS                                                                    
+PRODUCTS                                                                        
+PRODUCT_CHANGES                                                                 
+PRODUCT_TYPES                                                                   
+REGIONS                                                                         
+
+12 rows selected.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** 17 ***/
 SQL> 

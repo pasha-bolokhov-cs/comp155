@@ -2,14 +2,14 @@
 
 set echo on
 SPOOL assign11.out
-set pagesize 15
+set pagesize 20
 set linesize 80
 
 /*********************************
  Assignment - Lab 11 Solution
  By Pasha Bolokhov
  Lab Section: 1B
- Time Used Completing Lab: xx.x hours
+ Time Used Completing Lab: 2:00 hours
  **********************************/
  
 /*** 1 Create MY_STUDENT ***/
@@ -50,37 +50,45 @@ COMMENT ON TABLE MY_STUDENT
 SELECT TABLE_NAME, COMMENTS FROM USER_TAB_COMMENTS
        WHERE TABLE_NAME = 'MY_STUDENT';
 
-/*** 9 Create table My_Student ***/
 
-REM SQL command here
+/*** 9 Create table My_Student ***/
+CREATE TABLE "My_Student" AS
+       SELECT mystudent_id AS "StudentNo",
+	      mylname AS "Last Name",
+	      mystartdate AS "BeginDate"
+	      FROM MY_STUDENT;
+
 
 /*** 10 Describe ***/
+DESCRIBE "My_Student"
 
-REM SQL command here
 
 /*** 11 Select from data dictionary ***/
+SELECT table_name FROM user_tables
+       ORDER BY table_name;
 
-REM SQL command here
-   
+
 /*** 12 Drop MY_STUDENT ***/
+DROP TABLE MY_STUDENT PURGE;
 
-REM SQL command here
 
 /*** 13 Rename ***/
+RENAME "My_Student" TO MY_STUDENT;
 
-REM SQL command here
 
 /*** 14 Select from data dictionary ***/
+SELECT table_name FROM user_tables
+       ORDER BY table_name;
 
-REM SQL command here
 
 /*** 15 Drop MY_STUDENT ***/
-DROP TABLE my_student PURGE;
+DROP TABLE MY_STUDENT PURGE;
 
 
 /*** 16 Select from data dictionary ***/
+SELECT table_name FROM user_tables
+       ORDER BY table_name;
 
-REM SQL command here
 
 /*** 17 ***/
 
