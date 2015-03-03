@@ -1,7 +1,7 @@
--- Run command: @H:\comp155\labsol\Lab12_SolCmd
+-- Run command: @assign12
 
 set echo on
-SPOOL H:\comp155\labsol\Lab12_Sol.txt
+SPOOL assign12.out
 SET PAGESIZE 50
 
 /*********************************

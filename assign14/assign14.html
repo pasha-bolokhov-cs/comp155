@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab14.html?ou=83589 -->
+<html xmlns="http://&lt;/span&gt;w.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./assign14_files/9efc9e456b"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":88,"ttGuid":"B20CD0A2112AC94A","agent":"js-agent.newrelic.com/nr-536.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],G9z0Bl:[function(n,e){function t(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(e,t){e in n||(n[e]=t)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=v.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},v=e.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 14</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+color:#036;
+line-height: 125%;
+}
+h1 {text-align:center;
+}
+strong { font-family:Consolas, "Courier New", monospace;
+color:#03F;
+}
+li { margin-bottom: 15px; }
+pre { font-family:"Courier New", Courier, monospace;
+color:gray;
+}
+td { padding: 3px; font-family: Consolas, "Courier new", monospace; color: #339;
+}
+.style1 { font-family: Consolas, "Courier New", monospace;
+          font-weight:bold;
+  }
+
+.rightcol { color: darkgreen;
+          }
+.strong {  color: darkgreen;
+          font-family:"Courier New", Courier, monospace;
+       }
+ol.upper-roman {list-style-type: upper-alpha;}
+.data  { color: blue;   }
+
+</style>
+<script type="text/javascript" src="./assign14_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign14_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 14</h1>
+<h1>Other Database Objects</h1>
+<h2>Due</h2>
+<p>At the start of your next <b>scheduled</b> lab at the same day and time. In other words:</p>
+<blockquote>
+<p>Lab section 1A: due Tuesday, March 10th @ 10:30am<br> Lab section 1B: due Tuesday, March 10th @ 1:00pm<br> Lab section 2A: due Monday, March 9th @ 1:30pm<br> Lab section 2B: due Monday, March 9th @ 3:00pm</p>
+</blockquote>
+<p>[Note: Lab 12 is due]</p>
+<h2>Prerequisites</h2>
+<p>Read Chapter 9, pages 287-288 on Synonyms.</p>
+<p>Read Chapter 10, pages 315-325 on Sequences and Indexes.</p>
+<h2>Objective</h2>
+<ul>
+<li>Create, maintain and use sequences</li>
+<li>Create and maintain indexes</li>
+<li>Create private and public synonyms</li>
+</ul>
+<h2>Do</h2>
+<ul>
+<li>Work your way through the various examples on pages listed under Prerequisites.&nbsp;Note the following:</li>
+<li>Pages 287-288. Do not try to connect as a different user. If you wish to try to create some synonyms, create them on the tables available to you in the <strong>STOREDB</strong> schema.</li>
+<li>Pages 315-325. To do the examples, run <a href="create.sql" target="_blank">the available script to create the <strong>order_status2</strong> table and the <strong>customers</strong> table</a>. Note that you have an <strong>employees</strong> table in your schema which is <i><b>different</b></i> than the one referenced by your text and online notes. You can still create the index on page 322 but your results will look somewhat different than those on pages 323-324. Be sure to <a href="drop.sql" target="_blank">drop your tables when you are finished.</a></li>
+</ul>
+<h2>Assignment</h2>
+<p>Start spooling so that as you work through the following steps you will have a record of the commands and the results. Only properly spooled results will be accepted. (If you wish, you may clean up any errors in your spooled file before handing it in. If you choose to leave errors, be sure to indicate which statements belong to which part of the assignment. Only those statements indicated as belonging to a specific part (number) of the assignment will be marked.)</p>
+<p>Be sure to use proper formatting for all SQL statement (e.g. put clauses on separate lines).</p>
+<ol>
+<li>Run the <a href="create-textbook.sql">Lab14Create.sql</a> script to create a table called <strong>MYTEXTBOOKTABLE&nbsp;</strong>and populate it with some sample data. For your information, the attributes of the table are:
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td>text_id</td>
+<td>number(5)</td>
+</tr>
+<tr>
+<td>text_name</td>
+<td>varchar2(25)</td>
+</tr>
+<tr>
+<td>text_author</td>
+<td>varchar2(50)</td>
+</tr>
+<tr>
+<td>text_publisher</td>
+<td>varchar2(25)</td>
+</tr>
+<tr>
+<td>faculty_ref</td>
+<td>number(5)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</li>
+<li>Create a sequence called <strong>textbook_seq</strong> which will start with a value of <strong>22</strong>. Do not allow caching (i.e. <strong>NOCACHE</strong>).</li>
+<li>Update your textbook table with the sequence, placing the sequence numbers in the text_id column.</li>
+<li>Write a query to display the following information about your sequence: sequence name, maximum value, increment by size, and last number. Restrict the query to your <strong>textbook_seq sequence</strong>.</li>
+<li>Make the <strong>text_id</strong> column the primary key for the textbook table. Name your constraint something meaninful.</li>
+<li>Add the following data values to your <strong>MYTEXTBOOKTABLE</strong> table. When you add the values, be sure to use your <strong>textbook_seq</strong> sequence to enter the associated <strong>text_id</strong> values. Replace the &lt;give your name&gt; in the <strong>text_author&nbsp;</strong>column with your actual name.
+<table border="1" style="width: 94%;">
+<tbody>
+<tr>
+<td style="background-color: #c0c0c0;" width="11%">text_id</td>
+<td style="background-color: #c0c0c0;" width="29%">text_name</td>
+<td style="background-color: #c0c0c0;" width="20%">text_author</td>
+<td style="background-color: #c0c0c0;" width="20%">text_publisher</td>
+<td style="background-color: #c0c0c0;" width="20%">faculty_ref</td>
+</tr>
+<tr>
+<td width="11%">&nbsp;</td>
+<td width="29%">Relational Databases</td>
+<td width="20%">Ted Codd</td>
+<td width="20%">IT</td>
+<td width="20%">2</td>
+</tr>
+<tr>
+<td width="11%">&nbsp;</td>
+<td width="29%">The greatest book ever</td>
+<td width="20%">&lt;<i>give your name</i>&gt;</td>
+<td width="20%">Publish</td>
+<td width="20%">1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>List all the <strong>text_id</strong>s and <strong>text_author</strong>s in your <strong>MYTEXTBOOKTABLE</strong> table. (Hint: use the <strong>select</strong> command).</li>
+<li>Create a non-unique index called <strong>textname_idx</strong> on the <strong>text_name</strong>.</li>
+<li>Display the index name, index type, and uniqueness that exist in the data dictionary for the <strong>textbook</strong> table. Be sure to limit your query to the <strong>textbook</strong> table. (Hint: use the <strong>USER_INDEXES</strong> table.)</li>
+<li>Create a synonym for your <strong>textbook</strong> table called <strong>TEXT</strong>.</li>
+<li>Using your new synonym, list all the <strong>text_id</strong>s and <strong>text_author</strong>s in your <strong>MYTEXTBOOKTABLE</strong> table. (Hint: use the <strong>select</strong> command).</li>
+<li>Display the synonym names that exist in the data dictionary. (Hint: use the <strong>USER_SYNONYMS</strong> table.)</li>
+<li>Clean up your schema by dropping:
+<ul>
+<li>your <strong>textbook</strong> table,</li>
+<li>your <strong>textbook_seq</strong> sequence.</li>
+<li>your <strong>TEXT</strong> synonym</li>
+</ul>
+</li>
+<li>Remember to stop spooling.</li>
+</ol>
+<h2>Hand-In</h2>
+<ul>
+<li>Hand in a hard copy of your spooled results&nbsp;<strong>OR&nbsp;</strong>submit the spooled results to the D2L Dropbox.</li>
+<li>Be sure that your name is on all pages that you hand in.</li>
+</ul>
+<h2>Notes:</h2>
+<p>As with previous labs, I am <a href="assign14.sql">including a solution template</a>&nbsp;that you can use with this lab.</p>
+
+<script src="./assign14_files/nr-536.min.js"></script></body></html>
