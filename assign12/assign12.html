@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab12.html?ou=83589 -->
+<html xmlns="http://&lt;/span&gt;w.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./assign12_files/9efc9e456b"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":43,"ttGuid":"119B958021AD5807","agent":"js-agent.newrelic.com/nr-536.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],G9z0Bl:[function(n,e){function t(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(e,t){e in n||(n[e]=t)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=v.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},v=e.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 12</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+color:#036;
+line-height: 125%;
+}
+h1 {text-align:center;
+}
+strong { font-family:Consolas, "Courier New", monospace;
+color:#03F;
+}
+li { margin-bottom: 15px; }
+pre { font-family:"Courier New", Courier, monospace;
+color:gray;
+}
+td { padding: 3px;
+}
+.style1 { font-family: Consolas, "Courier New", monospace;
+          font-weight:bold;
+  }
+
+.rightcol { color: darkgreen;
+          }
+.strong {  color: darkgreen;
+          font-family:"Courier New", Courier, monospace;
+       }
+ol.upper-roman {list-style-type: upper-alpha;}
+.data  { color: blue;   }
+
+</style>
+<script type="text/javascript" src="./assign12_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign12_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 12</h1>
+<h1>Managing Tables and Constraints</h1>
+<h2>Due</h2>
+<blockquote>Lab section 1A: due Tuesday, Mar 3rd @ 10:30am<br> Lab section 1B: due Tuesday, Mar 3rd @ 1:00pm<br> Lab section 2A: due Monday, Mar 2nd @ 1:30pm<br> Lab section 2B: due Monday, Mar 2nd @ 3:00pm</blockquote>
+<h2>Prerequisites</h2>
+<p>Read Chapter 10, pages 306-312.</p>
+<p>Review notes on constraints.</p>
+<p>If required, review Oracle <a href="http://docs.oracle.com/cd/E11882_01/server.112/e41084/clauses002.htm#i1002629" target="_blank">online documentation</a> on constraints.</p>
+<h2>Objective</h2>
+<ul>
+<li>Describe constraints.</li>
+<li>Create and maintain constraints.</li>
+</ul>
+<h2>Do</h2>
+<ul>Pay careful attention to constraints. Constraints enforce the business rules and relationships among data entities, so they are a critical part of the relational database.</ul>
+<h2>Assignment</h2>
+<p>Start spooling so that as you work through the following steps you will have a record of the commands and the results. Only properly spooled results will be accepted. (If you wish, you may clean up any errors in your spooled file before handing it in. If you choose to leave errors, be sure to indicate which statements belong to which part of the assignment. Only those statements indicated as belonging to a specific part (number) of the assignment will be marked.)</p>
+<p>Be sure to use proper formatting for all SQL statement (e.g. put clauses on separate lines). You will lose marks for poorly structured SQL statements.</p>
+<ol>
+<li>Create a table called <strong>NEW_STUDENTS</strong> with the following structure (Note, case is not important):<br>
+<blockquote>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td>temp_id</td>
+<td class="rightcol">number(5)</td>
+</tr>
+<tr>
+<td>prog_id</td>
+<td class="rightcol">char(4)</td>
+</tr>
+<tr>
+<td>fname</td>
+<td class="rightcol">varchar2(25)</td>
+</tr>
+<tr>
+<td>lname</td>
+<td class="rightcol">varchar2(25)</td>
+</tr>
+<tr>
+<td>reg_date</td>
+<td class="rightcol">date</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</blockquote>
+</li>
+<li>Add 2 columns to the table you created above as follows (again, case is not important):<br>
+<blockquote>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td>created_by</td>
+<td class="rightcol">varchar2(30)</td>
+</tr>
+<tr>
+<td>created_date</td>
+<td class="rightcol">date</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</blockquote>
+When you add these columns to the table, you will need to include the following constraints:<br>
+<blockquote><ol class="upper-roman">
+<li><strong>created_by</strong> should not allow <strong>NULL</strong> values</li>
+<li><strong>created_date</strong> should default to the system date</li>
+</ol></blockquote>
+</li>
+<li>Confirm your modifications. (Hint, use the <strong>describe</strong> command)</li>
+<li>Confirm that the constraints were added by querying the <strong>USER_CONSTRAINTS</strong> data dictionary. Note the <i><b>constraint name</b></i>, <i><b>constraint type</b></i> and <i><b>search</b></i> <i><b>condition</b></i> for the constraints. Show <b><span style="text-decoration: underline;">ONLY</span></b> the constraints for your <strong>NEW_STUDENTS</strong> table.</li>
+<li>Create another table called <strong>PROGRAMMES </strong>with the following structure (Note, case is not important):
+<blockquote>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td>prog_id</td>
+<td class="rightcol">char(4)</td>
+</tr>
+<tr>
+<td>prog_desc</td>
+<td class="rightcol">varchar2(30)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</blockquote>
+</li>
+<li>Run the following script to add some data to your tables. Do <b>NOT&nbsp;</b>just copy the inserts into your script, run the Lab12Insert script from your script.
+<blockquote><a href="inserts.sql">Lab12Inserts.sql</a></blockquote>
+</li>
+<li>Confirm that the data have been added to both tables. (Hint, use a <strong>select *</strong> statement on each table. )</li>
+<li>Alter the <strong>PROGRAMMES</strong> table to make <strong>prog_id</strong> a primary key. Name your constraint <strong><i>prog_id_pk</i></strong>.</li>
+<li>Alter the <strong>NEW_STUDENTS</strong> table to make <strong>temp_id</strong> plus <strong>prog_id</strong> (both columns) the primary key. Name your constraint <strong><i>tempid_progid_pk</i></strong>.</li>
+<li>The column <strong>prog_id</strong> is a foreign key in the <strong>NEW_STUDENTS</strong> table, so make it a foreign key. Name your constraint <strong><i>prog_id_fk</i></strong>.</li>
+<li>Confirm that the constraints were added by querying the <strong>USER_CONSTRAINTS</strong> data dictionary. Note the <i><b>constraint name</b></i>, <i><b>constraint type</b></i> and <i><b>search</b></i> <i><b>condition</b></i> for the constraints. Show <b><span style="text-decoration: underline;">ONLY</span></b> the constraints for your <strong>NEW_STUDENTS</strong> and <strong>PROGRAMMES</strong> tables. Order the results by the table name.</li>
+<li>Insert the following values into your <strong>NEW_STUDENTS&nbsp;</strong>table as a new record:
+<table border="0">
+<tbody>
+<tr>
+<td>temp_id = <span class="data">9517</span></td>
+</tr>
+<tr>
+<td>prog_id = <span class="data">econ</span></td>
+</tr>
+<tr>
+<td>fname = <span class="data">Bill</span></td>
+</tr>
+<tr>
+<td>lname = <span class="data">Gates</span></td>
+</tr>
+<tr>
+<td>reg_date = <span class="data">today's date</span></td>
+</tr>
+<tr>
+<td>created_by = <span class="data">your name</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>You should get an error when you insert this record. Why? Answer this in your printout.</li>
+<li>New students have only been registered since the year 1997. Add a constraint to the <strong>reg_date</strong> column to ensure that only registration dates as of January 1, 1997 can be entered. Name your constraint <strong><i>dates_ck</i></strong>.</li>
+<li>Insert the following values into your <strong>NEW_STUDENTS&nbsp;</strong>table to test your new constraint:
+<table border="0">
+<tbody>
+<tr>
+<td>temp_id = <span class="data">9519</span></td>
+</tr>
+<tr>
+<td>prog_id = <span class="data">comp</span></td>
+</tr>
+<tr>
+<td>fname = <span class="data">Grace</span></td>
+</tr>
+<tr>
+<td>lname = <span class="data">Hopper</span></td>
+<td>reg_date = <span class="data">January 2, 1948</span></td>
+<td>created_by = <span class="data">your name</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Again, list all the constraints (as described in #4 above) for your <strong>NEW_STUDENTS</strong> and <strong>PROGRAMMES</strong> tables (and these <span style="text-decoration: underline;"><b>ONLY</b>)</span>.</li>
+<li>Clean up your schema by dropping both the <strong>NEW_STUDENTS</strong> and <strong>PROGRAMMES</strong> tables. Remember to <strong>purge</strong> when you drop the tables.</li>
+<li>Spool off.</li>
+</ol>
+<p>Print and hand-in the results (if you do not want to upload the output file to your lab 11 dropbox on D2L).</p>
+<h2>Hand-In</h2>
+<ul>
+<li>Either hand in a hard copy of spooled results <strong>OR</strong> upload the spooled output file to dropbox for lab 11 prior to your lab section's due date and time.</li>
+<li>Be sure that your name is on all pages that you hand in.</li>
+</ul>
+<h2>Notes</h2>
+<p>As with previous labs, I am <a href="assign12.sql" target="_blank">including a solution template</a> that you can use with this lab.</p>
+<script src="./assign12_files/nr-536.min.js"></script></body></html>
