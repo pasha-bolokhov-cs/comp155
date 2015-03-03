@@ -11,12 +11,18 @@ SET PAGESIZE 50
 **********************************/
 
 /*** Step 1 Create NEW_STUDENTS ***/
-
-REM SQL command here
+CREATE TABLE NEW_STUDENTS (
+       temp_id NUMBER(5),
+       prog_id CHAR(4),
+       fname VARCHAR2(25),
+       lname VARCHAR2(25),
+       reg_date DATE
+);
  
 /*** Step 2 Add columns ***/ 
+ALTER TABLE NEW_STUDENTS
+      ADD
 
-REM SQL command here
 
 /*** Step 3 Confirm additions ***/     
 
@@ -75,8 +81,8 @@ REM SQL command here
 REM SQL command here
 
 /*** Step 17 Clean up schema ***/
-
-REM SQL commands here
+DROP TABLE NEW_STUDENTS PURGE
+DROP TABLE PROGRAMMES PURGE
 
 /*** Step 18 End ***/
 

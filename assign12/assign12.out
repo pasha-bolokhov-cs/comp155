@@ -1,0 +1,87 @@
+SQL> SET PAGESIZE 50
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 12 Solution
+SQL>  By <give name>
+SQL>  Lab Section: ??
+SQL> **********************************/
+SQL> 
+SQL> /*** Step 1 Create NEW_STUDENTS ***/
+SQL> CREATE TABLE NEW_STUDENTS (
+  2  	    temp_id NUMBER(5),
+  3  	    prog_id CHAR(4),
+  4  	    fname VARCHAR2(25),
+  5  	    lname VARCHAR2(25),
+  6  	    reg_date DATE
+  7  );
+
+Table created.
+
+SQL> 
+SQL> /*** Step 2 Add columns ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 3 Confirm additions ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 4 Confirm constraints for NEW_STUDENTS ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 5 Create PROGRAMMES ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 6 Run insert script ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 7 SELECT from created tables ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 8 Alter PROGRAMMES ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 9 Alter NEW_STUDENTS ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 10 Add foreign key constraint ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 11 Confirm constraints for new tables ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 12 Insert into NEW_STUDENTS ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 13 Explain error ***/
+SQL> 
+SQL> REM You should get an error when you insert the record in Step 12. Why?
+SQL> 
+SQL> /*** Step 14 Add date constraint ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 15 Test date constraint ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 16 List constraints for new tables ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 17 Clean up schema ***/
+SQL> DROP TABLE NEW_STUDENTS PURGE
+  2  DROP TABLE PROGRAMMES PURGE
+  3  
+SQL> /*** Step 18 End ***/
+SQL> 
+SQL> SPOOL OFF
