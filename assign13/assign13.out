@@ -1,0 +1,129 @@
+SQL> SET PAGESIZE 50
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 13 Solution
+SQL>  By Pasha Bolokhov
+SQL>  Lab Section: 1B
+SQL>  Approx. Time Spent: 1 hr
+SQL>  **********************************/
+SQL> 
+SQL> /*** Step 1 Create EMPLOYEES_VW ***/
+SQL> CREATE OR REPLACE VIEW EMPLOYEES_VW
+  2  	    AS SELECT employee_id, first_name || ' ' || last_name AS "EMPNAME", department_id
+  3  	    FROM employees;
+
+View created.
+
+SQL> 
+SQL> /*** Step 2 Display for Dept 90 ***/
+SQL> SELECT * FROM EMPLOYEES_VW
+  2  	    WHERE department_id = 90;
+
+EMPLOYEE_ID EMPNAME                                        DEPARTMENT_ID        
+----------- ---------------------------------------------- -------------        
+        100 Steven King                                               90        
+        101 Neena Kochhar                                             90        
+        102 Lex De Haan                                               90        
+
+SQL> 
+SQL> /*** Step 3 List Views from Dictionary ***/
+SQL> SELECT VIEW_NAME, TEXT
+  2  	    FROM USER_VIEWS
+  3  	    WHERE VIEW_NAME = 'EMPLOYEES_VW';
+
+VIEW_NAME                                                                       
+------------------------------                                                  
+TEXT                                                                            
+--------------------------------------------------------------------------------
+EMPLOYEES_VW                                                                    
+SELECT employee_id, first_name || ' ' || last_name AS "EMPNAME", department_id  
+                                                                                
+                                                                                
+
+SQL> 
+SQL> /*** Step 4 Create DEPT50 view ***/
+SQL> CREATE OR REPLACE VIEW DEPT50
+  2  	    (EMPNO, EMPLOYEE, DEPTNO)
+  3  	    AS SELECT employee_id, last_name, department_id
+  4  	       FROM employees
+  5  	       WHERE department_id = 50
+  6  	       WITH CHECK OPTION CONSTRAINT DEPT_NO_C;
+
+View created.
+
+SQL> 
+SQL> /*** Step 5 Structure & Contents of DEPT50 ***/
+SQL> DESCRIBE DEPT50
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(6)
+ EMPLOYEE                                  NOT NULL VARCHAR2(25)
+ DEPTNO                                             NUMBER(4)
+
+SQL> SELECT * FROM DEPT50
+  2  	    WHERE ROWNUM <= 10;
+
+     EMPNO EMPLOYEE                      DEPTNO                                 
+---------- ------------------------- ----------                                 
+       120 Weiss                             50                                 
+       121 Fripp                             50                                 
+       122 Kaufling                          50                                 
+       123 Vollman                           50                                 
+       124 Mourgos                           50                                 
+       125 Nayer                             50                                 
+       126 Mikkilineni                       50                                 
+       127 Landry                            50                                 
+       128 Markle                            50                                 
+       129 Bissot                            50                                 
+
+10 rows selected.
+
+SQL> 
+SQL> /*** Step 6 Reassign Matos ***/
+SQL> UPDATE DEPT50
+  2  	    SET DEPTNO = 80
+  3  	    WHERE UPPER(EMPLOYEE) = 'MATOS';
+UPDATE DEPT50
+       *
+ERROR at line 1:
+ORA-01402: view WITH CHECK OPTION where-clause violation 
+
+
+SQL> 
+SQL> /*** Step 7 Why did you get an error? ***/
+SQL> PROMPT The error occurred because of the constraint DEPT_NO_C
+The error occurred because of the constraint DEPT_NO_C
+SQL> 
+SQL> /*** Step 8 List views from USER_VIEWS ***/
+SQL> SELECT VIEW_NAME, TEXT
+  2  	    FROM USER_VIEWS
+  3  	    WHERE VIEW_NAME = 'EMPLOYEES_VW'
+  4  	    OR	  VIEW_NAME = 'DEPT50';
+
+VIEW_NAME                                                                       
+------------------------------                                                  
+TEXT                                                                            
+--------------------------------------------------------------------------------
+DEPT50                                                                          
+SELECT employee_id, last_name, department_id                                    
+       	  FROM employees                                                        
+	  WHERE d                                                                      
+                                                                                
+EMPLOYEES_VW                                                                    
+SELECT employee_id, first_name || ' ' || last_name AS "EMPNAME", department_id  
+                                                                                
+                                                                                
+
+SQL> 
+SQL> /*** Step 9 Drop the new views ***/
+SQL> DROP VIEW EMPLOYEES_VW;
+
+View dropped.
+
+SQL> DROP VIEW DEPT50;
+
+View dropped.
+
+SQL> 
+SQL> /*** Step 10 ***/
+SQL> SPOOL OFF
