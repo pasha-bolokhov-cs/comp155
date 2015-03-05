@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0093)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/DogsDB.html?ou=83589 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DogsDB.java</title>
+<script type="text/javascript" src="./16 - DogsDB (Java)_files/9efc9e456b"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":78,"ttGuid":"B9D2B7F2F4331FB3","agent":"js-agent.newrelic.com/nr-536.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],G9z0Bl:[function(n,e){function t(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(e,t){e in n||(n[e]=t)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=v.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},v=e.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff;  font-family: "Consolas", "Courier New", monospace;}
+pre {color: #000000; background-color: #ffffff;  font-family: "Consolas", "Courier New", monospace;}
+table {color: #000000; background-color: #e9e8e2;  font-family: "Consolas", "Courier New", monospace;}
+.ST1 { font-family: "Consolas", "Courier New", monospace; font-weight: bold}
+.ST3 { font-family: "Consolas", "Courier New", monospace; font-style: italic}
+.ST2 { font-family: "Consolas", "Courier New", monospace; font-weight: bold; font-style: italic}
+.comment {color: #969696}
+.ST0 {color: #969696;  font-family: "Consolas", "Courier New", monospace; font-weight: bold}
+.ST4 {color: #009900;  font-family: "Consolas", "Courier New", monospace; font-style: italic}
+.keyword-directive {color: #0000e6}
+.character {color: #ce7b00}
+-->
+</style>
+<script type="text/javascript" src="./16 - DogsDB (Java)_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./16 - DogsDB (Java)_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td align="center">DogsDB.java</td>
+</tr>
+</tbody>
+</table>
+<pre>  1 <span class="comment">/*</span>
+  2 <span class="comment"> * To change this license header, choose License Headers in Project Properties.</span>
+  3 <span class="comment"> * To change this template file, choose Tools | Templates</span>
+  4 <span class="comment"> * and open the template in the editor.</span>
+  5 <span class="comment"> */</span>
+  6 <span class="keyword-directive">package</span> dogsdb;
+  7 
+  8 <span class="comment">/**</span>
+  9 <span class="comment"> * *</span>
+ 10 <span class="comment"> * </span><span class="ST0">File</span><span class="ST0"> : </span><span class="ST0">DogsDB</span><span class="ST0">.</span><span class="ST0">java</span> 
+ 11 <span class="comment"> * </span><span class="ST0">Created</span> <span class="ST0">by</span><span class="ST0"> : </span><span class="ST0">Marla</span> <span class="ST0">Weston</span> 
+ 12 <span class="comment"> * </span><span class="ST0">Modified</span> <span class="ST0">by</span><span class="ST0"> : </span><span class="ST0">Stephen</span> <span class="ST0">Lang</span>
+ 13 <span class="comment"> * </span><span class="ST0">Written</span><span class="ST0"> : 17 </span><span class="ST0">November</span><span class="ST0">, 2013 </span>
+ 14 <span class="comment"> * </span><span class="ST0">Updated</span><span class="ST0"> : 02 </span><span class="ST0">March</span><span class="ST0">, 2015 </span>
+ 15 <span class="comment"> * </span><span class="ST0">Description</span><span class="ST0"> : </span><span class="ST0">Simple</span> <span class="ST0">program</span> <span class="ST0">to</span> <span class="ST0">illustrate</span> <span class="ST0">basic</span> <span class="ST0">concepts</span><span class="ST0">.</span>
+ 16  <span class="comment">*/</span>
+ 17 <span class="keyword-directive">import</span> java.sql.*;
+ 18 
+ 19 <span class="keyword-directive">public</span> <span class="keyword-directive">class</span> <span class="ST1">DogsDB</span> {
+ 20 
+ 21     <span class="keyword-directive">public</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">main</span>(String[] args) <span class="keyword-directive">throws</span> SQLException {
+ 22 
+ 23         String breed;        <span class="comment">/* Breed of dog.  e.g. Great Dane */</span>
+ 24 
+ 25         String asize;        <span class="comment">/* Size of dog. e.g. small */</span>
+ 26 
+ 27         String kennelname;   <span class="comment">/* Name of the dog kennel  */</span>
+ 28 
+ 29         String address;      <span class="comment">/* Address of the dog kennel */</span>
+ 30 
+ 31         <span class="keyword-directive">float</span> wt;            <span class="comment">/* Weight of the dog in kg   */</span>
+ 32 
+ 33         <span class="keyword-directive">int</span> dogCount;        <span class="comment">/* Primary key counter for dog table */</span>
+ 34 
+ 35         <span class="keyword-directive">int</span> breederCount;    <span class="comment">/* Primary key counter for breeders  */</span>
+ 36 
+ 37         Connection c = <span class="keyword-directive">null</span>; <span class="comment">/* Database connection to the Oracle database. */</span>
+ 38 
+ 39         Statement s;         <span class="comment">/* Database statement */</span>
+ 40 
+ 41         dogCount = 0;
+ 42         breederCount = 0;
+ 43 
+ 44         <span class="keyword-directive">try</span> {
+ 45             Class.<span class="ST3">forName</span>(<span class="character">"</span><span class="character">oracle.jdbc.driver.OracleDriver</span><span class="character">"</span>);
+ 46 
+ 47             c = DriverManager.<span class="ST3">getConnection</span>(
+ 48                     <span class="character">"</span><span class="character">jdbc:oracle:thin:@babbage.cs.camosun.bc.ca:1521:caleb</span><span class="character">"</span>,
+ 49                     <span class="character">"</span><span class="character">your_username_goes_right_here</span><span class="character">"</span>,
+ 50                     <span class="character">"</span><span class="character">your_password_goes_right_here</span><span class="character">"</span>);
+ 51 
+ 52             s = c.createStatement();
+ 53 
+ 54             c.setAutoCommit(<span class="keyword-directive">false</span>);
+ 55 
+ 56                         <span class="comment">// First check to see if the table exists in the DB. If it does,</span>
+ 57             <span class="comment">// drop it.</span>
+ 58             ResultSet restable = s.executeQuery(<span class="character">"</span><span class="character">SELECT * </span><span class="character">"</span>
+ 59                     + <span class="character">"</span><span class="character"> FROM user_tables </span><span class="character">"</span>
+ 60                     + <span class="character">"</span><span class="character"> WHERE table_name='DOGS'</span><span class="character">"</span>);
+ 61 
+ 62             <span class="keyword-directive">while</span> (restable.next()) {
+ 63                 s.executeUpdate(<span class="character">"</span><span class="character">DROP TABLE Dogs PURGE</span><span class="character">"</span>);
+ 64             }
+ 65 
+ 66             s.executeUpdate(<span class="character">"</span><span class="character">CREATE TABLE Dogs </span><span class="character">"</span>
+ 67                     + <span class="character">"</span><span class="character">(dog_id INT </span><span class="character">"</span>
+ 68                     + <span class="character">"</span><span class="character"> ,breed VARCHAR2(40) </span><span class="character">"</span>
+ 69                     + <span class="character">"</span><span class="character">, asize VARCHAR2(40)</span><span class="character">"</span>
+ 70                     + <span class="character">"</span><span class="character">, wt REAL)</span><span class="character">"</span>);
+ 71 
+ 72             s.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Dogs VALUES </span><span class="character">"</span>
+ 73                     + <span class="character">"</span><span class="character">(</span><span class="character">"</span> + (dogCount++)
+ 74                     + <span class="character">"</span><span class="character">,'Great Dane'</span><span class="character">"</span>
+ 75                     + <span class="character">"</span><span class="character">,'Large'</span><span class="character">"</span>
+ 76                     + <span class="character">"</span><span class="character">, 60.00)</span><span class="character">"</span>);
+ 77             s.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Dogs VALUES </span><span class="character">"</span>
+ 78                     + <span class="character">"</span><span class="character">(</span><span class="character">"</span> + (dogCount++)
+ 79                     + <span class="character">"</span><span class="character">,'Border Collie'</span><span class="character">"</span>
+ 80                     + <span class="character">"</span><span class="character">, 'Medium'</span><span class="character">"</span>
+ 81                     + <span class="character">"</span><span class="character">, 15.00)</span><span class="character">"</span>);
+ 82             s.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Dogs VALUES </span><span class="character">"</span>
+ 83                     + <span class="character">"</span><span class="character">(</span><span class="character">"</span> + (dogCount++)
+ 84                     + <span class="character">"</span><span class="character">,'Chihuahua'</span><span class="character">"</span>
+ 85                     + <span class="character">"</span><span class="character">, 'Small'</span><span class="character">"</span>
+ 86                     + <span class="character">"</span><span class="character">, 1.50)</span><span class="character">"</span>);
+ 87 
+ 88                         <span class="comment">// First check to see if the table exists in the DB. If it does,</span>
+ 89             <span class="comment">// drop it.</span>
+ 90             ResultSet restable2 = s.executeQuery(<span class="character">"</span><span class="character">SELECT * </span><span class="character">"</span>
+ 91                     + <span class="character">"</span><span class="character"> FROM user_tables </span><span class="character">"</span>
+ 92                     + <span class="character">"</span><span class="character"> WHERE table_name='BREEDERS'</span><span class="character">"</span>);
+ 93 
+ 94             <span class="keyword-directive">while</span> (restable2.next()) {
+ 95                 s.executeUpdate(<span class="character">"</span><span class="character">DROP TABLE Breeders PURGE</span><span class="character">"</span>);
+ 96             }
+ 97 
+ 98                         <span class="comment">// Create a new BREEDERS table.</span>
+ 99             String sqlString = <span class="character">"</span><span class="character">CREATE TABLE Breeders </span><span class="character">"</span>
+100                     + <span class="character">"</span><span class="character">(dog_id INT </span><span class="character">"</span>
+101                     + <span class="character">"</span><span class="character">, breed VARCHAR2(40)</span><span class="character">"</span>
+102                     + <span class="character">"</span><span class="character">, kennelname VARCHAR2(40)</span><span class="character">"</span>
+103                     + <span class="character">"</span><span class="character">, address VARCHAR2(80)</span><span class="character">"</span>
+104                     + <span class="character">"</span><span class="character">, lic INT)</span><span class="character">"</span>;
+105             s.executeUpdate(sqlString);
+106 
+107             <span class="comment">// Add three new breeders records into the table.</span>
+108             s.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Breeders VALUES </span><span class="character">"</span>
+109                     + <span class="character">"</span><span class="character">(</span><span class="character">"</span> + (breederCount++)
+110                     + <span class="character">"</span><span class="character">,'Great Dane'</span><span class="character">"</span>
+111                     + <span class="character">"</span><span class="character">, 'Large Dog Kennels'</span><span class="character">"</span>
+112                     + <span class="character">"</span><span class="character">, '123 Main'</span><span class="character">"</span>
+113                     + <span class="character">"</span><span class="character">, 12)</span><span class="character">"</span>);
+114             s.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Breeders VALUES </span><span class="character">"</span>
+115                     + <span class="character">"</span><span class="character">(</span><span class="character">"</span> + (breederCount++)
+116                     + <span class="character">"</span><span class="character">,'Border Collie'</span><span class="character">"</span>
+117                     + <span class="character">"</span><span class="character">, 'Fast Dog Kennels'</span><span class="character">"</span>
+118                     + <span class="character">"</span><span class="character">, '456 Main'</span><span class="character">"</span>
+119                     + <span class="character">"</span><span class="character">, 45)</span><span class="character">"</span>);
+120             s.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Breeders VALUES </span><span class="character">"</span>
+121                     + <span class="character">"</span><span class="character">(</span><span class="character">"</span> + (breederCount++)
+122                     + <span class="character">"</span><span class="character">,'Chihuahua'</span><span class="character">"</span>
+123                     + <span class="character">"</span><span class="character">, 'Tiny Dog Kennels'</span><span class="character">"</span>
+124                     + <span class="character">"</span><span class="character">, '789 Main'</span><span class="character">"</span>
+125                     + <span class="character">"</span><span class="character">, 78)</span><span class="character">"</span>);
+126 
+127             c.commit();
+128             c.setAutoCommit(<span class="keyword-directive">true</span>);
+129 
+130                         <span class="comment">// Retrieve the dogs and breeders join records.</span>
+131             ResultSet rs = s.executeQuery(<span class="character">"</span><span class="character">SELECT * </span><span class="character">"</span>
+132                     + <span class="character">"</span><span class="character"> FROM Dogs d, Breeders b </span><span class="character">"</span>
+133                     + <span class="character">"</span><span class="character"> WHERE d.dog_id = b.dog_id </span><span class="character">"</span>);
+134 
+135             <span class="keyword-directive">while</span> (rs.next()) {
+136                 breed = rs.getString(<span class="character">"</span><span class="character">breed</span><span class="character">"</span>);
+137                 asize = rs.getString(<span class="character">"</span><span class="character">asize</span><span class="character">"</span>);
+138                 wt = rs.getFloat(<span class="character">"</span><span class="character">wt</span><span class="character">"</span>);
+139 
+140                 kennelname = rs.getString(<span class="character">"</span><span class="character">kennelname</span><span class="character">"</span>);
+141                 address = rs.getString(<span class="character">"</span><span class="character">address</span><span class="character">"</span>);
+142                 System.<span class="ST4">out</span>.println(breed + <span class="character">"</span><span class="character">s are of </span><span class="character">"</span> + asize
+143                         + <span class="character">"</span><span class="character"> size and weigh </span><span class="character">"</span> + wt + <span class="character">"</span><span class="character"> kilos</span><span class="character">"</span> + <span class="character">"</span><span class="character"> from </span><span class="character">"</span>
+144                         + kennelname + <span class="character">"</span><span class="character"> at </span><span class="character">"</span> + address);
+145             }
+146             s.close();
+147             c.close();
+148         } <span class="keyword-directive">catch</span> (ClassNotFoundException ex) {
+149             System.<span class="ST4">out</span>.println(ex);
+150         } <span class="keyword-directive">catch</span> (SQLException ex) {
+151             <span class="keyword-directive">if</span> (c != <span class="keyword-directive">null</span>) {
+152                 c.rollback();
+153                 c.setAutoCommit(<span class="keyword-directive">true</span>);
+154             }
+155             System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">SQLException caught</span><span class="character">"</span>);
+156             System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">---</span><span class="character">"</span>);
+157             <span class="keyword-directive">while</span> (ex != <span class="keyword-directive">null</span>) {
+158                 System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">Message   : </span><span class="character">"</span> + ex.getMessage());
+159                 System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">SQLState  : </span><span class="character">"</span> + ex.getSQLState());
+160                 System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">ErrorCode : </span><span class="character">"</span> + ex.getErrorCode());
+161                 System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">---</span><span class="character">"</span>);
+162                 ex = ex.getNextException();
+163             }
+164         }
+165     }
+166 }
+167 
+</pre>
+
+<script src="./16 - DogsDB (Java)_files/nr-536.min.js"></script></body></html>
