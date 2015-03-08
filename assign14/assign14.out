@@ -1,0 +1,119 @@
+SQL> SET PAGESIZE 50
+SQL> SET LINESIZE 100
+SQL> 
+SQL> /*********************************
+SQL>  Assignment - Lab 14 Solution
+SQL>  By Pasha Bolokhov
+SQL>  Lab Section: 1B
+SQL>  **********************************/
+SQL> 
+SQL> /*** Step 1 Run script to create table & insert data ***/
+SQL> @create-textbook.sql
+SQL> /*** Create the table ***/
+SQL> 
+SQL> CREATE TABLE mytextbooktable
+  2  (text_id NUMBER(5),
+  3   text_name VARCHAR2(25),
+  4   text_author VARCHAR2(50),
+  5   text_publisher VARCHAR2(25),
+  6   faculty_ref NUMBER(5));
+
+Table created.
+
+SQL> 
+SQL> /*** Insert some data ***/
+SQL> 
+SQL> INSERT INTO mytextbooktable
+  2  (text_name, text_author, text_publisher,faculty_ref)
+  3  VALUES
+  4  ('All computers', 'Know It All', 'Self',3);
+
+1 row created.
+
+SQL> 
+SQL> INSERT INTO mytextbooktable
+  2  (text_name, text_author, text_publisher,faculty_ref)
+  3  VALUES
+  4  ('No Homework!', 'Tired Student', 'Publish',1);
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> /*** Step 2 Create sequence ***/
+SQL> CREATE SEQUENCE	textbook_seq
+  2  	    START WITH	22
+  3  	    NOCACHE;
+
+Sequence created.
+
+SQL> 
+SQL> 
+SQL> /*** Step 3 Update with sequence ***/
+SQL> UPDATE MYTEXTBOOKTABLE
+  2  	    SET TEXT_ID = textbook_seq.NEXTVAL
+  3  	    WHERE TEXT_NAME = 'All computers';
+
+1 row updated.
+
+SQL> UPDATE MYTEXTBOOKTABLE
+  2  	    SET TEXT_ID = textbook_seq.NEXTVAL
+  3  	    WHERE TEXT_NAME = 'No Homework!';
+
+1 row updated.
+
+SQL> 
+SQL> 
+SQL> /*** Step 4 Display details about textbook_seq ***/
+SQL> SELECT SEQUENCE_NAME, MAX_VALUE, INCREMENT_BY, LAST_NUMBER
+  2  	    FROM USER_SEQUENCES
+  3  	    WHERE SEQUENCE_NAME = 'TEXTBOOK_SEQ';
+
+SEQUENCE_NAME                   MAX_VALUE INCREMENT_BY LAST_NUMBER                                  
+------------------------------ ---------- ------------ -----------                                  
+TEXTBOOK_SEQ                   1.0000E+28            1          24                                  
+
+SQL> 
+SQL> 
+SQL> /*** Step 5 Make text_id the primary key ***/
+SQL> ALTER TABLE MYTEXTBOOKTABLE ADD CONSTRAINT text_id_pk PRIMARY KEY (TEXT_ID);
+
+Table altered.
+
+SQL> 
+SQL> 
+SQL> /*** Step 6 Insert values ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 7 List from MYTEXTBOOKTABLE ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 8 Create non-unique index ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 9 Display details about indexes on textbook table ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 10 Create synonym ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 11 Use synonym to list ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 12 Display synonym names ***/
+SQL> 
+SQL> REM SQL command here
+SQL> 
+SQL> /*** Step 13 Drop schema objects ***/
+SQL> --DROP SEQUENCE textbook_seq;
+SQL> --DROP TABLE MYTEXTBOOKTABLE PURGE;
+SQL> 
+SQL> /*** Step 14 End ***/
+SQL> 
+SQL> SPOOL OFF
