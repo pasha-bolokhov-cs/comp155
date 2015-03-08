@@ -41,34 +41,44 @@ ALTER TABLE MYTEXTBOOKTABLE ADD CONSTRAINT text_id_pk PRIMARY KEY (TEXT_ID);
 
 
 /*** Step 6 Insert values ***/
+INSERT INTO MYTEXTBOOKTABLE
+       (TEXT_ID, TEXT_NAME, TEXT_AUTHOR, TEXT_PUBLISHER, FACULTY_REF)
+       VALUES
+       (textbook_seq.NEXTVAL, 'Relational Databases', 'Ted Codd', 'IT', 2);
+INSERT INTO MYTEXTBOOKTABLE
+       (TEXT_ID, TEXT_NAME, TEXT_AUTHOR, TEXT_PUBLISHER, FACULTY_REF)
+       VALUES
+       (textbook_seq.NEXTVAL, 'The Hunger Games', 'Suzanne Collins', 'Publish', 1);
 
-REM SQL command here
 
 /*** Step 7 List from MYTEXTBOOKTABLE ***/
+SELECT TEXT_ID, TEXT_AUTHOR FROM MYTEXTBOOKTABLE;
 
-REM SQL command here
 
 /*** Step 8 Create non-unique index ***/
+CREATE INDEX textname_idx ON MYTEXTBOOKTABLE (TEXT_NAME);
 
-REM SQL command here
       
 /*** Step 9 Display details about indexes on textbook table ***/
+SELECT INDEX_NAME, INDEX_TYPE, UNIQUENESS
+       FROM USER_INDEXES
+       WHERE TABLE_NAME = 'MYTEXTBOOKTABLE';
 
-REM SQL command here
       
 /*** Step 10 Create synonym ***/
+CREATE SYNONYM TEXT FOR MYTEXTBOOKTABLE;
 
-REM SQL command here
             
 /*** Step 11 Use synonym to list ***/
+SELECT TEXT_ID, TEXT_AUTHOR FROM TEXT;
 
-REM SQL command here
       
 /*** Step 12 Display synonym names ***/
+SELECT SYNONYM_NAME FROM USER_SYNONYMS;
 
-REM SQL command here
       
 /*** Step 13 Drop schema objects ***/
+DROP SYNONYM TEXT;
 DROP SEQUENCE textbook_seq;
 DROP TABLE MYTEXTBOOKTABLE PURGE;
 

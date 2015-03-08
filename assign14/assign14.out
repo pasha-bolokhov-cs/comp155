@@ -83,36 +83,94 @@ Table altered.
 SQL> 
 SQL> 
 SQL> /*** Step 6 Insert values ***/
+SQL> INSERT INTO MYTEXTBOOKTABLE
+  2  	    (TEXT_ID, TEXT_NAME, TEXT_AUTHOR, TEXT_PUBLISHER, FACULTY_REF)
+  3  	    VALUES
+  4  	    (textbook_seq.NEXTVAL, 'Relational Databases', 'Ted Codd', 'IT', 2);
+
+1 row created.
+
+SQL> INSERT INTO MYTEXTBOOKTABLE
+  2  	    (TEXT_ID, TEXT_NAME, TEXT_AUTHOR, TEXT_PUBLISHER, FACULTY_REF)
+  3  	    VALUES
+  4  	    (textbook_seq.NEXTVAL, 'The Hunger Games', 'Suzanne Collins', 'Publish', 1);
+
+1 row created.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 7 List from MYTEXTBOOKTABLE ***/
+SQL> SELECT TEXT_ID, TEXT_AUTHOR FROM MYTEXTBOOKTABLE;
+
+   TEXT_ID TEXT_AUTHOR                                                                              
+---------- --------------------------------------------------                                       
+        22 Know It All                                                                              
+        23 Tired Student                                                                            
+        24 Ted Codd                                                                                 
+        25 Suzanne Collins                                                                          
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 8 Create non-unique index ***/
+SQL> CREATE INDEX textname_idx ON MYTEXTBOOKTABLE (TEXT_NAME);
+
+Index created.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 9 Display details about indexes on textbook table ***/
+SQL> SELECT INDEX_NAME, INDEX_TYPE, UNIQUENESS
+  2  	    FROM USER_INDEXES
+  3  	    WHERE TABLE_NAME = 'MYTEXTBOOKTABLE';
+
+INDEX_NAME                     INDEX_TYPE                  UNIQUENES                                
+------------------------------ --------------------------- ---------                                
+TEXT_ID_PK                     NORMAL                      UNIQUE                                   
+TEXTNAME_IDX                   NORMAL                      NONUNIQUE                                
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 10 Create synonym ***/
+SQL> CREATE SYNONYM TEXT FOR MYTEXTBOOKTABLE;
+
+Synonym created.
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 11 Use synonym to list ***/
+SQL> SELECT TEXT_ID, TEXT_AUTHOR FROM TEXT;
+
+   TEXT_ID TEXT_AUTHOR                                                                              
+---------- --------------------------------------------------                                       
+        22 Know It All                                                                              
+        23 Tired Student                                                                            
+        24 Ted Codd                                                                                 
+        25 Suzanne Collins                                                                          
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 12 Display synonym names ***/
+SQL> SELECT SYNONYM_NAME FROM USER_SYNONYMS;
+
+SYNONYM_NAME                                                                                        
+------------------------------                                                                      
+TEXT                                                                                                
+
 SQL> 
-SQL> REM SQL command here
 SQL> 
 SQL> /*** Step 13 Drop schema objects ***/
-SQL> --DROP SEQUENCE textbook_seq;
-SQL> --DROP TABLE MYTEXTBOOKTABLE PURGE;
+SQL> DROP SYNONYM TEXT;
+
+Synonym dropped.
+
+SQL> DROP SEQUENCE textbook_seq;
+
+Sequence dropped.
+
+SQL> DROP TABLE MYTEXTBOOKTABLE PURGE;
+
+Table dropped.
+
 SQL> 
 SQL> /*** Step 14 End ***/
 SQL> 
