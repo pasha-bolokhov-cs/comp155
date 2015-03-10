@@ -32,31 +32,31 @@ SET ECHO ON
 -- create tables, sequences and constraint
 --
 
-@<path here>hr_cre
+@hr_cre
 
 -- 
 -- populate tables
 --
 
-@<path here>hr_popul
+@hr_popul
 
 --
 -- create indexes
 --
 
-@<path here>hr_idx
+@hr_idx
 
 --
 -- create procedural objects
 --
 
-@<path here>hr_code
+@hr_code
 
 --
 -- add comments to tables and columns
 --
 
-@<path here>hr_comnt
+@hr_comnt
 
 
 
