@@ -1,0 +1,52 @@
+Normalization Lab 
+Name:
+
+1. What is the definition of zero normal form?
+
+
+
+
+2. Express the information in the grooming ledger above in zero normal form.  e.g. provide an appropriate entity name in upper case then write out the attributes like this:   ENTITY_NAME ( attribute1, attribute2, …)
+
+
+
+
+3. What is the definition of first normal form?
+
+
+
+
+
+4. Express the information into first normal form.  Underline the primary key for each entity.
+
+
+
+
+
+
+
+5. What is the definition of second normal form?
+
+
+
+
+
+
+
+6. Express the information into second normal form.  Underline the primary key for each entity.
+
+
+
+
+
+
+
+
+7. What is the definition of third normal form?
+
+
+
+
+
+8. Express the information into third normal form. Underline the primary key for each entity.
+
