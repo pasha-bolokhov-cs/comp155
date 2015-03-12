@@ -1,4 +1,10 @@
 
+/*
+ * Settings
+ */
+set echo on
+set linesize = 120
+
 /**********************
  *                    *
  *       Part I       *
@@ -16,7 +22,6 @@ CREATE OR REPLACE TRIGGER audit_salary
        ON employees
        FOR EACH ROW
 BEGIN
-  dbms_output.put_line('audit_salary()');
   CASE
     WHEN DELETING THEN
       INSERT INTO audit_table (user_name, tablename, change_date, del) 
@@ -52,7 +57,6 @@ CREATE OR REPLACE TRIGGER audit_salary
        ON employees
        FOR EACH ROW
 BEGIN
-  dbms_output.put_line('audit_salary()');
   CASE
     WHEN DELETING THEN
       INSERT INTO audit_table (user_name, tablename, change_date, del) 
@@ -63,8 +67,8 @@ BEGIN
     WHEN UPDATING('salary') THEN
       INSERT INTO audit_table (user_name, tablename, column_name, change_date, upd)
 	     VALUES (USER, 'Employees', 'Salary', SYSDATE, 'X');
-      INSERT INTO transaction_salary_table
-      	     VALUES (employee_id, first_name, last_name, :OLD.salary, :NEW.salary, SYS_DATE);
+      INSERT INTO transaction_salary_table (employee_id, fname, lname, old_salary, new_salary, change_date)
+      	     VALUES (:NEW.employee_id, :NEW.first_name, :NEW.last_name, :OLD.salary, :NEW.salary, SYSDATE);
     WHEN UPDATING THEN
       INSERT INTO audit_table (user_name, tablename, change_date, upd)
 	     VALUES (USER, 'Employees', SYSDATE, 'X');
