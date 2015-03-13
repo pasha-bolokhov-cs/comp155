@@ -29,7 +29,7 @@ public class Assign16 {
 			 *************************************************************/
 
 			/* Remove SCOTTHR_EMP table if it existed */
-			try { s.executeUpdate("DROP TABLE SCOTTHR_EMP"); } catch (SQLException ex) {}
+			try { s.executeUpdate("DROP TABLE SCOTTHR_EMP PURGE"); } catch (SQLException ex) {}
 
 			/* Create SCOTTHR_EMP table */
 			s.executeUpdate("CREATE TABLE SCOTTHR_EMP (" +
@@ -64,9 +64,9 @@ public class Assign16 {
 					  "********************\n");
 			ResultSet r = s.executeQuery("SELECT * FROM SCOTTHR_EMP");
 			while (r.next()) {
-				System.out.printf("Employee #%d, %s, at Dept No %d makes $%d\n",
+				System.out.printf("Employee #%d, %s, at Dept No %d makes $%g\n",
 						  r.getInt("empno"), r.getString("ename"),
-						  r.getInt("deptno"), r.getInt("sal"));
+						  r.getInt("deptno"), r.getDouble("sal"));
 			}
 			System.out.printf("\n\n");
 
@@ -82,14 +82,15 @@ public class Assign16 {
 			s.execute("CALL raisesalary(20, 10)");			
 
 			/* Query again */
+			System.out.printf("Ka-Ching!!\n\n");
 			System.out.printf("********************" + 
 					  " Employee Data after Raise " +
 					  "********************\n");
 			r = s.executeQuery("SELECT * FROM SCOTTHR_EMP");
 			while (r.next()) {
-				System.out.printf("Employee #%d, %s, at Dept No %d makes $%d\n",
+				System.out.printf("Employee #%d, %s, at Dept No %d makes $%g\n",
 						  r.getInt("empno"), r.getString("ename"),
-						  r.getInt("deptno"), r.getInt("sal"));
+						  r.getInt("deptno"), r.getDouble("sal"));
 			}
 			System.out.printf("\n");
 
