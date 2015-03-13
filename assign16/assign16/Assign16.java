@@ -21,6 +21,9 @@ public class Assign16 {
 			s = c.createStatement();
 			c.setAutoCommit(false);
 
+			/* Remove SCOTTHR_EMP table if it existed */
+			try { s.executeUpdate("DROP TABLE SCOTTHR_EMP"); } catch (SQLException ex) {}
+
 			/* Create SCOTTHR_EMP table */
 			s.executeUpdate("CREATE TABLE SCOTTHR_EMP (" +
 					"	empno	NUMBER(5), " +
@@ -30,8 +33,14 @@ public class Assign16 {
 					")");
 
 			/* Migrate all Scott entries */
-			s.executeUpdate("INSERT INTO SCOTTHR_EMP " + 
+			s.executeUpdate("INSERT INTO SCOTTHR_EMP " +
 					"	SELECT empno, deptno, INITCAP(ename), sal FROM emp");
+
+			/* Migrate all HR Finance employees */
+			s.executeUpdate("INSERT INTO SCOTTHR_EMP (empno, ename) " +
+					"	SELECT employee_id * 10, last_name " +
+					"	       FROM employees " +
+					"	       WHERE department_id = 100");
 
 			/* Apply the changes */
 			c.commit();
