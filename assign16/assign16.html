@@ -70,19 +70,19 @@ ol.upper-roman {list-style-type: upper-alpha;}
 <p>[Note: Lab 14 is due]</p>
 <h2>Prerequisites</h2>
 <p>Read Chapter 15, pages 532-578.</p>
-<p>Review the notes and sample code available on the web via the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lecture%20and%20Lab.html?ou=83589">course website</a>. See the links under the "<i>Ch 15.Running SQL Using Java"</i> lecture heading in week 9. Review the sample Java program we covered in class. There are here:</p>
+<p>Review the notes and sample code available on the web via the <a href="..">course website</a>. See the links under the "<i>Ch 15.Running SQL Using Java"</i> lecture heading in week 9. Review the sample Java program we covered in class. There are here:</p>
 <ul>
-<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/DogsDB.html?ou=83589" target="_blank">DogsDB</a> - Simple, basic program with the username and password embedded in the connection.</li>
-<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/PrepJavaExample.html?ou=83589" target="_blank">PrepJavaExample</a> - Uses Scanner to allow console input of the username and password. Also gives an example of the use of a prepared statement.</li>
-<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/JavaExample.html?ou=83589" target="_blank">JavaExample</a>- As above, it uses Scanner for console input of the username and password. Shows how to call a stored procedure.
+<li><a href="DogsDB.java.html" target="_blank">DogsDB</a> - Simple, basic program with the username and password embedded in the connection.</li>
+<li><a href="PrepJavaExample.java.html" target="_blank">PrepJavaExample</a> - Uses Scanner to allow console input of the username and password. Also gives an example of the use of a prepared statement.</li>
+<li><a href="JavaExample.java.html" target="_blank">JavaExample</a>- As above, it uses Scanner for console input of the username and password. Shows how to call a stored procedure.
 <ul>
-<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/change_weight.sql?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589" target="_blank"><strong>CHANGE_WEIGHT</strong></a> - The PL/SQL stored procedure called by the JavaExample program above.</li>
+<li><a href="change_weight.sql" target="_blank"><strong>CHANGE_WEIGHT</strong></a> - The PL/SQL stored procedure called by the JavaExample program above.</li>
 </ul>
 </li>
 </ul>
 <h2>Preparations</h2>
 <h3>Setting up the connection to the database...</h3>
-<p>You will need a copy of the Oracle JDBC driver for this lab. The driver file <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/ojdbc14.jar?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589">ojdbc14.jar is available here</a> for your use. Save it to your H: drive.</p>
+<p>You will need a copy of the Oracle JDBC driver for this lab. The driver file <a href="ojdbc14.jar">ojdbc14.jar is available here</a> for your use. Save it to your H: drive.</p>
 <p>Set up as usual for your Java project (e.g. File | New | Java Project | &lt;Project Name&gt;). You will need to add the JDBC driver given above as part of your Referenced Libraries. To do that in NetBeans or Eclipse, you will need to:</p>
 <ul>
 <li>From the Project menu, select "Properties"</li>
@@ -94,7 +94,7 @@ ol.upper-roman {list-style-type: upper-alpha;}
 <li>You are now ready to connect to Oracle.</li>
 </ul>
 <h3>Adding some additional database files...</h3>
-<p>In class you have seen examples using the EMP, DEPT, BONUS and SALGRADE tables. If you haven't loaded these into your schema for testing purposes, you should do so now. You will need them for this lab. The SQL script to create and populate these tables is <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/scott.sql?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589">available here</a> - or off the main Lecture/Lab page. (Note: These 4 tables have been available as part of Oracle for decades. Everyone knows them as the "<span style="color: #ff0088; font-family: Consolas, &#39;Courier New&#39;, monospace; font-weight: bold;">Scott</span>"&nbsp;tables.)</p>
+<p>In class you have seen examples using the EMP, DEPT, BONUS and SALGRADE tables. If you haven't loaded these into your schema for testing purposes, you should do so now. You will need them for this lab. The SQL script to create and populate these tables is <a href="scott.sql">available here</a> - or off the main Lecture/Lab page. (Note: These 4 tables have been available as part of Oracle for decades. Everyone knows them as the "<span style="color: #ff0088; font-family: Consolas, &#39;Courier New&#39;, monospace; font-weight: bold;">Scott</span>"&nbsp;tables.)</p>
 <h2>Objective</h2>
 <ul>
 <li>Understand the basics of JDBC</li>
@@ -110,7 +110,7 @@ ol.upper-roman {list-style-type: upper-alpha;}
 <ul>
 <li><b>Part 1. </b>
 <ul>
-<li>Logon to your Oracle account as usual. Run the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/JDBC_lab.sql?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589">available SQL script</a> to set up an initial table, and a procedure called <strong>RAISE_SALARY</strong>.</li>
+<li>Logon to your Oracle account as usual. Run the <a href="JDBC_lab.sql">available SQL script</a> to set up an initial table, and a procedure called <strong>RAISE_SALARY</strong>.</li>
 <li>Double check that the procedure exists in your schema by using the <strong>USER_SOURCE</strong> data dictionary table.</li>
 </ul>
 <p>&nbsp;</p>
