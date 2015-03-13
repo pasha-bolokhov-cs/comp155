@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lab16.html?ou=83589 -->
+<html xmlns="http://&lt;/span&gt;w.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./assign16_files/9efc9e456b"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":48,"ttGuid":"38346E346E10495B","agent":"js-agent.newrelic.com/nr-536.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],G9z0Bl:[function(n,e){function t(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(e,t){e in n||(n[e]=t)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=v.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},v=e.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+<title>Computer Science 155 - Lab 15</title>
+<style>
+body { font-family:Arial, Helvetica, sans-serif;
+color:#036;
+line-height: 125%;
+}
+h1 {text-align:center;
+}
+strong { font-family:Consolas, "Courier New", monospace;
+color:#03F;
+}
+li { margin-bottom: 15px; }
+pre { font-family:"Courier New", Courier, monospace;
+color:gray;
+}
+td { padding: 3px; font-family: Consolas, "Courier new", monospace; color: #339;
+}
+.style1 { font-family: Consolas, "Courier New", monospace;
+          font-weight:bold;
+  }
+
+.rightcol { color: darkgreen;
+          }
+.strong {  color: darkgreen;
+          font-family:"Courier New", Courier, monospace;
+       }
+ol.upper-roman {list-style-type: upper-alpha;}
+.data  { color: blue;   }
+
+</style>
+<script type="text/javascript" src="./assign16_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./assign16_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+<h1>Lab 16</h1>
+<h1>Java JDBC</h1>
+<h2>Due</h2>
+<p>There are no formal labs in the last week of classes, so you must get this lab in on time. In other words <b>at the beginning</b> of your lab section as follows:</p>
+<blockquote>
+<blockquote>
+<p>Lab section 1A: <b>due Tuesday, March 17th @ 10:30am</b><br> Lab section 1B: <b>due Tuesday, March 17th @ 1:00pm</b><br> Lab section 2A: <b>due Monday, March 16th @ 1:30pm</b><br> Lab section 2B: <b>due Monday, March 16th @ 3:00pm</b></p>
+</blockquote>
+</blockquote>
+<p>The solution to this lab will be posted on Wednesday, March 18th at noon PST</p>
+<p>[Note: Lab 14 is due]</p>
+<h2>Prerequisites</h2>
+<p>Read Chapter 15, pages 532-578.</p>
+<p>Review the notes and sample code available on the web via the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Lecture%20and%20Lab.html?ou=83589">course website</a>. See the links under the "<i>Ch 15.Running SQL Using Java"</i> lecture heading in week 9. Review the sample Java program we covered in class. There are here:</p>
+<ul>
+<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/DogsDB.html?ou=83589" target="_blank">DogsDB</a> - Simple, basic program with the username and password embedded in the connection.</li>
+<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/PrepJavaExample.html?ou=83589" target="_blank">PrepJavaExample</a> - Uses Scanner to allow console input of the username and password. Also gives an example of the use of a prepared statement.</li>
+<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/JavaExample.html?ou=83589" target="_blank">JavaExample</a>- As above, it uses Scanner for console input of the username and password. Shows how to call a stored procedure.
+<ul>
+<li><a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/change_weight.sql?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589" target="_blank"><strong>CHANGE_WEIGHT</strong></a> - The PL/SQL stored procedure called by the JavaExample program above.</li>
+</ul>
+</li>
+</ul>
+<h2>Preparations</h2>
+<h3>Setting up the connection to the database...</h3>
+<p>You will need a copy of the Oracle JDBC driver for this lab. The driver file <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/ojdbc14.jar?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589">ojdbc14.jar is available here</a> for your use. Save it to your H: drive.</p>
+<p>Set up as usual for your Java project (e.g. File | New | Java Project | &lt;Project Name&gt;). You will need to add the JDBC driver given above as part of your Referenced Libraries. To do that in NetBeans or Eclipse, you will need to:</p>
+<ul>
+<li>From the Project menu, select "Properties"</li>
+<li>From the Properties window, select "Java Build Path"</li>
+<li>Now click on the "Libraries" tab.</li>
+<li>Click on the "Add External JARs..." button</li>
+<li>Locate the ojdbc14.jar file you have saved to your H: drive. Click on it. You should see that jar file added to your Library.</li>
+<li>Click OK. You should see the ojdbc14.jar file add to your "Referenced Libraries".</li>
+<li>You are now ready to connect to Oracle.</li>
+</ul>
+<h3>Adding some additional database files...</h3>
+<p>In class you have seen examples using the EMP, DEPT, BONUS and SALGRADE tables. If you haven't loaded these into your schema for testing purposes, you should do so now. You will need them for this lab. The SQL script to create and populate these tables is <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/scott.sql?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589">available here</a> - or off the main Lecture/Lab page. (Note: These 4 tables have been available as part of Oracle for decades. Everyone knows them as the "<span style="color: #ff0088; font-family: Consolas, &#39;Courier New&#39;, monospace; font-weight: bold;">Scott</span>"&nbsp;tables.)</p>
+<h2>Objective</h2>
+<ul>
+<li>Understand the basics of JDBC</li>
+<li>Run SQL statements from a Java program using JDBC</li>
+<li>Run an Oracle stored procedure from a Java program using JDBC</li>
+</ul>
+<h2>Do</h2>
+<ul>
+<li>Read Chapter 15 in your text. It is a long chapter but there is a lot of detail you won't need at this point. You will just be working on a simple Java program.</li>
+</ul>
+<h2>Assignment</h2>
+<p>Make sure you have the <strong>Scott</strong> tables in your schema. See "Preparations" above for more information.</p>
+<ul>
+<li><b>Part 1. </b>
+<ul>
+<li>Logon to your Oracle account as usual. Run the <a href="https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/JDBC_lab.sql?_&d2lSessionVal=rId3vjjxLPpUdUBzeZlzNxpWZ&ou=83589">available SQL script</a> to set up an initial table, and a procedure called <strong>RAISE_SALARY</strong>.</li>
+<li>Double check that the procedure exists in your schema by using the <strong>USER_SOURCE</strong> data dictionary table.</li>
+</ul>
+<p>&nbsp;</p>
+</li>
+<li><b>Part 2.</b>
+<p>The Oracle HR Finance department has had a hostile takeover by the Scott company. You have been asked by your boss to start a merger of the two by creating a table with all the employees. The new company will be called <strong>ScottHR</strong>&nbsp;so your new employee table will be called <strong>SCOTTHR_EMP</strong>. Because Rob Thorndyke is on the quality assurance board, you know you'd better do all your programming in Java rather than in pure SQL using SQL*Plus. However, the other person on the quality assurance board is well known for her insistence on SQL, so you should use SQL to do as much of the hard database work as possible.</p>
+<ul>
+<li>Write a Java program which will <b>use SQL</b>&nbsp;via JDBC to:
+<ul>
+<li>Create the <strong>SCOTTHR_EMP</strong>&nbsp;table with the following attributes:
+<ul>
+<li><strong>empno NUMBER(5)</strong></li>
+<li><strong>deptno NUMBER(2)</strong></li>
+<li><strong>ename VARCHAR2(30)</strong></li>
+<li><strong>sal NUMBER(7,2)</strong></li>
+<li>(Note, if you have done any testing, you may have to drop the table (in your Java program) before you create it again. See the java examples in the <i>Prerequisite</i> section above for a method to do just that.)</li>
+</ul>
+</li>
+<li>Insert all the Scott employees from the <strong>EMP</strong> table into your new <strong>SCOTTHR_EMP</strong>&nbsp;table. You will only be inserting those columns which match your new table.
+<ul>
+<li>Note: When you insert the employee names (<strong>ename</strong>) from <strong>EMP</strong>, make sure that only the <b>first letter</b> of the name is capitalized</li>
+</ul>
+</li>
+<li>Insert all the employees from the Oracle HR Finance department (<strong>department_id = 100</strong>) employees table as follows:
+<ul>
+<li>Put the <strong>employee_id</strong> into <strong>empno</strong> (multiply the <strong>employee_id</strong> by 10 so that the new employee_id/empno values will be in the same range as the Scott employee numbers)</li>
+<li>Put <strong>last_name</strong> in <strong>ename</strong></li>
+</ul>
+</li>
+<li>The ScottHR corporation has decided that all former Oracle HR Finance employees will belong to department 99 (i.e. deptno = 99), and will have a salary of 2000. <b>Update</b> your <strong>SCOTTHR_EMP</strong> table with these values.</li>
+<li>Print out a report to the screen of all the new employees in the following format:
+<p>Employee # 7369, Smith, at Dept No 20 makes $800<br> Employee # 7499, Allen, at Dept No 30 makes $1600<br> ....<br> Employee # 1130, Popp, at Dept No 99 makes $2000</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><b>Part 3</b></p>
+<p>As part of the merger, ScottHR has promised all employees in Research (department 20) a 10% increase. You remember that there is an Oracle stored procedure called <strong>RAISE_SALARY</strong> which will take the <strong>deptno</strong> and the percent raise as <i>parameters</i>.</p>
+<ul>
+<li>Modify your Java program from Part 2 above to include a call the Oracle stored procedure <strong>RAISE_SALARY</strong> and pass it the deptno (20) and the 10% raise.</li>
+<li>Produce a report similar to the one in Part 2 above but show the new, increased salaries. In other words, your program should give the full employee list <b>before</b> the raise, and <b>after</b> the raise. The reports should be almost identical except for the salaries of the employees who got the raise. Be sure you add a header to each report to distinguish them.</li>
+<li><b>Demonstrate</b> your program to your instructor.</li>
+</ul>
+</li>
+</ul>
+<h2>Hand-In</h2>
+<ul>
+<li>Demonstrate:
+<ul>
+<li>Your Java program from Part 3</li>
+</ul>
+</li>
+<li>Hand-in your completed code from Part 3. You do not need to include the results. Either print or submit the program to your D2L dropbox.</li>
+</ul>
+<script src="./assign16_files/nr-536.min.js"></script></body></html>

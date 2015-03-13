@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0098)https://online.camosun.ca/content/enforced/83589-2015Q2COMP155X01AB/Java/JavaExample.html?ou=83589 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JavaExample.java</title>
+<script type="text/javascript" src="./JavaExample.java_files/9efc9e456b"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"9efc9e456b","applicationID":"2089117","transactionName":"b1wHYUNYWxEFUkJbDlYWLUFFSX0DClVaVxMXfVd5H3VlTDBeWV4SFnERQUF0WgYRXVMcIldXEVBfTX0WCV1wWw1MXBd9UFdRDgFD","queueTime":0,"applicationTime":131,"ttGuid":"64897A42908C25BB","agent":"js-agent.newrelic.com/nr-536.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],G9z0Bl:[function(n,e){function t(){var n=v.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(d,function(e,t){e in n||(n[e]=t)}),v.proto="https"===l.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=v.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",l=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},v=e.exports={offset:i(),origin:l,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: "Consolas", "Courier New", monospace;}
+pre {color: #000000; background-color: #ffffff; font-family:  "Consolas", "Courier New", monospace;}
+table {color: #000000; background-color: #e9e8e2; font-family:  "Consolas", "Courier New", monospace;}
+.ST1 {font-family: "Consolas", "Courier New", monospace; font-weight: bold}
+.ST3 {font-family: "Consolas", "Courier New", monospace; font-style: italic}
+.ST2 {font-family: "Consolas", "Courier New", monospace; font-weight: bold; font-style: italic}
+.comment {color: #969696}
+.ST0 {color: #969696; font-family: "Consolas", "Courier New", monospace; font-weight: bold}
+.ST4 {color: #009900; font-family: "Consolas", "Courier New", monospace; font-style: italic}
+.keyword-directive {color: #0000e6}
+.character {color: #ce7b00}
+.ST5 {color: #ce7b00; font-family: "Consolas", "Courier New", monospace; font-weight: bold}
+-->
+</style>
+<script type="text/javascript" src="./JavaExample.java_files/MathML.js"></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML&v=10.3.0.791-39','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&v=10.3.0.791-39');</script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ delayStartupUntil: "onload",showProcessingMessages: false, messageStyle: "none", showMathMenu: true, showMathMenuMSIE: true, menuSettings: { context: "MathJax", zoom: "None" },NativeMML: { showMathMenuMSIE: false, scale: 140 }, "HTML-CSS": { linebreaks: { automatic: true, width: "container"}, imageFont: null, scale: 130 } });</script><script type="text/javascript" src="./JavaExample.java_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td align="center">JavaExample.java</td>
+</tr>
+</tbody>
+</table>
+<pre><span class="keyword-directive">package</span> javaexample;
+
+<span class="comment">/**</span><span class="comment">*</span>
+<span class="comment"> * </span><span class="ST0">File</span><span class="ST0">        : </span><span class="ST0">JavaExample</span><span class="ST0">.</span><span class="ST0">java</span>
+<span class="comment"> * </span><span class="ST0">Written</span> <span class="ST0">by</span><span class="ST0">  : </span><span class="ST0">Marla</span> <span class="ST0">Weston</span>
+<span class="comment"> * </span><span class="ST0">Modified</span> <span class="ST0">by</span><span class="ST0"> : </span><span class="ST0">Marla</span> <span class="ST0">Weston</span> <span class="ST0">with</span> <span class="ST0">a</span> <span class="ST0">help</span> <span class="ST0">from</span> <span class="ST0">a</span> <span class="ST0">friend</span>
+<span class="comment"> * </span><span class="ST0">Written</span><span class="ST0">     : </span><span class="ST0">February</span><span class="ST0"> 20, 2014</span>
+<span class="comment"> * </span><span class="ST0">Updated</span><span class="ST0">     : </span><span class="ST0">February</span><span class="ST0"> 25, 2014</span>
+<span class="comment"> * </span><span class="ST0">Description</span><span class="ST0"> : </span><span class="ST0">The</span> <span class="ST0">user</span> <span class="ST0">is</span> <span class="ST0">asked</span> <span class="ST0">to</span> <span class="ST0">input</span> <span class="ST0">his</span><span class="ST0">/</span><span class="ST0">her</span> <span class="ST0">username</span><span class="ST0">.</span>
+ <span class="comment">*/</span>
+   
+<span class="keyword-directive">import</span> java.sql.*;
+<span class="keyword-directive">import</span> java.util.Scanner;
+
+<span class="keyword-directive">public</span> <span class="keyword-directive">class</span> <span class="ST1">JavaExample</span> {
+        <span class="keyword-directive">public</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">main</span>(String[] args) <span class="keyword-directive">throws</span> SQLException,
+                        ClassNotFoundException {
+
+                Connection sqlConnection = <span class="keyword-directive">null</span>;
+                Statement sqlStatement = <span class="keyword-directive">null</span>;
+
+                <span class="keyword-directive">try</span> {
+                        sqlConnection = <span class="ST3">getConnection</span>();
+
+                        sqlStatement = sqlConnection.createStatement();
+
+                        sqlConnection.setAutoCommit(<span class="keyword-directive">false</span>);
+
+                        <span class="ST3">dropDogsTable</span>(sqlStatement);
+                        <span class="ST3">createDogsTable</span>(sqlStatement);
+
+                        <span class="ST3">dropBreedersTable</span>(sqlStatement);
+                        <span class="ST3">createBreedersTable</span>(sqlStatement);
+
+                        sqlConnection.commit();
+                        sqlConnection.setAutoCommit(<span class="keyword-directive">true</span>);
+                        
+                        System.<span class="ST4">out</span>
+                        .println(<span class="character">"</span><span class="ST5">\n</span><span class="character"> ******** A First Printing ********** </span><span class="ST5">\n</span><span class="character">"</span>);
+                        ResultSet sqlResultSet = sqlStatement
+                                        .executeQuery(<span class="character">"</span><span class="character">SELECT * FROM Dogs, Breeders </span><span class="character">"</span>
+                                                        + <span class="character">"</span><span class="character"> WHERE dogs.dog_id = breeders.dog_id </span><span class="character">"</span>);
+
+                        <span class="ST3">printResultSet</span>(sqlResultSet);
+                        
+                        <span class="comment">// Call a stored procedure</span>
+                        sqlConnection.setAutoCommit(<span class="keyword-directive">false</span>);
+                        CallableStatement cstmt 
+                                = sqlConnection.prepareCall(<span class="character">"</span><span class="character">{ call CHANGE_WEIGHT ('Chihuahua', 1.5)}</span><span class="character">"</span>);
+                        cstmt.execute();
+                        cstmt.close();
+                        sqlConnection.commit();
+                        sqlConnection.setAutoCommit(<span class="keyword-directive">true</span>);
+                        
+                        System.<span class="ST4">out</span>
+                        .println(<span class="character">"</span><span class="ST5">\n</span><span class="character"> ******** A Second Printing ********** </span><span class="ST5">\n</span><span class="character">"</span>);
+                        ResultSet sqlResultSetNew = sqlStatement
+                                        .executeQuery(<span class="character">"</span><span class="character">SELECT * FROM Dogs, Breeders </span><span class="character">"</span>
+                                                + <span class="character">"</span><span class="character"> WHERE dogs.dog_id = breeders.dog_id </span><span class="character">"</span>);
+
+                        <span class="ST3">printResultSet</span>(sqlResultSetNew);
+
+
+                        sqlStatement.close();
+
+                } <span class="keyword-directive">catch</span> (SQLException ex) {
+
+                        <span class="keyword-directive">if</span> (sqlConnection != <span class="keyword-directive">null</span>) {
+                                sqlConnection.rollback();
+                                sqlConnection.setAutoCommit(<span class="keyword-directive">true</span>);
+                        }
+
+                        <span class="ST3">printSQLException</span>(ex);
+                } <span class="keyword-directive">finally</span> {
+                        <span class="keyword-directive">if</span> (sqlStatement != <span class="keyword-directive">null</span>) {
+                                sqlStatement.close();
+                        }
+                        <span class="keyword-directive">if</span> (sqlConnection != <span class="keyword-directive">null</span>) {
+                                sqlConnection.close();
+                        }
+                }
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> Connection <span class="ST2">getConnection</span>() <span class="keyword-directive">throws</span> ClassNotFoundException,
+                        SQLException {
+                <span class="comment">// Connect to the database</span>
+                
+                Connection sqlConnection = <span class="keyword-directive">null</span>;
+                
+                <span class="comment">// Have the user enter their username and password.</span>
+
+                System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">Please enter your username: </span><span class="character">"</span>);
+                Scanner inputReader = <span class="keyword-directive">new</span> Scanner(System.<span class="ST4">in</span>);
+
+                String username = inputReader.nextLine();
+
+                System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">Please enter your password: </span><span class="character">"</span>);
+                String userpass = inputReader.nextLine();
+                inputReader.close();
+
+                Class.<span class="ST3">forName</span>(<span class="character">"</span><span class="character">oracle.jdbc.driver.OracleDriver</span><span class="character">"</span>);
+
+                sqlConnection = DriverManager.<span class="ST3">getConnection</span>(
+                                <span class="character">"</span><span class="character">jdbc:oracle:thin:@babbage.cs.camosun.bc.ca:1521:caleb</span><span class="character">"</span>,
+                                username, userpass);
+
+                <span class="keyword-directive">return</span> sqlConnection;
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">printResultSet</span>(ResultSet sqlResultSet)
+                        <span class="keyword-directive">throws</span> SQLException {
+                <span class="comment">// Print out the results from the SELECT statement</span>
+                
+                <span class="keyword-directive">while</span> (sqlResultSet.next()) {
+                        String breed = sqlResultSet.getString(<span class="character">"</span><span class="character">breed</span><span class="character">"</span>);
+                        String asize = sqlResultSet.getString(<span class="character">"</span><span class="character">asize</span><span class="character">"</span>);
+                        <span class="keyword-directive">float</span> weight = sqlResultSet.getFloat(<span class="character">"</span><span class="character">wt</span><span class="character">"</span>);
+                        String kennelname = sqlResultSet.getString(<span class="character">"</span><span class="character">kennelname</span><span class="character">"</span>);
+                        String address = sqlResultSet.getString(<span class="character">"</span><span class="character">address</span><span class="character">"</span>);
+
+                        System.<span class="ST4">out</span>.print(breed + <span class="character">"</span><span class="character">s</span><span class="character">"</span>);
+                        System.<span class="ST4">out</span>.print(<span class="character">"</span><span class="character"> are of </span><span class="character">"</span> + asize + <span class="character">"</span><span class="character"> size</span><span class="character">"</span>);
+                        System.<span class="ST4">out</span>.print(<span class="character">"</span><span class="character"> and weigh </span><span class="character">"</span> + weight + <span class="character">"</span><span class="character"> kilos</span><span class="character">"</span>);
+                        System.<span class="ST4">out</span>.print(<span class="character">"</span><span class="character"> from </span><span class="character">"</span> + kennelname);
+                        System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character"> at </span><span class="character">"</span> + address);
+                }
+
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">dropDogsTable</span>(Statement sqlStatement)
+                        <span class="keyword-directive">throws</span> SQLException {
+                <span class="comment">// Check to see if the DOGS table already exists in the database.</span>
+                <span class="comment">// If the table exists, drop it because it will be created later.</span>
+
+                ResultSet resultTable = sqlStatement
+                                .executeQuery(<span class="character">"</span><span class="character">SELECT * FROM user_tables </span><span class="character">"</span>
+                                                + <span class="character">"</span><span class="character">WHERE table_name='DOGS'</span><span class="character">"</span>);
+
+                <span class="keyword-directive">while</span> (resultTable.next()) {
+                        sqlStatement.executeUpdate(<span class="character">"</span><span class="character">DROP TABLE Dogs PURGE</span><span class="character">"</span>);
+                }
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">dropBreedersTable</span>(Statement sqlStatement)
+                        <span class="keyword-directive">throws</span> SQLException {
+                <span class="comment">// Check to see if the BREEDERS table already exists in the database.</span>
+                <span class="comment">// If the table exists, drop it because it will be created later.</span>
+                
+                ResultSet restable2 = sqlStatement
+                                .executeQuery(<span class="character">"</span><span class="character">SELECT * FROM user_tables </span><span class="character">"</span>
+                                                + <span class="character">"</span><span class="character">WHERE table_name='BREEDERS'</span><span class="character">"</span>);
+                <span class="keyword-directive">while</span> (restable2.next()) {
+                        sqlStatement.executeUpdate(<span class="character">"</span><span class="character">DROP TABLE Breeders PURGE</span><span class="character">"</span>);
+                }
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">createDogsTable</span>(Statement sqlStatement)
+                        <span class="keyword-directive">throws</span> SQLException {
+                <span class="comment">// CREATE the DOGS table using SQL and insert some data.</span>
+                
+                sqlStatement
+                        .executeUpdate(<span class="character">"</span><span class="character">CREATE TABLE Dogs </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(dog_id INT, breed VARCHAR2(40), asize VARCHAR2(40), wt REAL)</span><span class="character">"</span>);
+                sqlStatement.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Dogs VALUES </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(1,'Great Dane', 'Large', 60.00)</span><span class="character">"</span>);
+                sqlStatement.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Dogs VALUES </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(2,'Border Collie', 'Medium', 15.00)</span><span class="character">"</span>);
+                sqlStatement.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Dogs VALUES </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(3,'Chihuahua', 'Small', 150)</span><span class="character">"</span>);
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">createBreedersTable</span>(Statement sqlStatement)
+                        <span class="keyword-directive">throws</span> SQLException {
+                <span class="comment">// CREATE the BREEDERS table using SQL and insert some data.</span>
+                
+                String createTableString = <span class="character">"</span><span class="character">CREATE TABLE Breeders </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(dog_id INT, breed VARCHAR2(40), kennelname VARCHAR2(40), </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character"> address VARCHAR2(80), lic INT)</span><span class="character">"</span>;
+                sqlStatement.executeUpdate(createTableString);
+
+                sqlStatement.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Breeders VALUES </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(1,'Great Dane', 'Large Dog Kennels', '123 Main', 12)</span><span class="character">"</span>);
+                sqlStatement.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Breeders VALUES </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(2,'Border Collie', 'Fast Dog Kennels', '456 Main', 45)</span><span class="character">"</span>);
+                sqlStatement.executeUpdate(<span class="character">"</span><span class="character">INSERT INTO Breeders VALUES </span><span class="character">"</span>
+                                + <span class="character">"</span><span class="character">(3,'Chihuahua', 'Tiny Dog Kennels', '789 Main', 78)</span><span class="character">"</span>);
+
+        }
+
+        <span class="keyword-directive">private</span> <span class="keyword-directive">static</span> <span class="keyword-directive">void</span> <span class="ST2">printSQLException</span>(SQLException ex) {
+                <span class="comment">// If there is a SQL exception, catch it here and print it out.</span>
+
+                System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">SQLException caught</span><span class="character">"</span>);
+                System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">---</span><span class="character">"</span>);
+
+                <span class="keyword-directive">while</span> (ex != <span class="keyword-directive">null</span>) {
+                        System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">Message   : </span><span class="character">"</span> + ex.getMessage());
+                        System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">SQLState  : </span><span class="character">"</span> + ex.getSQLState());
+                        System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">ErrorCode : </span><span class="character">"</span> + ex.getErrorCode());
+                        System.<span class="ST4">out</span>.println(<span class="character">"</span><span class="character">---</span><span class="character">"</span>);
+                        ex = ex.getNextException();
+                }
+        }
+}
+</pre>
+
+<script src="./JavaExample.java_files/nr-536.min.js"></script></body></html>
