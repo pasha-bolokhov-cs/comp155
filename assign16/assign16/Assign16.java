@@ -21,6 +21,13 @@ public class Assign16 {
 			s = c.createStatement();
 			c.setAutoCommit(false);
 
+
+			/*************************************************************
+			 *                                                           *
+			 *                          Part II                          *
+			 *                                                           *
+			 *************************************************************/
+
 			/* Remove SCOTTHR_EMP table if it existed */
 			try { s.executeUpdate("DROP TABLE SCOTTHR_EMP"); } catch (SQLException ex) {}
 
@@ -42,9 +49,49 @@ public class Assign16 {
 					"	       FROM employees " +
 					"	       WHERE department_id = 100");
 
+			/* Set the ID and salary for the merged workers */
+			s.executeUpdate("UPDATE SCOTTHR_EMP " +
+					"	SET deptno = 99, sal = 2000 " +
+					"	WHERE deptno IS NULL");
+
 			/* Apply the changes */
 			c.commit();
 
+
+			/* Query the table */
+			System.out.printf("********************" + 
+					  " Employee Data before Raise " +
+					  "********************\n");
+			ResultSet r = s.executeQuery("SELECT * FROM SCOTTHR_EMP");
+			while (r.next()) {
+				System.out.printf("Employee #%d, %s, at Dept No %d makes $%d\n",
+						  r.getInt("empno"), r.getString("ename"),
+						  r.getInt("deptno"), r.getInt("sal"));
+			}
+			System.out.printf("\n\n");
+
+
+
+			/*************************************************************
+			 *                                                           *
+			 *                          Part III                         *
+			 *                                                           *
+			 *************************************************************/
+
+			/* Execute 'raisesalary()' */
+			s.execute("CALL raisesalary(20, 10)");			
+
+			/* Query again */
+			System.out.printf("********************" + 
+					  " Employee Data after Raise " +
+					  "********************\n");
+			r = s.executeQuery("SELECT * FROM SCOTTHR_EMP");
+			while (r.next()) {
+				System.out.printf("Employee #%d, %s, at Dept No %d makes $%d\n",
+						  r.getInt("empno"), r.getString("ename"),
+						  r.getInt("deptno"), r.getInt("sal"));
+			}
+			System.out.printf("\n");
 
 		} catch (SQLException ex) {
 			if (c != null) {
@@ -52,12 +99,12 @@ public class Assign16 {
 				c.setAutoCommit(true);
 			}
 
-			System.out.println("------------------------------------------------------------");
+			System.err.println("------------------------------------------------------------");
 			for (; ex != null; ex = ex.getNextException()) {
-				System.out.print("Exception\t: " + ex.getMessage());
-				System.out.println("SQLState\t: " + ex.getSQLState());
-				System.out.println("Error code\t: " + ex.getErrorCode());
-				System.out.println("------------------------------------------------------------");
+				System.err.print("Exception\t: " + ex.getMessage());
+				System.err.println("SQLState\t: " + ex.getSQLState());
+				System.err.println("Error code\t: " + ex.getErrorCode());
+				System.err.println("------------------------------------------------------------");
 			}
 		} finally {
 			if (s != null)
