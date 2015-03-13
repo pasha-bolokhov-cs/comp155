@@ -9,5 +9,5 @@ USER=bolokhov
 read -s -p "Password: " PASS
 DATABASE=BOLOKHOVDB
 
-${MYSQL} --socket=/home/student/cst401/local/mysql/var/lib/mysql.sock --port=3307 -u ${USER} -p${PASS} ${DATABASE}
+${MYSQL} --socket=/home/student/cst401/local/mysql/var/lib/mysql.sock --port=3307 -u ${USER} -p${PASS} "$@" ${DATABASE}
 

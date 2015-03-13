@@ -1,0 +1,183 @@
+--------------
+DROP TABLE IF EXISTS emp
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP TABLE IF EXISTS dept
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+CREATE TABLE dept
+       (deptno INT(2),
+	dname VARCHAR(14) ,
+	loc VARCHAR(13),
+	CONSTRAINT pk_dept PRIMARY KEY (deptno))
+	ENGINE = InnoDB
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+CREATE TABLE emp
+       (empno INT(4),
+	ename VARCHAR(10),
+	job VARCHAR(9),
+	mgr INT(4),
+	hiredate DATE,
+	sal FLOAT(7, 2),
+	comm FLOAT(7, 2),
+	deptno INT(2),
+	CONSTRAINT pk_emp PRIMARY KEY (empno),
+	CONSTRAINT fk_deptno FOREIGN KEY (deptno) REFERENCES dept (deptno))
+	ENGINE = InnoDB
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+INSERT INTO dept VALUES
+	(10, 'ACCOUNTING', 'NEW YORK'),
+	(20, 'RESEARCH', 'DALLAS'),
+	(30, 'SALES', 'CHICAGO'),
+	(40, 'OPERATIONS', 'BOSTON')
+--------------
+
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+--------------
+INSERT INTO emp VALUES
+	(7369, 'SMITH', 'CLERK', 7902, STR_TO_DATE('17-12-1980', '%d-%m-%Y'), 800, NULL, 20),
+	(7499, 'ALLEN', 'SALESMAN', 7698, STR_TO_DATE('20-2-1981', '%d-%m-%Y'), 1600, 300, 30),
+	(7521, 'WARD', 'SALESMAN', 7698, STR_TO_DATE('22-2-1981', '%d-%m-%Y'), 1250, 500, 30),
+	(7566, 'JONES', 'MANAGER', 7839, STR_TO_DATE('2-4-1981', '%d-%m-%Y'), 2975, NULL, 20),
+	(7654, 'MARTIN', 'SALESMAN', 7698, STR_TO_DATE('28-9-1981', '%d-%m-%Y'), 1250, 1400, 30),
+	(7698, 'BLAKE', 'MANAGER', 7839, STR_TO_DATE('1-5-1981', '%d-%m-%Y'), 2850, NULL, 30),
+	(7782, 'CLARK', 'MANAGER', 7839, STR_TO_DATE('9-6-1981', '%d-%m-%Y'), 2450, NULL, 10),
+	(7788, 'SCOTT', 'ANALYST', 7566, STR_TO_DATE('13-07-1987', '%d-%m-%Y'), 3000, NULL, 20),
+	(7839, 'KING', 'PRESIDENT', NULL, STR_TO_DATE('17-11-1981', '%d-%m-%Y'), 5000, NULL, 10),
+	(7844, 'TURNER', 'SALESMAN', 7698, STR_TO_DATE('8-9-1981', '%d-%m-%Y'), 1500, 0, 30),
+	(7876, 'ADAMS', 'CLERK', 7788, STR_TO_DATE('13-07-1987', '%d-%m-%Y'), 1100, NULL, 20),
+	(7900, 'JAMES', 'CLERK', 7698, STR_TO_DATE('3-12-1981', '%d-%m-%Y'), 950, NULL, 30),
+	(7902, 'FORD', 'ANALYST', 7566, STR_TO_DATE('3-12-1981', '%d-%m-%Y'), 3000, NULL, 20),
+	(7934, 'MILLER', 'CLERK', 7782, STR_TO_DATE('23-1-1982', '%d-%m-%Y'), 1300, NULL, 10)
+--------------
+
+Query OK, 14 rows affected (0.00 sec)
+Records: 14  Duplicates: 0  Warnings: 0
+
+--------------
+DROP TABLE IF EXISTS bonus
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+CREATE TABLE bonus
+	(ename VARCHAR(10),
+	 job VARCHAR(9),
+	 sal INT,
+	 comm INT)
+	 ENGINE = InnoDB
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP TABLE IF EXISTS salgrade
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE TABLE salgrade
+      ( grade INT,
+	losal INT,
+	hisal INT )
+	ENGINE = InnoDB
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+INSERT INTO salgrade VALUES 
+	(1, 700,  1200),
+	(2, 1201, 1400),
+	(3, 1401, 2000),
+	(4, 2001, 3000),
+	(5, 3001, 9999)
+--------------
+
+Query OK, 5 rows affected (0.00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+--------------
+COMMIT
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+SELECT e.ename, e.empno 
+       FROM emp e INNER JOIN dept d
+       USING(deptno)
+       WHERE UPPER(d.loc) = 'CHICAGO'
+--------------
+
++--------+-------+
+| ename  | empno |
++--------+-------+
+| ALLEN  |  7499 |
+| WARD   |  7521 |
+| MARTIN |  7654 |
+| BLAKE  |  7698 |
+| TURNER |  7844 |
+| JAMES  |  7900 |
++--------+-------+
+6 rows in set (0.00 sec)
+
+--------------
+SELECT e.ename AS 'Employee', e.empno AS 'EMPNO', m.ename AS 'Manager', m.empno AS 'MgrNo'
+       FROM emp e INNER JOIN emp m
+       ON e.mgr = m.empno
+--------------
+
++----------+-------+---------+-------+
+| Employee | EMPNO | Manager | MgrNo |
++----------+-------+---------+-------+
+| SMITH    |  7369 | FORD    |  7902 |
+| ALLEN    |  7499 | BLAKE   |  7698 |
+| WARD     |  7521 | BLAKE   |  7698 |
+| JONES    |  7566 | KING    |  7839 |
+| MARTIN   |  7654 | BLAKE   |  7698 |
+| BLAKE    |  7698 | KING    |  7839 |
+| CLARK    |  7782 | KING    |  7839 |
+| SCOTT    |  7788 | JONES   |  7566 |
+| TURNER   |  7844 | BLAKE   |  7698 |
+| ADAMS    |  7876 | SCOTT   |  7788 |
+| JAMES    |  7900 | BLAKE   |  7698 |
+| FORD     |  7902 | JONES   |  7566 |
+| MILLER   |  7934 | CLARK   |  7782 |
++----------+-------+---------+-------+
+13 rows in set (0.00 sec)
+
+--------------
+SELECT deptno, COUNT(ename) AS 'Total'
+       FROM emp
+       GROUP BY deptno
+--------------
+
++--------+-------+
+| deptno | Total |
++--------+-------+
+|     10 |     3 |
+|     20 |     5 |
+|     30 |     6 |
++--------+-------+
+3 rows in set (0.00 sec)
+
+Bye
