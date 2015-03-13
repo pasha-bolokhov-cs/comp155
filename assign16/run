@@ -1,0 +1,4 @@
+#
+javac assign16/Assign16.java &&
+java -cp .:ojdbc14.jar assign16.Assign16
+
