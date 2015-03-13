@@ -1,0 +1,14 @@
+#!/bin/bash
+# 
+
+# Pick which one to use
+MYSQL=mysql
+
+# Ask for the password
+USER=Bolokhov
+PASS=$(echo -n '*ND&(&ExODE^5&#$@($%^@%@$#' | base64 -d -i)
+#read -s -p "Password: " PASS
+DATABASE=BOLOKHOVDB
+
+${MYSQL} -u ${USER} -p${PASS} ${DATABASE}
+
