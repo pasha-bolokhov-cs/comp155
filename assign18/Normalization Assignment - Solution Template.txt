@@ -1,43 +1,57 @@
 Normalization Lab 
-Name:
+Name: Pasha Bolokhov
 
 1. What is the definition of zero normal form?
 
-
+	The usual spreadsheet / table form of data
 
 
 2. Express the information in the grooming ledger above in zero normal form.  e.g. provide an appropriate entity name in upper case then write out the attributes like this:   ENTITY_NAME ( attribute1, attribute2, …)
 
-
+	grooming (till_receipt, customer_id, fname, lname, caddress, 
+		  postal, service_date, store_id, store_address,
+		  dog1, dog1_breed, attendant1_id, attendant1_name, treatment1, treatment1_cost,
+		  dog2, dog2_breed, attendant2_id, attendant2_name, treatment2, treatment2_cost,
+		  dog3, dog3_breed, attendant3_id, attendant3_name, treatment3, treatment3_cost)
+		  
 
 
 3. What is the definition of first normal form?
 
-
+   	there is a primary key, and no repeating groups (all cells are atomic)
 
 
 
 4. Express the information into first normal form.  Underline the primary key for each entity.
 
+        Since the three dogs per till receipt are split into cells, they do *not* form a repeating group
+
+	So, although badly formed, it is a first normal form (till_receipt is the primary key)
 
 
+	grooming (till_receipt, customer_id, fname, lname, caddress, 
+                  ------------
+		  postal, service_date, store_id, store_address,
+		  dog1, dog1_breed, attendant1_id, attendant1_name, treatment1, treatment1_cost,
+		  dog2, dog2_breed, attendant2_id, attendant2_name, treatment2, treatment2_cost,
+		  dog3, dog3_breed, attendant3_id, attendant3_name, treatment3, treatment3_cost)
 
 
 
 
 5. What is the definition of second normal form?
 
-
-
-
+   	* First Normal Form
+	* No non-prime attribute depends on any proper subset of *any* candidate key
+	  (that is, any non-prime element depends on the whole candidate key)
 
 
 
 6. Express the information into second normal form.  Underline the primary key for each entity.
 
-
-
-
+	* Second Normal Form
+	* All non-prime elements depends on each superkey
+	  (the non-prime elements cannot depend on other non-prime elements)
 
 
 
