@@ -6,19 +6,23 @@ Name: Pasha Bolokhov
 	The usual spreadsheet / table form of data
 
 
-2. Express the information in the grooming ledger above in zero normal form.  e.g. provide an appropriate entity name in upper case then write out the attributes like this:   ENTITY_NAME ( attribute1, attribute2, …)
 
-	grooming (till_receipt, customer_id, fname, lname, caddress, 
-		  postal, service_date, store_id, store_address,
+
+2. Express the information in the grooming ledger above in zero normal form.  e.g. provide an appropriate entity name in upper case then write out the attributes like this:   ENTITY_NAME (attribute1, attribute2, ...)
+
+	grooming (till_receipt, customer_id, fname, lname, caddress, cpostal,
+		  service_date, store_id, store_address,
 		  dog1, dog1_breed, attendant1_id, attendant1_name, treatment1, treatment1_cost,
 		  dog2, dog2_breed, attendant2_id, attendant2_name, treatment2, treatment2_cost,
 		  dog3, dog3_breed, attendant3_id, attendant3_name, treatment3, treatment3_cost)
 		  
 
 
+
 3. What is the definition of first normal form?
 
    	there is a primary key, and no repeating groups (all cells are atomic)
+
 
 
 
@@ -28,13 +32,15 @@ Name: Pasha Bolokhov
 
 	So, although badly formed, it is a first normal form (till_receipt is the primary key)
 
+	Notice, we *do not* split off the dogs, even though they have repeating attributes
 
-	grooming (till_receipt, customer_id, fname, lname, caddress, 
-                  ------------
-		  postal, service_date, store_id, store_address,
+
+	grooming (**till_receipt**, customer_id, fname, lname, caddress, cpostal,
+		  service_date, store_id, store_address,
 		  dog1, dog1_breed, attendant1_id, attendant1_name, treatment1, treatment1_cost,
 		  dog2, dog2_breed, attendant2_id, attendant2_name, treatment2, treatment2_cost,
 		  dog3, dog3_breed, attendant3_id, attendant3_name, treatment3, treatment3_cost)
+
 
 
 
@@ -43,11 +49,24 @@ Name: Pasha Bolokhov
 
    	* First Normal Form
 	* No non-prime attribute depends on any proper subset of *any* candidate key
-	  (that is, any non-prime element depends on the whole candidate key)
+	  (that is, every non-prime element depends on the whole candidate key (and on every such key))
+
 
 
 
 6. Express the information into second normal form.  Underline the primary key for each entity.
+
+	the key is single-column, so it is already in second normal form
+	grooming (**till_receipt**, customer_id, fname, lname, caddress, cpostal,
+		  service_date, store_id, store_address,
+		  dog1, dog1_breed, attendant1_id, attendant1_name, treatment1, treatment1_cost,
+		  dog2, dog2_breed, attendant2_id, attendant2_name, treatment2, treatment2_cost,
+		  dog3, dog3_breed, attendant3_id, attendant3_name, treatment3, treatment3_cost)
+	
+
+
+
+7. What is the definition of third normal form?
 
 	* Second Normal Form
 	* All non-prime elements depends on each superkey
@@ -56,11 +75,158 @@ Name: Pasha Bolokhov
 
 
 
-7. What is the definition of third normal form?
-
-
-
-
-
 8. Express the information into third normal form. Underline the primary key for each entity.
 
+	Here, Customer Address and Postal Code depend on Customer First Name, Customer Last Name
+	Store Address depends on Store ID
+	Dog1 Breed depends on Dog1 Name and Customer etc
+	Attendant1 Name depends on Attendant1 ID etc
+	Treatment1 Cost depends on Treatment1 etc
+
+	Take away customers, stores, dogs, attendants, treatments
+
+		customers (**customer_id**, fname, lname, caddress, cpostal)
+		stores (**store_id**, store_address)
+		dogs (**customer_id, dog_name**, dog_breed)
+		attendants (**attendant_id**, attendant_name)
+		rates (**treatment**, cost)
+
+	All that's left from the receipt table is
+
+		grooming (till_receipt, customer_id, service_date, store_id,
+			  dog1, attendant1_id, treatment1
+			  dog2, attendant2_id, treatment2
+			  dog3, attendant3_id, treatment3)
+
+	It is now that we bounce into the problem with the dogs: 
+	if a customer has (brings) just one dog, "dog2" and "dog3" will be "null"
+	But dog's name cannot be "null" because it is part of the table "dogs" primary key
+	So, if we have not done it before, now we need to split off the dogs
+	But if the customer's dogs stay on the same receipt, than the receipt will not
+	be the primary key anymore
+
+		grooming (till_receipt, customer_id, service_date, store_id, dog, attendant_id, treatment)
+
+	The primary key will be (customer_id, service_date, dog):
+
+		grooming (**customer_id, service_date, dog**, store_id, attendant_id, treatment, till_receipt)
+
+	This is silly, because it would be easier to put the dogs on separate bills (and then use the receipt
+	as the key), but let's keep the store's habits
+
+	This is supplemented with
+
+		customers (**customer_id**, fname, lname, caddress, cpostal)
+		stores (**store_id**, store_address)
+		dogs (**customer_id, dog_name**, dog_breed)
+		attendants (**attendant_id**, attendant_name)
+		rates (**treatment**, cost)
+
+
+
+	/*** Let's deal with supplementary information first ***/
+
+	Are the supplementary tables all Second Form?
+	All the candidate keys are single-column, except for table "dogs", and "customers"
+	--> "dogs" 
+		We ensure that "dog_breed" does not depend solely on "customer_id" or "dog_name", only on both
+
+	--> "customers":
+			customers (**customer_id**, fname, lname, caddress, cpostal)
+
+		Candidate keys are: { customer_id }, { fname, lname, caddress }
+		Here, "cpostal" depends only on "caddress"!
+		So formally "customers" is not in Second Form, although for practical reasons
+		it is silly to separate the postal code from the address
+		(because then we'll be duplicating Canada Post database)
+
+		Ok, let's split off the postal codes:
+
+			customers (**customer_id**, fname, lname, caddress)
+			addresses (**caddress**, cpostal)
+
+		Now, "customers" consists solely of candidate keys, and so is in **third** normal form
+		"addresses" obviously also is in the third normal form
+
+
+	Here is what we know so far:
+
+		customers (**customer_id**, fname, lname, caddress)		IIINF
+		addresses (**caddress**, cpostal)				IIINF
+		stores (**store_id**, store_address)				IIINF
+		dogs (**customer_id, dog_name**, dog_breed)			IIINF
+		attendants (**attendant_id**, attendant_name)			IIINF
+		rates (**treatment**, cost)					IIINF
+		
+		grooming (**customer_id, service_date, dog**, store_id,		???NF
+			  attendant_id, treatment, till_receipt)
+
+
+	/*** Let's now deal with "grooming" ***/
+
+	{ customer_id, service_date, dog }
+	{ till_receipt, dog }
+
+	The only non-prime elements are 
+		"store_id", "attendant_id" and "treatment"
+
+	"store_id" depends only 	on "customer_id" and "service_date"
+					or on "till_receipt" (customer cannot bring dogs to both stores)
+
+	So not a IINF
+
+		appointments (**till_receipt**, store_id)
+		services (**customer_id, service_date, dog**, attendant_id, treatment, till_receipt)
+
+		** This, unfortunately, allows to assign the same attendant to two different stores **
+		** for the same time-slot.                                                          **
+		** But so does the original table                                                   **
+
+	"appointments" is BCNF
+	"services":
+		{ customer_id, service_date, dog }
+		{ till_receipt, dog }
+
+	Note that [service_date, attendant_id] does not determine the "dog" or "till_receipt"
+	because an attendant can be booked "twice" for the same time-slot 
+	(the sample table has it - attendant Sue Rivers)
+
+	Similarly, [customer_id, service_date, attendant_id] does not determine the record,
+	because this attendant can wash two (of three) customer's dogs
+
+	So, table "services" has two non-prime elements: "attendant_id" and "treatment"
+	Both are independent of each other => "services" = BCNF
+
+
+
+	/*** Summarizing ***/
+
+	Since the above tables do not have *overlapping candidate keys*,
+	they are all BCNF
+
+		customers (**customer_id**, fname, lname, caddress)		BCNF
+		addresses (**caddress**, cpostal)				BCNF
+		stores (**store_id**, store_address)				BCNF
+		dogs (**customer_id, dog_name**, dog_breed)			BCNF
+		attendants (**attendant_id**, attendant_name)			BCNF
+		rates (**treatment**, cost)					BCNF
+
+
+		appointments (**till_receipt**, store_id)			BCNF
+		services (**customer_id, service_date, dog_name**, 		BCNF
+			  attendant_id, treatment, till_receipt)
+
+	Seemingly they are also IVNF, as the only multivalued dependence is
+
+		customer_id -->> dog_name
+
+	in table "services", but "attendant_id" and "treatment" will depend on the "dog"
+
+	
+	!!!! "till_receipt" depends only on "customer_id" and "service_date" !!!!
+
+	
+	
+	
+
+				
